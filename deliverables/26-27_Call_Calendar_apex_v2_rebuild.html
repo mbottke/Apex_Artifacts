@@ -80,6 +80,7 @@ h1,h2,h3{font-family:var(--font-serif);font-weight:600;letter-spacing:-.01em;mar
 .nm.i{color:var(--r1);background:var(--r1-soft)}
 .nm.s2{color:var(--r2);background:var(--r2-soft)}
 .nm.s3{color:var(--r3);background:var(--r3-soft)}
+.nm:focus-visible{outline:2px solid var(--accent);outline-offset:1px;border-radius:3px}
 /* selection highlight */
 body.has-sel .nm{opacity:.3;filter:saturate(.55)}
 body.has-sel .nm.hit{opacity:1;filter:none;outline:2px solid var(--ring);outline-offset:0;font-weight:700}
@@ -334,7 +335,7 @@ document.getElementById('foot').innerHTML=`
   weeknights are fixed by the rotation schedule; no resident is assigned call during a no-call rotation, on a
   restricted day for their rotation, during approved leave, or on consecutive days.
   <b>Version:</b> ${which==='rebuilt'?'Full Rebuild (V2)':'Minimal Repair (V1)'}.
-  <span style="color:var(--n-400)">This calendar is self-contained and print-ready (Ctrl/Cmd-P).</span>`;
+  <span style="color:var(--n-400)">This file is a standalone HTML document and is formatted for printing (Ctrl/Cmd-P).</span>`;
 </script>
 </body>
 </html>
