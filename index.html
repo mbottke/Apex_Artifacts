@@ -6,56 +6,56 @@
 <title>Resident On-Call Schedule — Academic Year 2026–2027</title>
 <meta name="description" content="Interactive resident on-call schedule for the 2026–2027 academic year (full rebuild and minimal-repair versions).">
 <style>
-:root{--ink:#1c1b19;--soft:#5c574f;--faint:#928c82;--rule:#e2dccd;--rule2:#cfc7b4;
-  --accent:#243a8f;--accent2:#9d3611;--green:#2f6d45;--card:#f8f4ec;--panel:#f1ece0;}
+:root{
+  --font:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --display:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Roboto,Helvetica,sans-serif;
+  --bg:#ffffff;--bg2:#f5f5f7;--ink:#1d1d1f;--soft:#6e6e73;--faint:#86868b;--hair:#e3e3e8;
+  --accent:#0071e3;--r1:#0a6cff;--r2:#1c8a4e;--r3:#c2410c;
+}
 *{box-sizing:border-box}
-body{margin:0;background:#fff;color:var(--ink);line-height:1.5;
-  font-family:-apple-system,"Segoe UI",Roboto,"Liberation Sans",Arial,sans-serif;-webkit-font-smoothing:antialiased}
-.serif{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Liberation Serif",serif}
-.wrap{max-width:880px;margin:0 auto;padding:clamp(24px,5vw,56px) 22px 48px}
-.brandbar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;
-  border-bottom:2.5px solid var(--ink);padding-bottom:9px;font-size:.7rem;letter-spacing:.13em;text-transform:uppercase;font-weight:700}
-.brandbar .r{color:var(--accent)}
-.eyebrow{font-size:.72rem;letter-spacing:.17em;text-transform:uppercase;color:var(--accent2);font-weight:700;margin:30px 0 10px}
-h1{font-size:clamp(2.1rem,5.2vw,3.1rem);line-height:1.04;letter-spacing:-.02em;margin:0;font-weight:700}
-.lede{font-size:1.1rem;color:var(--soft);max-width:38em;margin:14px 0 0}
-.cards{display:grid;grid-template-columns:1fr;gap:18px;margin:34px 0 0}
-@media(min-width:680px){.cards{grid-template-columns:1fr 1fr}}
-.card{display:flex;flex-direction:column;border:1px solid var(--rule2);border-radius:14px;overflow:hidden;
-  background:var(--card);text-decoration:none;color:inherit;transition:transform .15s,box-shadow .15s,border-color .15s}
-.card:hover{transform:translateY(-3px);box-shadow:0 16px 34px rgb(20 20 40/.10);border-color:var(--rule)}
-.card:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
-.card .top{padding:8px 18px;color:#fff;font-weight:700;font-size:.66rem;letter-spacing:.1em;text-transform:uppercase}
-.card.opt .top{background:var(--accent)} .card.min .top{background:var(--green)}
-.card .body{padding:18px 20px 20px;flex:1;display:flex;flex-direction:column}
-.card h2{font-size:1.45rem;margin:0 0 6px;letter-spacing:-.01em}
-.card p{margin:0;color:var(--soft);font-size:.94rem;flex:1}
-.card ul{margin:12px 0 0;padding-left:18px;color:var(--soft);font-size:.86rem}
-.card ul li{margin:3px 0}
-.card .go{margin-top:16px;font-weight:700;font-size:.9rem}
-.card.opt .go{color:var(--accent)} .card.min .go{color:var(--green)}
-.legend{margin:30px 0 0;padding:16px 18px;background:var(--panel);border-radius:12px;font-size:.9rem;color:var(--soft)}
-.legend b{color:var(--ink)}
-.keys{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px;font-size:.82rem}
-.keys .k{display:inline-flex;align-items:center;gap:6px}
-.sw{width:13px;height:13px;border-radius:3px;border:1px solid rgb(0 0 0/.12)}
-footer{margin-top:30px;padding-top:14px;border-top:1px solid var(--rule);color:var(--faint);font-size:.78rem;line-height:1.6}
+body{margin:0;background:var(--bg);color:var(--ink);line-height:1.47;
+  font-family:var(--font);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+.wrap{max-width:980px;margin:0 auto;padding:clamp(28px,5vw,64px) 22px 56px}
+.eyebrow{font-size:.82rem;font-weight:600;letter-spacing:-.01em;color:var(--accent);margin:0 0 12px}
+h1{font-family:var(--display);font-size:clamp(2.4rem,6vw,4rem);line-height:1.03;letter-spacing:-.028em;
+  margin:0;font-weight:700}
+.lede{font-size:clamp(1.1rem,2.4vw,1.32rem);color:var(--soft);max-width:30em;margin:18px 0 0;letter-spacing:-.01em}
+.cards{display:grid;grid-template-columns:1fr;gap:18px;margin:40px 0 0}
+@media(min-width:720px){.cards{grid-template-columns:1fr 1fr}}
+.card{display:flex;flex-direction:column;border:1px solid var(--hair);border-radius:22px;overflow:hidden;
+  background:var(--bg);text-decoration:none;color:inherit;box-shadow:0 1px 3px rgb(0 0 0/.04);
+  transition:transform .22s cubic-bezier(.2,.7,.2,1),box-shadow .22s}
+.card:hover{transform:translateY(-4px);box-shadow:0 18px 48px rgb(0 0 0/.10),0 4px 12px rgb(0 0 0/.06)}
+.card:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.card .top{padding:9px 22px;font-weight:600;font-size:.72rem;letter-spacing:.01em;color:#fff}
+.card.opt .top{background:var(--accent)} .card.min .top{background:var(--r2)}
+.card .body{padding:22px 24px 26px;flex:1;display:flex;flex-direction:column}
+.card h2{font-family:var(--display);font-size:1.65rem;margin:0 0 8px;letter-spacing:-.02em;font-weight:680}
+.card p{margin:0;color:var(--soft);font-size:.98rem;flex:1}
+.card ul{margin:14px 0 0;padding-left:18px;color:var(--soft);font-size:.9rem}
+.card ul li{margin:4px 0}
+.card .go{margin-top:20px;font-weight:590;font-size:.96rem;color:var(--accent)}
+.card.min .go{color:var(--r2)}
+.legend{margin:34px 0 0;padding:20px 22px;background:var(--bg2);border-radius:18px;font-size:.95rem;color:var(--soft)}
+.legend b{color:var(--ink);font-weight:600}
+.keys{display:flex;gap:18px;flex-wrap:wrap;margin-top:12px;font-size:.85rem}
+.keys .k{display:inline-flex;align-items:center;gap:7px}
+.sw{width:14px;height:14px;border-radius:4px;border:1px solid rgb(0 0 0/.1)}
+footer{margin-top:36px;padding-top:18px;border-top:1px solid var(--hair);color:var(--faint);font-size:.82rem;line-height:1.6}
 </style>
 </head>
 <body>
 <div class="wrap">
-  <div class="brandbar"><span>Family Medicine Residency</span><span class="r">Academic Year 2026–2027</span></div>
-  <div class="eyebrow">Resident On-Call Schedule</div>
-  <h1 class="serif">Resident On-Call Schedule</h1>
-  <p class="lede">The 2026–2027 academic year comprises 354 on-call days, each staffed by one intern and one senior
-    resident. Select a version below; within either calendar, select a resident to highlight their assignments and
-    review their individual workload summary.</p>
+  <div class="eyebrow">Family Medicine Residency · Academic Year 2026–2027</div>
+  <h1>Resident On-Call Schedule</h1>
+  <p class="lede">354 on-call days, one intern and one senior resident apiece. Choose a version; inside, select a
+    resident to see their assignments and individual workload.</p>
 
   <div class="cards">
     <a class="card opt" href="/optimized">
-      <div class="top">Recommended · Version 2</div>
+      <div class="top">RECOMMENDED · VERSION 2</div>
       <div class="body">
-        <h2 class="serif">Full Rebuild</h2>
+        <h2>Full Rebuild</h2>
         <p>The complete schedule re-derived for an even distribution of on-call workload within the constraints of every rule.</p>
         <ul>
           <li>On-call workload distributed as evenly as the rules permit</li>
@@ -66,9 +66,9 @@ footer{margin-top:30px;padding-top:14px;border-top:1px solid var(--rule);color:v
       </div>
     </a>
     <a class="card min" href="/minimal">
-      <div class="top">Version 1</div>
+      <div class="top">VERSION 1</div>
       <div class="body">
-        <h2 class="serif">Minimal Repair</h2>
+        <h2>Minimal Repair</h2>
         <p>The original draft with only the rule violations corrected; no other assignments were changed.</p>
         <ul>
           <li>Each correction is a same-weekday substitution</li>
@@ -82,14 +82,14 @@ footer{margin-top:30px;padding-top:14px;border-top:1px solid var(--rule);color:v
 
   <div class="legend">
     <b>Reading the calendar.</b> Each day lists the intern (top) and senior (bottom) on call. Within either calendar,
-    selecting a resident highlights their assignments and displays their distribution of shifts by day of week, their
+    selecting a resident highlights their assignments and shows their distribution of shifts by day of week, their
     holiday assignments, and their workload relative to others in their postgraduate class.
     <div class="keys">
-      <span class="k"><span class="sw" style="background:#eef1fb;border-color:#2f49a8"></span>Intern (R1)</span>
-      <span class="k"><span class="sw" style="background:#ecf4ee;border-color:#2f6d45"></span>Senior R2</span>
-      <span class="k"><span class="sw" style="background:#f8efe6;border-color:#a8521f"></span>Senior R3</span>
-      <span class="k"><span class="sw" style="background:#fbf3df"></span>★ Holiday</span>
-      <span class="k"><span class="sw" style="background:#f4f1ea"></span>Weekend</span>
+      <span class="k"><span class="sw" style="background:#ebf2ff;border-color:#0a6cff"></span>Intern (R1)</span>
+      <span class="k"><span class="sw" style="background:#e7f6ed;border-color:#1c8a4e"></span>Senior R2</span>
+      <span class="k"><span class="sw" style="background:#fcebdd;border-color:#c2410c"></span>Senior R3</span>
+      <span class="k"><span class="sw" style="background:#fbf4e0"></span>★ Holiday</span>
+      <span class="k"><span class="sw" style="background:#eef1f6"></span>Weekend</span>
     </div>
   </div>
 
