@@ -57,33 +57,33 @@ h1,h2,h3{font-family:var(--font-serif);font-weight:600;letter-spacing:-.01em;mar
 /* ---- layout ---- */
 .grid-main{display:grid;grid-template-columns:1fr;gap:var(--s-6)}
 @media(min-width:1040px){.grid-main{grid-template-columns:1fr 320px}}
-.months{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:var(--s-4)}
+.months{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:var(--s-4)}
 .month{background:#fff;border:1px solid var(--n-200);border-radius:var(--r-md);box-shadow:var(--sh-sm);overflow:hidden}
 .month h3{font-size:1rem;padding:var(--s-2) var(--s-3);border-bottom:1px solid var(--n-100);
   display:flex;justify-content:space-between;align-items:baseline}
 .month h3 .yr{font-family:var(--font-mono);font-size:.7rem;color:var(--n-400);font-weight:400}
-.dow-head{display:grid;grid-template-columns:repeat(7,1fr);font-size:.6rem;font-weight:600;
-  letter-spacing:.04em;color:var(--n-400);text-transform:uppercase;padding:0 4px}
-.dow-head span{text-align:center;padding:3px 0}
+/* dow-head and days MUST share identical column geometry (7 equal cols, same gap + side padding) so they line up */
+.dow-head{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:2px;font-size:.6rem;font-weight:600;
+  letter-spacing:.04em;color:var(--n-400);text-transform:uppercase;padding:3px 4px 2px}
+.dow-head span{text-align:center;padding:2px 0;min-width:0}
 .dow-head span.we{color:var(--accent)}
-.days{display:grid;grid-template-columns:repeat(7,1fr);gap:2px;padding:4px}
-.cell{min-height:46px;border-radius:var(--r-sm);padding:2px 3px;font-size:.62rem;position:relative;
-  border:1px solid transparent;background:var(--n-50)}
+.days{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:2px;padding:0 4px 4px}
+.cell{min-height:46px;min-width:0;border-radius:var(--r-sm);padding:2px 3px;font-size:.62rem;position:relative;
+  border:1px solid transparent;background:var(--n-50);overflow:hidden}
 .cell.empty{background:transparent}
 .cell.we{background:color-mix(in oklab,var(--n-100) 70%,var(--accent) 6%)}
 .cell.hol{background:color-mix(in oklab,#fff 78%,var(--gold) 30%)}
 .cell .num{font-family:var(--font-mono);font-size:.58rem;color:var(--n-400);font-weight:500;line-height:1}
 .cell .star{position:absolute;top:1px;right:3px;color:var(--gold);font-size:.62rem}
-.nm{display:block;border-radius:3px;padding:1px 3px;margin-top:1px;font-weight:600;white-space:nowrap;
-  overflow:hidden;text-overflow:ellipsis;line-height:1.32;letter-spacing:-.01em}
+.nm{display:block;max-width:100%;border-radius:3px;padding:1px 3px;margin-top:1px;font-weight:600;white-space:nowrap;
+  overflow:hidden;text-overflow:ellipsis;line-height:1.3;letter-spacing:-.01em;cursor:pointer}
 .nm.i{color:var(--r1);background:var(--r1-soft)}
 .nm.s2{color:var(--r2);background:var(--r2-soft)}
 .nm.s3{color:var(--r3);background:var(--r3-soft)}
 /* selection highlight */
-body.has-sel .nm{opacity:.32;filter:saturate(.5)}
-body.has-sel .nm.hit{opacity:1;filter:none;outline:2px solid var(--ring);outline-offset:0;
-  box-shadow:0 0 0 3px color-mix(in oklab,var(--ring) 22%,transparent);font-weight:700}
-body.has-sel .cell:has(.nm.hit){background:#fff;border-color:color-mix(in oklab,var(--ring) 40%,transparent)}
+body.has-sel .nm{opacity:.3;filter:saturate(.55)}
+body.has-sel .nm.hit{opacity:1;filter:none;outline:2px solid var(--ring);outline-offset:0;font-weight:700}
+body.has-sel .cell.cellhit{background:#fff;border-color:var(--ring)}   /* set in JS (no :has() needed) */
 /* ---- side panel ---- */
 .panel{position:sticky;top:74px;align-self:start;background:#fff;border:1px solid var(--n-200);
   border-radius:var(--r-md);box-shadow:var(--sh-sm);padding:var(--s-4);max-height:calc(100vh - 90px);overflow:auto}
@@ -107,6 +107,7 @@ body.has-sel .cell:has(.nm.hit){background:#fff;border-color:color-mix(in oklab,
 .tag.M{background:oklch(92% .05 25);color:oklch(45% .18 25)}
 .tag.m{background:var(--n-100);color:var(--n-500)}
 .eq{margin:var(--s-2) 0}
+.ov-h{font-weight:700;color:var(--n-700);font-size:.82rem;margin:14px 0 4px}
 .eq-row{display:flex;align-items:center;gap:8px;margin:5px 0;font-size:.78rem}
 .eq-row .lab{width:62px;color:var(--n-500);flex:none}
 .eq-bar{flex:1;height:7px;background:var(--n-100);border-radius:4px;overflow:hidden}
@@ -246,7 +247,9 @@ function select(nm){
   sel=nm;document.body.classList.toggle('has-sel',!!nm);
   document.getElementById('clearbtn').hidden=!nm;
   if(nm)document.body.style.setProperty('--ring',RING[PGY[nm]]);
-  document.querySelectorAll('.nm').forEach(el=>el.classList.toggle('hit',nm&&el.dataset.nm===nm));
+  document.querySelectorAll('.nm').forEach(el=>el.classList.toggle('hit',!!nm&&el.dataset.nm===nm));
+  // highlight the containing day cell in JS (robust fallback for browsers without :has())
+  document.querySelectorAll('.cell').forEach(c=>c.classList.toggle('cellhit',!!nm&&!!c.querySelector('.nm.hit')));
   [...resc.children].forEach(c=>c.setAttribute('aria-pressed',c.dataset.nm===nm));
   renderPanel();
 }
@@ -262,9 +265,9 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape')select(null);});
 function rotOn(nm,ds){const sp=rotations[nm]||[];for(const x of sp){if(ds>=x.s&&ds<=x.e)return x.r;}return null;}
 function fingerprint(byDowObj){
   const max=Math.max(1,...DOW.map(d=>byDowObj[d]||0));
-  const bars=DOW.map(d=>{const v=byDowObj[d]||0;const h=Math.round(v/max*100);
+  const bars=DOW.map(d=>{const v=byDowObj[d]||0;const h=Math.max(3,Math.round(v/max*58));  // px (robust; not %)
     const cls=d==='Sat'?'worst':(d==='Fri'||d==='Sun')?'bad':(d==='Wed'||d==='Thu')?'best':'';
-    return `<div class="b ${cls}" style="height:${Math.max(3,h)}%" title="${d}: ${v}"></div>`;}).join('');
+    return `<div class="b ${cls}" style="height:${h}px" title="${d}: ${v}"></div>`;}).join('');
   const vals=DOW.map(d=>`<span>${byDowObj[d]||0}</span>`).join('');
   const xs=DOW.map(d=>`<span>${d[0]}</span>`).join('');
   return `<div class="fp"><div class="fp-title">Call fingerprint — shifts by weekday</div>
@@ -302,18 +305,19 @@ function renderPanel(){
       Bars compare total call within the ${PGY[sel]} class — flatter is fairer.</p>`;
 }
 function overviewHTML(){
-  function block(label,names){
-    const tot=names.map(n=>stats[n].total),avg=names.map(n=>stats[n].avg),sat=names.map(n=>stats[n].byDow.Sat||0);
-    const rng=(a)=>`${Math.min(...a)}–${Math.max(...a)}`;
-    return `<div class="eq-row" style="font-weight:600;color:var(--n-700);margin-top:10px"><span>${label}</span></div>
-      <div class="eq-row"><span class="lab">total</span><span class="eq-bar"><i style="width:100%;background:${ROLEC[names===INT?'R1':names===R2?'R2':'R3']}"></i></span><span class="val">${rng(tot)}</span></div>
-      <div class="eq-row"><span class="lab">Saturdays</span><span class="eq-bar"><i style="width:100%;background:var(--n-300)"></i></span><span class="val">${rng(sat)}</span></div>
-      <div class="eq-row"><span class="lab">avg incon.</span><span class="eq-bar"><i style="width:100%;background:var(--n-300)"></i></span><span class="val">${rng(avg)}</span></div>`;
+  function block(label,names,pgyk){
+    const wls=names.map(n=>stats[n].wload), mx=Math.max(...wls)*1.06;
+    const rows=names.map(n=>{const s=stats[n], w=Math.round(s.wload/mx*100);
+      return `<div class="eq-row"><span class="lab">${n}</span>
+        <span class="eq-bar"><i style="width:${w}%;background:${ROLEC[pgyk]}"></i></span>
+        <span class="val">${s.total} · ${s.avg}</span></div>`;}).join('');
+    return `<div class="ov-h">${label}</div>${rows}`;
   }
   return `<h2>Class fairness at a glance</h2>
-    <div class="sub">Range of each metric within a class — the tighter the range, the more evenly the load is shared.</div>
+    <div class="sub">Each bar is a resident's weighted on-call load (total calls · avg inconvenience). The more
+      level the bars within a class, the more evenly the burden is shared.</div>
     <div class="hint">Tip: click any resident's name in the calendar, or a chip above, to highlight their entire year and see their personal load. Press <kbd>Esc</kbd> to clear.</div>
-    ${block('Interns (R1)',INT)}${block('Seniors — R2',R2)}${block('Seniors — R3',R3)}
+    ${block('Interns — R1',INT,'R1')}${block('Seniors — R2',R2,'R2')}${block('Seniors — R3',R3,'R3')}
     <p class="note" style="margin-top:14px">Each call day is staffed by <b>one intern + one senior</b>.
     Interns carry night-float (weeknights, first half) plus weekend &amp; holiday 24-hour call; seniors carry daily
     24-hour call with a post-call day. R3s take no Sunday senior call (one exception); R2s carry 7–8 Sundays each.</p>`;
