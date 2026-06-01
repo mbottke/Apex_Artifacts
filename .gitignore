@@ -1,3 +1,7 @@
 call_analysis/*.png
 call_analysis/print_cal_*.html
 call_analysis/artifact_data_*.json
+# transient QA / sub-agent scratch files
+qa_*.py
+/*.png
+/*.pdf
