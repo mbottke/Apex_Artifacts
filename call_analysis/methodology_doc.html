@@ -5,7 +5,9 @@
 <title>Scheduling at the Limit — Methodology</title>
 <style>
 :root{
-  --paper:#fbf9f4; --panel:#f3efe5; --ink:#1c1b19; --soft:#6c6760; --faint:#928c82;
+  --paper:#ffffff;       /* page = white, so it merges with the PDF page margins (no floating rectangle) */
+  --card:#f8f4ec;        /* warm cards/figures pop against the white page */
+  --panel:#f1ece0; --ink:#1c1b19; --soft:#6c6760; --faint:#928c82;
   --rule:#e2dccd; --rule2:#cfc7b4;
   --accent:#243a8f;            /* cobalt */
   --accent2:#9d3611;           /* terracotta signal */
@@ -39,7 +41,7 @@ a{color:var(--accent);text-decoration:none}
 .abstract b{color:var(--accent)}
 /* hero stat strip */
 .herostrip{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:26px 0 6px;
-  border:1px solid var(--rule2);border-radius:4px;overflow:hidden}
+  border:1px solid var(--rule2);border-radius:4px;overflow:hidden;background:var(--card)}
 .herostrip .h{padding:13px 12px;border-right:1px solid var(--rule)}
 .herostrip .h:last-child{border-right:0}
 .herostrip .n{font-size:1.62rem;font-weight:700;letter-spacing:-.02em;line-height:1;color:var(--accent)}
@@ -67,7 +69,7 @@ figure{margin:16px 0;break-inside:avoid}
 figcaption{font-size:.76rem;color:var(--soft);margin-top:8px;font-family:"Liberation Sans",sans-serif}
 figcaption b{color:var(--ink)}
 .statgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;break-inside:avoid}
-.stat{background:#fff;border:1px solid var(--rule2);border-radius:5px;padding:13px 14px}
+.stat{background:var(--card);border:1px solid var(--rule2);border-radius:5px;padding:13px 14px}
 .stat .n{font-size:1.7rem;font-weight:700;color:var(--accent);line-height:1;letter-spacing:-.02em}
 .stat .n.alt{color:var(--accent2)}
 .stat .l{font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;color:var(--soft);margin-top:6px;font-family:"Liberation Sans",sans-serif;line-height:1.3}
@@ -78,7 +80,7 @@ figcaption b{color:var(--ink)}
   text-transform:uppercase;color:var(--accent2);margin-bottom:6px}
 .sidebar p:last-child{margin-bottom:0}
 /* equation */
-.eqbox{margin:15px 0;padding:14px 16px;background:#fff;border:1px solid var(--rule2);border-radius:5px;
+.eqbox{margin:15px 0;padding:14px 16px;background:var(--card);border:1px solid var(--rule2);border-radius:5px;
   text-align:center;break-inside:avoid}
 .eq{font-size:1.16rem;font-style:italic;line-height:1.9}
 .eq .sig{font-style:normal;font-size:1.5em;vertical-align:-.32em;margin:0 .05em}
@@ -100,7 +102,7 @@ table.ctable tr td:first-child{font-weight:600}
 table.ctable tfoot td{border-top:1.5px solid var(--rule2);border-bottom:0;font-weight:700;padding-top:8px}
 /* two-version compare */
 .vcompare{display:grid;grid-template-columns:1fr 1fr;gap:12px;break-inside:avoid;margin:14px 0}
-.vcard{border:1px solid var(--rule2);border-radius:6px;overflow:hidden;background:#fff}
+.vcard{border:1px solid var(--rule2);border-radius:6px;overflow:hidden;background:var(--card)}
 .vcard .vh{padding:10px 14px;color:#fff;font-weight:700}
 .vcard.v1 .vh{background:var(--green)} .vcard.v2 .vh{background:var(--accent)}
 .vcard .vh .t{font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;opacity:.85;font-family:"Liberation Sans",sans-serif}
@@ -121,7 +123,7 @@ table.ctable tfoot td{border-top:1.5px solid var(--rule2);border-bottom:0;font-w
 .pq{font-size:1.4rem;line-height:1.32;color:var(--accent);font-weight:700;letter-spacing:-.01em;
   border-left:3px solid var(--accent2);padding:4px 0 4px 18px;margin:20px 0}
 /* dumbbell chart */
-.chart{background:#fff;border:1px solid var(--rule2);border-radius:6px;padding:12px 8px 6px}
+.chart{background:var(--card);border:1px solid var(--rule2);border-radius:6px;padding:12px 8px 6px}
 .legend2{display:flex;gap:18px;justify-content:center;font-size:.74rem;color:var(--soft);
   font-family:"Liberation Sans",sans-serif;margin-top:2px}
 .legend2 .k{display:inline-flex;align-items:center;gap:6px}
