@@ -3,25 +3,22 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>UPH Family Medicine — 2026–2027 Resident Call Calendar</title>
-<meta name="description" content="Interactive 2026–2027 resident on-call calendar — optimized full rebuild and minimal-repair versions.">
+<title>Resident On-Call Schedule — Academic Year 2026–2027</title>
+<meta name="description" content="Interactive resident on-call schedule for the 2026–2027 academic year (full rebuild and minimal-repair versions).">
 <style>
-:root{
-  --ink:#1c1b19;--soft:#5c574f;--faint:#928c82;--rule:#e2dccd;--rule2:#cfc7b4;
-  --accent:#243a8f;--accent2:#9d3611;--green:#2f6d45;--card:#f8f4ec;--panel:#f1ece0;
-}
+:root{--ink:#1c1b19;--soft:#5c574f;--faint:#928c82;--rule:#e2dccd;--rule2:#cfc7b4;
+  --accent:#243a8f;--accent2:#9d3611;--green:#2f6d45;--card:#f8f4ec;--panel:#f1ece0;}
 *{box-sizing:border-box}
 body{margin:0;background:#fff;color:var(--ink);line-height:1.5;
   font-family:-apple-system,"Segoe UI",Roboto,"Liberation Sans",Arial,sans-serif;-webkit-font-smoothing:antialiased}
 .serif{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Liberation Serif",serif}
 .wrap{max-width:880px;margin:0 auto;padding:clamp(24px,5vw,56px) 22px 48px}
 .brandbar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;
-  border-bottom:2.5px solid var(--ink);padding-bottom:9px;font-size:.7rem;letter-spacing:.13em;
-  text-transform:uppercase;font-weight:700}
+  border-bottom:2.5px solid var(--ink);padding-bottom:9px;font-size:.7rem;letter-spacing:.13em;text-transform:uppercase;font-weight:700}
 .brandbar .r{color:var(--accent)}
 .eyebrow{font-size:.72rem;letter-spacing:.17em;text-transform:uppercase;color:var(--accent2);font-weight:700;margin:30px 0 10px}
 h1{font-size:clamp(2.1rem,5.2vw,3.1rem);line-height:1.04;letter-spacing:-.02em;margin:0;font-weight:700}
-.lede{font-size:1.1rem;color:var(--soft);max-width:34em;margin:14px 0 0}
+.lede{font-size:1.1rem;color:var(--soft);max-width:38em;margin:14px 0 0}
 .cards{display:grid;grid-template-columns:1fr;gap:18px;margin:34px 0 0}
 @media(min-width:680px){.cards{grid-template-columns:1fr 1fr}}
 .card{display:flex;flex-direction:column;border:1px solid var(--rule2);border-radius:14px;overflow:hidden;
@@ -35,7 +32,7 @@ h1{font-size:clamp(2.1rem,5.2vw,3.1rem);line-height:1.04;letter-spacing:-.02em;m
 .card p{margin:0;color:var(--soft);font-size:.94rem;flex:1}
 .card ul{margin:12px 0 0;padding-left:18px;color:var(--soft);font-size:.86rem}
 .card ul li{margin:3px 0}
-.card .go{margin-top:16px;font-weight:700;font-size:.9rem;display:inline-flex;align-items:center;gap:7px}
+.card .go{margin-top:16px;font-weight:700;font-size:.9rem}
 .card.opt .go{color:var(--accent)} .card.min .go{color:var(--green)}
 .legend{margin:30px 0 0;padding:16px 18px;background:var(--panel);border-radius:12px;font-size:.9rem;color:var(--soft)}
 .legend b{color:var(--ink)}
@@ -47,45 +44,46 @@ footer{margin-top:30px;padding-top:14px;border-top:1px solid var(--rule);color:v
 </head>
 <body>
 <div class="wrap">
-  <div class="brandbar"><span>UnityPoint Health · Family Medicine Residency</span><span class="r">Academic Year 2026–2027</span></div>
-  <div class="eyebrow">Interactive On-Call Calendar</div>
-  <h1 class="serif">The Resident Call Calendar, balanced to the day.</h1>
-  <p class="lede">Every one of the year's 354 call days — one intern and one senior apiece. Choose a version below;
-    inside, click any resident to light up their entire year and read their personal load.</p>
+  <div class="brandbar"><span>Family Medicine Residency</span><span class="r">Academic Year 2026–2027</span></div>
+  <div class="eyebrow">Resident On-Call Schedule</div>
+  <h1 class="serif">Resident On-Call Schedule</h1>
+  <p class="lede">The 2026–2027 academic year comprises 354 on-call days, each staffed by one intern and one senior
+    resident. Select a version below; within either calendar, select a resident to highlight their assignments and
+    review their individual workload summary.</p>
 
   <div class="cards">
     <a class="card opt" href="/optimized">
       <div class="top">Recommended · Version 2</div>
       <div class="body">
         <h2 class="serif">Full Rebuild</h2>
-        <p>The whole year re-derived for maximum fairness within every rule.</p>
+        <p>The complete schedule re-derived for an even distribution of on-call workload within the constraints of every rule.</p>
         <ul>
-          <li>Within each class, the on-call burden is as level as the rules allow</li>
-          <li>R3s off Sundays · R2s carry 7–8 Sundays · interns cover the winter holidays</li>
-          <li>Patel's extra early-year backup days preserved</li>
+          <li>On-call workload distributed as evenly as the rules permit</li>
+          <li>R3 residents are not assigned Sunday call; R2 residents carry 7–8 Sundays; interns cover the winter holidays</li>
+          <li>Resident Patel's additional early-year backup assignments are preserved</li>
         </ul>
-        <span class="go">Open the optimized calendar →</span>
+        <span class="go">Open the optimized schedule →</span>
       </div>
     </a>
     <a class="card min" href="/minimal">
       <div class="top">Version 1</div>
       <div class="body">
         <h2 class="serif">Minimal Repair</h2>
-        <p>Your original draft with only the rule violations fixed — nothing else moved.</p>
+        <p>The original draft with only the rule violations corrected; no other assignments were changed.</p>
         <ul>
-          <li>Each fix is a same-day-of-week swap</li>
-          <li>Every resident keeps their exact totals and day-mix</li>
-          <li>Smallest possible change to the draft</li>
+          <li>Each correction is a same-weekday substitution</li>
+          <li>Every resident retains their exact totals and day-of-week distribution</li>
+          <li>Minimal departure from the original draft</li>
         </ul>
-        <span class="go">Open the minimal-repair calendar →</span>
+        <span class="go">Open the minimal-repair schedule →</span>
       </div>
     </a>
   </div>
 
   <div class="legend">
-    <b>How to read it.</b> Each day shows the intern (top) and senior (bottom) on call. Inside either calendar,
-    selecting a resident highlights all their shifts and shows their day-of-week “fingerprint,” holidays, and how
-    their load compares within their class.
+    <b>Reading the calendar.</b> Each day lists the intern (top) and senior (bottom) on call. Within either calendar,
+    selecting a resident highlights their assignments and displays their distribution of shifts by day of week, their
+    holiday assignments, and their workload relative to others in their postgraduate class.
     <div class="keys">
       <span class="k"><span class="sw" style="background:#eef1fb;border-color:#2f49a8"></span>Intern (R1)</span>
       <span class="k"><span class="sw" style="background:#ecf4ee;border-color:#2f6d45"></span>Senior R2</span>
@@ -96,9 +94,10 @@ footer{margin-top:30px;padding-top:14px;border-top:1px solid var(--rule);color:v
   </div>
 
   <footer>
-    Built from a constraint-optimization model (Google OR-Tools CP-SAT): every rotation rule, PTO request, and holiday
-    rule enforced; the schedule then balanced for fairness. Both calendars are self-contained and print-ready.
-    <br>UnityPoint Health Family Medicine Residency · 2026–2027.
+    Generated from a constraint-optimization model (Google OR-Tools CP-SAT): every rotation restriction,
+    paid-time-off request, and holiday rule is enforced, with the schedule balanced for an equitable distribution of
+    workload. Both calendars are self-contained and print-ready.
+    <br>Family Medicine Residency · Academic Year 2026–2027 · Confidential.
   </footer>
 </div>
 </body>

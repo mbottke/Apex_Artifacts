@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" data-token-set="penguin-classic">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>UPH Family Medicine — 2026–2027 Resident Call Calendar</title>
 <style>
-:root[data-token-set="penguin-classic"]{
+:root{
   color-scheme:light;
   --font-sans:"Inter Tight","Inter",-apple-system,system-ui,sans-serif;
   --font-serif:"Fraunces","Source Serif Pro",Georgia,serif;
@@ -138,11 +138,11 @@ kbd{font-family:var(--font-mono);font-size:.7rem;background:var(--n-100);border:
 <div class="wrap">
   <header class="mast">
     <div class="eyebrow">UnityPoint Health · Family Medicine Residency · Academic Year 2026–2027</div>
-    <h1>The Resident Call Calendar, balanced to the day.</h1>
-    <p class="lede">Every one of the year's <b id="ndays">—</b> call days, one intern and one senior apiece —
-      optimized so that within each class the on-call burden is shared as evenly as the rotation rules allow.
-      <b>Select any resident</b> to light up their year and read their personal load; the bars show how level the
-      distribution is across the class.</p>
+    <h1>Resident On-Call Schedule</h1>
+    <p class="lede">The academic year comprises <b id="ndays">—</b> on-call days, each staffed by one intern and one
+      senior resident. Assignments are distributed so that, within each postgraduate class, the on-call workload is
+      shared as evenly as the rotation requirements permit. <b>Select a resident</b> to review their assignments and
+      individual workload summary.</p>
   </header>
 
   <div class="controls">
@@ -270,7 +270,7 @@ function fingerprint(byDowObj){
     return `<div class="b ${cls}" style="height:${h}px" title="${d}: ${v}"></div>`;}).join('');
   const vals=DOW.map(d=>`<span>${byDowObj[d]||0}</span>`).join('');
   const xs=DOW.map(d=>`<span>${d[0]}</span>`).join('');
-  return `<div class="fp"><div class="fp-title">Call fingerprint — shifts by weekday</div>
+  return `<div class="fp"><div class="fp-title">Shifts by day of week</div>
     <div class="fp-bars">${bars}</div><div class="fp-v">${vals}</div><div class="fp-x">${xs}</div></div>`;
 }
 function cohort(nm){const p=PGY[nm];return p==='R1'?INT:p==='R2'?R2:R3;}
@@ -287,22 +287,23 @@ function renderPanel(){
       <span class="val">${s.total} · ${s.avg}</span></div>`;}).join('');
   const hols=st.holidays.length?`<ul class="hols">${st.holidays.map(h=>
      `<li><span>${h.name}</span><span class="tag ${h.major?'M':'m'}">${h.major?'MAJOR':'minor'}</span></li>`).join('')}</ul>`
-     :`<p class="note">No holiday call this year.</p>`;
+     :`<p class="note">No holiday assignments this year.</p>`;
   P.innerHTML=`
     <h2>${fullname[sel]||sel}</h2>
-    <div class="sub">${PGY[sel]} · ${st.total} call shifts · avg inconvenience ${st.avg}
-      <span class="tag m" style="margin-left:4px">click another name to compare</span></div>
+    <div class="sub">${PGY[sel]} · ${st.total} call assignments · mean inconvenience ${st.avg}
+      <span class="tag m" style="margin-left:4px">Select another resident to compare</span></div>
     <div class="statbig">
-      <div><div class="v">${st.total}</div><div class="k">Total calls</div></div>
-      <div><div class="v">${(st.byDow.Fri||0)+(st.byDow.Sat||0)+(st.byDow.Sun||0)}</div><div class="k">Weekend (F/Sa/Su)</div></div>
+      <div><div class="v">${st.total}</div><div class="k">Total Calls</div></div>
+      <div><div class="v">${(st.byDow.Fri||0)+(st.byDow.Sat||0)+(st.byDow.Sun||0)}</div><div class="k">Weekend (Fri/Sat/Sun)</div></div>
       <div><div class="v">${st.byDow.Sat||0}</div><div class="k">Saturdays</div></div>
     </div>
     ${fingerprint(st.byDow)}
-    <div class="fp-title">Holiday call</div>${hols}
-    <div class="fp-title" style="margin-top:14px">${PGY[sel]} class — totals &amp; avg inconvenience</div>
+    <div class="fp-title">Holiday Assignments</div>${hols}
+    <div class="fp-title" style="margin-top:14px">${PGY[sel]} Class — Total Calls and Mean Inconvenience</div>
     <div class="eq">${eqRows}</div>
-    <p class="note">“Avg inconvenience” weights each call by day: Wed/Thu 1 · Mon/Tue 2 · Fri/Sun 3 · Sat 4.
-      Bars compare total call within the ${PGY[sel]} class — flatter is fairer.</p>`;
+    <p class="note">Mean inconvenience weights each call by day of week (Wed/Thu 1 · Mon/Tue 2 · Fri/Sun 3 · Sat 4).
+      The bars compare total call volume within the ${PGY[sel]} class; a more uniform distribution indicates a more
+      equitable allocation.</p>`;
 }
 function overviewHTML(){
   function block(label,names,pgyk){
@@ -313,26 +314,27 @@ function overviewHTML(){
         <span class="val">${s.total} · ${s.avg}</span></div>`;}).join('');
     return `<div class="ov-h">${label}</div>${rows}`;
   }
-  return `<h2>Class fairness at a glance</h2>
-    <div class="sub">Each bar is a resident's weighted on-call load (total calls · avg inconvenience). The more
-      level the bars within a class, the more evenly the burden is shared.</div>
-    <div class="hint">Tip: click any resident's name in the calendar, or a chip above, to highlight their entire year and see their personal load. Press <kbd>Esc</kbd> to clear.</div>
+  return `<h2>Workload Distribution by Class</h2>
+    <div class="sub">Each bar represents a resident's weighted on-call workload (total calls · mean inconvenience).
+      A more uniform set of bars within a class indicates a more even distribution of workload.</div>
+    <div class="hint">Select a resident — from the calendar or the controls above — to highlight their assignments and review their individual workload summary. Press <kbd>Esc</kbd> to clear the selection.</div>
     ${block('Interns — R1',INT,'R1')}${block('Seniors — R2',R2,'R2')}${block('Seniors — R3',R3,'R3')}
-    <p class="note" style="margin-top:14px">Each call day is staffed by <b>one intern + one senior</b>.
-    Interns carry night-float (weeknights, first half) plus weekend &amp; holiday 24-hour call; seniors carry daily
-    24-hour call with a post-call day. R3s take no Sunday senior call (one exception); R2s carry 7–8 Sundays each.</p>`;
+    <p class="note" style="margin-top:14px">Each call day is staffed by <b>one intern and one senior resident</b>.
+    Interns cover night float (weeknights during the first half of the year) and weekend and holiday 24-hour call;
+    seniors cover daily 24-hour call with a post-call day. R3 residents are not assigned Sunday senior call (with a
+    single exception); R2 residents carry seven to eight Sundays each.</p>`;
 }
 renderPanel();
 
 // ---------- footer / method ----------
 document.getElementById('foot').innerHTML=`
-  <b>How this calendar was built.</b> The assignment was solved as a constraint-optimization problem (CP-SAT):
-  every rotation rule, PTO request, and holiday rule is a hard constraint; within those, the solver minimizes the
-  inequality of each weekday's load across each class so the schedule is as fair as the rules permit. Night-float
-  weeknights are fixed by the rotation grid; no resident is on call on a no-call rotation, on a restricted day for
-  their rotation, during PTO, or on back-to-back days. <b>Version:</b> ${which}. ·
-  <span style="color:var(--n-400)">Design: penguin-classic tokens · select-to-ignite + weekday call-fingerprint ·
-  timetable-density tradition · single-file, offline, print-ready (⌘/Ctrl-P).</span>`;
+  <b>Methodology.</b> Assignments were generated by solving a constraint-optimization model (Google OR-Tools CP-SAT):
+  every rotation restriction, paid-time-off request, and holiday rule is enforced as a hard constraint, and within
+  those constraints the model minimizes the inequality of each weekday's workload across each class. Night-float
+  weeknights are fixed by the rotation schedule; no resident is assigned call during a no-call rotation, on a
+  restricted day for their rotation, during approved leave, or on consecutive days.
+  <b>Version:</b> ${which==='rebuilt'?'Full Rebuild (V2)':'Minimal Repair (V1)'}.
+  <span style="color:var(--n-400)">This calendar is self-contained and print-ready (Ctrl/Cmd-P).</span>`;
 </script>
 </body>
 </html>
