@@ -62,82 +62,97 @@ itot={i:m.NewIntVar(0,80,f'it_{i}') for i in INT}
 stot={s:m.NewIntVar(0,60,f'st_{s}') for s in SEN}
 for i in INT: m.Add(itot[i]==sum(xi[i,d] for d in days))
 for s in SEN: m.Add(stot[s]==sum(xs[s,d] for d in days))
-# balanced totals (interns avg 59, seniors avg 32.2)
+# balanced totals (interns avg ~59, seniors avg ~32)
 for i in INT: m.Add(itot[i]>=58); m.Add(itot[i]<=60)
-for s in SEN: m.Add(stot[s]>=31); m.Add(stot[s]<=33)
+for s in SEN: m.Add(stot[s]>=31); m.Add(stot[s]<=34)
 itot_max=m.NewIntVar(0,80,'itot_max'); itot_min=m.NewIntVar(0,80,'itot_min')
-stot_max=m.NewIntVar(0,60,'stot_max'); stot_min=m.NewIntVar(0,60,'stot_min')
 m.AddMaxEquality(itot_max,[itot[i] for i in INT]); m.AddMinEquality(itot_min,[itot[i] for i in INT])
-m.AddMaxEquality(stot_max,[stot[s] for s in SEN]); m.AddMinEquality(stot_min,[stot[s] for s in SEN])
+r2tot_mx=m.NewIntVar(0,60,'r2tot_mx'); r2tot_mn=m.NewIntVar(0,60,'r2tot_mn')
+r3tot_mx=m.NewIntVar(0,60,'r3tot_mx'); r3tot_mn=m.NewIntVar(0,60,'r3tot_mn')
+m.AddMaxEquality(r2tot_mx,[stot[s] for s in R2]); m.AddMinEquality(r2tot_mn,[stot[s] for s in R2])
+m.AddMaxEquality(r3tot_mx,[stot[s] for s in R3]); m.AddMinEquality(r3tot_mn,[stot[s] for s in R3])
+
 BYDOW={w:[d for d in days if dows[d]==w] for w in ['Mon','Tue','Wed','Thu','Fri','Sat','Sun']}
-def spread_vars(tag, group, daylist, hi=20):
+WEEKEND=BYDOW['Fri']+BYDOW['Sat']+BYDOW['Sun']
+def spread_vars(tag, group, daylist, hi=25):
     v={r:m.NewIntVar(0,hi,f'{tag}_{r}') for r in group}
     for r in group: m.Add(v[r]==sum((xi[r,d] if r in INT else xs[r,d]) for d in daylist))
     vmax=m.NewIntVar(0,hi,f'{tag}_max'); vmin=m.NewIntVar(0,hi,f'{tag}_min')
     m.AddMaxEquality(vmax,[v[r] for r in group]); m.AddMinEquality(vmin,[v[r] for r in group])
-    return vmax,vmin
-# Even distribution of EVERY day-type across ALL seniors (pure fairness) and across all interns.
-sen_dow_terms=[]; int_dow_terms=[]
-for w in ['Mon','Tue','Wed','Thu','Fri','Sat','Sun']:
-    smx,smn=spread_vars(f'sdow_{w}',SEN,BYDOW[w]); sen_dow_terms.append((w,smx-smn))
-    imx,imn=spread_vars(f'idow_{w}',INT,BYDOW[w]); int_dow_terms.append((w,imx-imn))
-# weight bad days (Sat/Fri/Sun) heaviest, then Mon/Tue, then Wed/Thu
+    return v,vmax,vmin
+
+# ===== HARD RULES (program structure) =====
+# R3 take NO Sunday call (single Lux-style exception permitted)
+m.Add(sum(xs[s,d] for s in R3 for d in BYDOW['Sun'])<=1)
+# R2: 7-8 Sunday calls each; 14-16 weekend (Fri+Sat+Sun) calls each
+for s in R2:
+    m.Add(sum(xs[s,d] for d in BYDOW['Sun'])>=7); m.Add(sum(xs[s,d] for d in BYDOW['Sun'])<=8)
+    m.Add(sum(xs[s,d] for d in WEEKEND)>=14);     m.Add(sum(xs[s,d] for d in WEEKEND)<=16)
+# Hard fairness BANDS on every bad day-type (forces even spread; objective then fine-tunes weekdays)
+def band(group, daylist, lo, hi):
+    for r in group:
+        e=sum((xi[r,d] if r in INT else xs[r,d]) for d in daylist)
+        m.Add(e>=lo); m.Add(e<=hi)
+band(INT, BYDOW['Sat'], 8, 9); band(INT, BYDOW['Sun'], 8, 9); band(INT, BYDOW['Fri'], 8, 9)
+band(R2,  BYDOW['Sat'], 4, 5); band(R2,  BYDOW['Fri'], 3, 5)
+band(R3,  BYDOW['Sat'], 4, 6); band(R3,  BYDOW['Fri'], 7, 9)
+
+# ===== fairness WITHIN each cohort: balance every day-type =====
 DOWW={'Sat':10,'Fri':8,'Sun':8,'Mon':5,'Tue':5,'Wed':4,'Thu':4}
-sat_terms=[t for w,t in sen_dow_terms if w=='Sat']  # for reporting parity
+bal_terms=[]
+for w in ['Mon','Tue','Wed','Thu','Fri','Sat','Sun']:
+    _,imx,imn=spread_vars(f'idow_{w}',INT,BYDOW[w]); bal_terms.append(DOWW[w]*(imx-imn))
+    _,r2mx,r2mn=spread_vars(f'r2dow_{w}',R2,BYDOW[w]); bal_terms.append(DOWW[w]*(r2mx-r2mn))
+    if w!='Sun':  # R3 Sundays fixed near 0 by rule
+        _,r3mx,r3mn=spread_vars(f'r3dow_{w}',R3,BYDOW[w]); bal_terms.append(DOWW[w]*(r3mx-r3mn))
 
-# ---- Saturday balance ----
-isat={i:m.NewIntVar(0,20,f'isat_{i}') for i in INT}
-ssat={s:m.NewIntVar(0,20,f'ssat_{s}') for s in SEN}
-for i in INT: m.Add(isat[i]==sum(xi[i,d] for d in SAT))
-for s in SEN: m.Add(ssat[s]==sum(xs[s,d] for d in SAT))
-isat_max=m.NewIntVar(0,20,'isat_max'); isat_min=m.NewIntVar(0,20,'isat_min')
+# Saturday vars (all seniors / interns) for reporting
+ssat={s:m.NewIntVar(0,20,f'ssat_{s}') for s in SEN}; isat={i:m.NewIntVar(0,20,f'isat_{i}') for i in INT}
+for s in SEN: m.Add(ssat[s]==sum(xs[s,d] for d in BYDOW['Sat']))
+for i in INT: m.Add(isat[i]==sum(xi[i,d] for d in BYDOW['Sat']))
 ssat_max=m.NewIntVar(0,20,'ssat_max'); ssat_min=m.NewIntVar(0,20,'ssat_min')
-m.AddMaxEquality(isat_max,[isat[i] for i in INT]); m.AddMinEquality(isat_min,[isat[i] for i in INT])
+isat_max=m.NewIntVar(0,20,'isat_max'); isat_min=m.NewIntVar(0,20,'isat_min')
 m.AddMaxEquality(ssat_max,[ssat[s] for s in SEN]); m.AddMinEquality(ssat_min,[ssat[s] for s in SEN])
+m.AddMaxEquality(isat_max,[isat[i] for i in INT]); m.AddMinEquality(isat_min,[isat[i] for i in INT])
 
-# ---- weighted load balance ----
-iwl={i:m.NewIntVar(0,400,f'iwl_{i}') for i in INT}
-swl={s:m.NewIntVar(0,400,f'swl_{s}') for s in SEN}
+# ---- weighted load (balance within cohort) ----
+iwl={i:m.NewIntVar(0,400,f'iwl_{i}') for i in INT}; swl={s:m.NewIntVar(0,400,f'swl_{s}') for s in SEN}
 for i in INT: m.Add(iwl[i]==sum(WT[dows[d]]*xi[i,d] for d in days))
 for s in SEN: m.Add(swl[s]==sum(WT[dows[d]]*xs[s,d] for d in days))
 iwl_max=m.NewIntVar(0,400,'iwl_max'); iwl_min=m.NewIntVar(0,400,'iwl_min')
-swl_max=m.NewIntVar(0,400,'swl_max'); swl_min=m.NewIntVar(0,400,'swl_min')
 m.AddMaxEquality(iwl_max,[iwl[i] for i in INT]); m.AddMinEquality(iwl_min,[iwl[i] for i in INT])
+r2wl_mx=m.NewIntVar(0,400,'r2wl_mx'); r2wl_mn=m.NewIntVar(0,400,'r2wl_mn')
+r3wl_mx=m.NewIntVar(0,400,'r3wl_mx'); r3wl_mn=m.NewIntVar(0,400,'r3wl_mn')
+m.AddMaxEquality(r2wl_mx,[swl[s] for s in R2]); m.AddMinEquality(r2wl_mn,[swl[s] for s in R2])
+m.AddMaxEquality(r3wl_mx,[swl[s] for s in R3]); m.AddMinEquality(r3wl_mn,[swl[s] for s in R3])
+swl_max=m.NewIntVar(0,400,'swl_max'); swl_min=m.NewIntVar(0,400,'swl_min')
 m.AddMaxEquality(swl_max,[swl[s] for s in SEN]); m.AddMinEquality(swl_min,[swl[s] for s in SEN])
 
 # ---- holidays ----
-# seniors: holiday weight (major2/minor1) <=2 each
-for s in SEN:
-    m.Add(sum((2 if HOL[h]=='MAJOR' else 1)*xs[s,h] for h in HOL)<=2)
-# interns: <=3 holidays each; special-4 (Jul4/Labor/Easter/Memorial) on distinct interns;
-# winter majors (Thanksgiving/Christmas/New Year's) on distinct interns
 WINTER_MAJ=['2026-11-26','2026-12-25','2027-01-01']
 ihol={i:m.NewIntVar(0,6,f'ihol_{i}') for i in INT}
 for i in INT:
-    m.Add(ihol[i]==sum(xi[i,h] for h in HOL))
-    m.Add(ihol[i]<=3)
+    m.Add(ihol[i]==sum(xi[i,h] for h in HOL)); m.Add(ihol[i]<=3)
     m.Add(sum(xi[i,h] for h in SPECIAL)<=1)
     m.Add(sum(xi[i,h] for h in WINTER_MAJ)<=1)
 ihol_max=m.NewIntVar(0,6,'ihol_max'); ihol_min=m.NewIntVar(0,6,'ihol_min')
 m.AddMaxEquality(ihol_max,[ihol[i] for i in INT]); m.AddMinEquality(ihol_min,[ihol[i] for i in INT])
-# seniors: holiday weight balance (spread, not just <=2)
 shol={s:m.NewIntVar(0,4,f'shol_{s}') for s in SEN}
-for s in SEN: m.Add(shol[s]==sum((2 if HOL[h]=='MAJOR' else 1)*xs[s,h] for h in HOL))
-shol_max=m.NewIntVar(0,4,'shol_max')
-m.AddMaxEquality(shol_max,[shol[s] for s in SEN])
+for s in SEN: m.Add(shol[s]==sum((2 if HOL[h]=='MAJOR' else 1)*xs[s,h] for h in HOL)); m.Add(shol[s]<=2)
+shol_max=m.NewIntVar(0,4,'shol_max'); m.AddMaxEquality(shol_max,[shol[s] for s in SEN])
 
 # ---- objective ----
 obj = 1000*sum(softpen) \
-    + 15*(stot_max-stot_min) + 15*(itot_max-itot_min) \
-    + 10*(swl_max-swl_min) + 10*(iwl_max-iwl_min) \
-    + sum(DOWW[w]*t for w,t in sen_dow_terms) \
-    + sum(DOWW[w]*t for w,t in int_dow_terms) \
+    + 12*(itot_max-itot_min) + 15*(r2tot_mx-r2tot_mn) + 15*(r3tot_mx-r3tot_mn) \
+    + 10*(iwl_max-iwl_min) + 10*(r2wl_mx-r2wl_mn) + 10*(r3wl_mx-r3wl_mn) \
+    + sum(bal_terms) \
     + 10*(ihol_max-ihol_min) + 6*shol_max
 m.Minimize(obj)
 
 solver=cp_model.CpSolver()
-solver.parameters.max_time_in_seconds=120
+solver.parameters.max_time_in_seconds=240
 solver.parameters.num_search_workers=8
+solver.parameters.relative_gap_limit=0.02
 res=solver.Solve(m)
 print("solver status:", solver.StatusName(res))
 if res not in (cp_model.OPTIMAL, cp_model.FEASIBLE):
