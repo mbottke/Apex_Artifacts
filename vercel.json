@@ -1,0 +1,11 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/optimized", "destination": "/deliverables/26-27_Call_Calendar_apex_v2_rebuild.html" },
+    { "source": "/minimal", "destination": "/deliverables/26-27_Call_Calendar_apex_v1_repair.html" }
+  ],
+  "headers": [
+    { "source": "/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=3600" }] }
+  ]
+}
