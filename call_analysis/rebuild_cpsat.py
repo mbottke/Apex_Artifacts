@@ -22,10 +22,21 @@ m=cp_model.CpModel()
 xi={(i,d):m.NewBoolVar(f'i_{i}_{d}') for i in INT for d in days}
 xs={(s,d):m.NewBoolVar(f's_{s}_{d}') for s in SEN for d in days}
 
-# coverage: exactly 1 intern + 1 senior per day
+# ---- Patel's preserved "extra" 2nd-senior days (early-year backup volume) ----
+PATEL='Patel'
+EXTRA_FIX=['2026-07-15','2026-07-24','2026-07-28','2026-08-05','2026-08-15',
+           '2026-08-24','2026-08-29','2026-09-01','2026-09-16','2026-09-21']  # 10 valid originals
+# original 9/10 (Nexplanon) & 9/27 (GYN/CM-Sun) break hard rules -> relocate to 2 eligible Jul-Sep weekdays
+EXTRA_CAND=[d for d in days if '2026-07-01'<=d<='2026-09-30' and dows[d] in ('Mon','Tue','Wed','Thu')
+            and elig_hard[PATEL][d] and d not in EXTRA_FIX and d!='2026-08-20']
+extra={d:(1 if d in EXTRA_FIX else (m.NewBoolVar(f'ex_{d}') if d in EXTRA_CAND else 0)) for d in days}
+m.Add(sum(extra[d] for d in EXTRA_CAND)==2)
+# coverage: exactly 1 intern always; seniors = 1 + extra (=2 on Patel's 12 extra days)
 for d in days:
     m.Add(sum(xi[i,d] for i in INT)==1)
-    m.Add(sum(xs[s,d] for s in SEN)==1)
+    m.Add(sum(xs[s,d] for s in SEN)==1+extra[d])
+    if d in EXTRA_FIX: m.Add(xs[PATEL,d]==1)            # Patel preserved on the 10 originals
+    elif d in EXTRA_CAND: m.Add(xs[PATEL,d]>=extra[d])  # Patel IS the extra on any relocated day
 
 # eligibility (hard) -> forbid
 for d in days:
@@ -62,14 +73,18 @@ itot={i:m.NewIntVar(0,80,f'it_{i}') for i in INT}
 stot={s:m.NewIntVar(0,60,f'st_{s}') for s in SEN}
 for i in INT: m.Add(itot[i]==sum(xi[i,d] for d in days))
 for s in SEN: m.Add(stot[s]==sum(xs[s,d] for d in days))
-# balanced totals (interns avg ~59, seniors avg ~32)
+R2_CORE=[s for s in R2 if s!=PATEL]
+REG=R2_CORE+R3  # the 10 "regular" (non-Patel) seniors — also balanced ACROSS cohorts to avoid lopsided splits
+# balanced totals (interns ~59; non-Patel seniors ~33; Patel ~35 incl. his 12 preserved extra days)
 for i in INT: m.Add(itot[i]>=58); m.Add(itot[i]<=60)
-for s in SEN: m.Add(stot[s]>=31); m.Add(stot[s]<=34)
+for s in SEN:
+    if s==PATEL: m.Add(stot[s]>=35); m.Add(stot[s]<=36)  # elevated volume (preserve Patel's extra ~35-36)
+    else: m.Add(stot[s]>=32); m.Add(stot[s]<=34)
 itot_max=m.NewIntVar(0,80,'itot_max'); itot_min=m.NewIntVar(0,80,'itot_min')
 m.AddMaxEquality(itot_max,[itot[i] for i in INT]); m.AddMinEquality(itot_min,[itot[i] for i in INT])
 r2tot_mx=m.NewIntVar(0,60,'r2tot_mx'); r2tot_mn=m.NewIntVar(0,60,'r2tot_mn')
 r3tot_mx=m.NewIntVar(0,60,'r3tot_mx'); r3tot_mn=m.NewIntVar(0,60,'r3tot_mn')
-m.AddMaxEquality(r2tot_mx,[stot[s] for s in R2]); m.AddMinEquality(r2tot_mn,[stot[s] for s in R2])
+m.AddMaxEquality(r2tot_mx,[stot[s] for s in R2_CORE]); m.AddMinEquality(r2tot_mn,[stot[s] for s in R2_CORE])
 m.AddMaxEquality(r3tot_mx,[stot[s] for s in R3]); m.AddMinEquality(r3tot_mn,[stot[s] for s in R3])
 
 BYDOW={w:[d for d in days if dows[d]==w] for w in ['Mon','Tue','Wed','Thu','Fri','Sat','Sun']}
@@ -94,17 +109,19 @@ def band(group, daylist, lo, hi):
         e=sum((xi[r,d] if r in INT else xs[r,d]) for d in daylist)
         m.Add(e>=lo); m.Add(e<=hi)
 band(INT, BYDOW['Sat'], 8, 9); band(INT, BYDOW['Sun'], 8, 9); band(INT, BYDOW['Fri'], 8, 9)
-band(R2,  BYDOW['Sat'], 4, 5); band(R2,  BYDOW['Fri'], 3, 5)
-band(R3,  BYDOW['Sat'], 4, 6); band(R3,  BYDOW['Fri'], 7, 9)
+band(R2_CORE, BYDOW['Sat'], 4, 5); band(R2_CORE, BYDOW['Fri'], 3, 5)   # Patel excluded (carries extra)
+band(R3,  BYDOW['Sat'], 4, 5); band(R3,  BYDOW['Fri'], 7, 9)
 
 # ===== fairness WITHIN each cohort: balance every day-type =====
 DOWW={'Sat':10,'Fri':8,'Sun':8,'Mon':5,'Tue':5,'Wed':4,'Thu':4}
 bal_terms=[]
 for w in ['Mon','Tue','Wed','Thu','Fri','Sat','Sun']:
     _,imx,imn=spread_vars(f'idow_{w}',INT,BYDOW[w]); bal_terms.append(DOWW[w]*(imx-imn))
-    _,r2mx,r2mn=spread_vars(f'r2dow_{w}',R2,BYDOW[w]); bal_terms.append(DOWW[w]*(r2mx-r2mn))
+    _,r2mx,r2mn=spread_vars(f'r2dow_{w}',R2_CORE,BYDOW[w]); bal_terms.append(DOWW[w]*(r2mx-r2mn))
     if w!='Sun':  # R3 Sundays fixed near 0 by rule
         _,r3mx,r3mn=spread_vars(f'r3dow_{w}',R3,BYDOW[w]); bal_terms.append(DOWW[w]*(r3mx-r3mn))
+    if w in ('Mon','Tue','Wed','Thu','Sat'):  # balance these EVENLY across ALL seniors (incl Patel -> smooth, no dumping)
+        _,rgmx,rgmn=spread_vars(f'sendow_{w}',SEN,BYDOW[w]); bal_terms.append(2*DOWW[w]*(rgmx-rgmn))
 
 # Saturday vars (all seniors / interns) for reporting
 ssat={s:m.NewIntVar(0,20,f'ssat_{s}') for s in SEN}; isat={i:m.NewIntVar(0,20,f'isat_{i}') for i in INT}
@@ -123,10 +140,13 @@ iwl_max=m.NewIntVar(0,400,'iwl_max'); iwl_min=m.NewIntVar(0,400,'iwl_min')
 m.AddMaxEquality(iwl_max,[iwl[i] for i in INT]); m.AddMinEquality(iwl_min,[iwl[i] for i in INT])
 r2wl_mx=m.NewIntVar(0,400,'r2wl_mx'); r2wl_mn=m.NewIntVar(0,400,'r2wl_mn')
 r3wl_mx=m.NewIntVar(0,400,'r3wl_mx'); r3wl_mn=m.NewIntVar(0,400,'r3wl_mn')
-m.AddMaxEquality(r2wl_mx,[swl[s] for s in R2]); m.AddMinEquality(r2wl_mn,[swl[s] for s in R2])
+m.AddMaxEquality(r2wl_mx,[swl[s] for s in R2_CORE]); m.AddMinEquality(r2wl_mn,[swl[s] for s in R2_CORE])
 m.AddMaxEquality(r3wl_mx,[swl[s] for s in R3]); m.AddMinEquality(r3wl_mn,[swl[s] for s in R3])
 swl_max=m.NewIntVar(0,400,'swl_max'); swl_min=m.NewIntVar(0,400,'swl_min')
 m.AddMaxEquality(swl_max,[swl[s] for s in SEN]); m.AddMinEquality(swl_min,[swl[s] for s in SEN])
+# pull the 10 regular seniors' TOTAL weighted load together (Patel excluded -> free to stay elevated)
+regwl_mx=m.NewIntVar(0,400,'regwl_mx'); regwl_mn=m.NewIntVar(0,400,'regwl_mn')
+m.AddMaxEquality(regwl_mx,[swl[s] for s in REG]); m.AddMinEquality(regwl_mn,[swl[s] for s in REG])
 
 # ---- holidays ----
 WINTER_MAJ=['2026-11-26','2026-12-25','2027-01-01']
@@ -145,6 +165,7 @@ shol_max=m.NewIntVar(0,4,'shol_max'); m.AddMaxEquality(shol_max,[shol[s] for s i
 obj = 1000*sum(softpen) \
     + 12*(itot_max-itot_min) + 15*(r2tot_mx-r2tot_mn) + 15*(r3tot_mx-r3tot_mn) \
     + 10*(iwl_max-iwl_min) + 10*(r2wl_mx-r2wl_mn) + 10*(r3wl_mx-r3wl_mn) \
+    + 9*(regwl_mx-regwl_mn) \
     + sum(bal_terms) \
     + 10*(ihol_max-ihol_min) + 6*shol_max
 m.Minimize(obj)
@@ -167,5 +188,9 @@ for d in days:
     ints=[i for i in INT if solver.Value(xi[i,d])]
     srs=[s for s in SEN if solver.Value(xs[s,d])]
     sched[d]={'interns':ints,'seniors':srs,'dow':dows[d],'line1':'/'.join(ints),'line2':'/'.join(srs)}
+two_sen=[d for d in days if len(sched[d]['seniors'])==2]
+reloc=[d for d in EXTRA_CAND if solver.Value(extra[d])==1]
+print(f"Patel total={sum(solver.Value(xs[PATEL,d]) for d in days)} | 2-senior days={len(two_sen)} | "
+      f"relocations(for 9/10 & 9/27)={reloc}")
 json.dump({'sched':sched,'changes':[]},open('/home/user/Apex_Artifacts/call_analysis/rebuilt.json','w'),indent=1)
 print("saved rebuilt.json; days:",len(sched))

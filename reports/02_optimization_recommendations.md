@@ -89,27 +89,33 @@ Lower spread = fairer. "Δ" is the gap between the most- and least-burdened resi
 | Back-to-back call (no post-call) | 4 | **0** |
 | Interns covering Christmas / NYE / NYD | none | **all three (3 different interns)** |
 | "Mix-up" holidays on distinct interns | no (Oehm ×2) | **yes — 4 distinct** |
-| R2 weighted-load spread | 74–80 (Δ6) | **75–75 (Δ0)** |
-| R2 Saturdays | 4–7 (Δ3) | **5–5 (Δ0)** |
-| R3 weighted-load spread | 71–80 (Δ9) | **71–71 (Δ0)** |
-| R3 Saturdays | 4–6 (Δ2) | **4–4 (Δ0)** |
+| R2 weighted-load spread (excl. Patel) | 74–80 (Δ6) | **75–75 (Δ0)** |
+| R2 Saturdays (excl. Patel) | 4–7 (Δ3) | **4–5 (Δ1)** |
+| R3 weighted-load spread | 71–80 (Δ9) | **75–75 (Δ0)** |
+| R3 Saturdays | 4–6 (Δ2) | **5–5 (Δ0)** |
 | Intern totals | 55–58 (Δ3) | **59–59 (Δ0)** |
+| R3 Sunday calls (rule) | Lux 1 | **0** |
+| Patel (preserved outlier) | 35 | **36 (12 backup days)** |
 | Senior holiday weight cap respected | no (Beutel 3 minor) | **yes (≤ one major / two minor each)** |
 
-In the rebuild, **all seven R2s share an identical day-of-week mix** (4 Mon · 4 Tue · 5 Wed · 4 Thu ·
-3 Fri · 5 Sat · 7 Sun = 32 calls, weighted load 75 each); the four R3s are within one shift of each
-other on every metric (weighted load 71 each). The small R2-vs-R3 weighted-load difference (75 vs 71)
-is the unavoidable consequence of the R3-no-Sunday rule — R3s never take the weight-3 Sunday, so their
-load is slightly lighter, by rule.
+In the rebuild the six non-Patel R2s share a near-identical mix (32–33 calls, **weighted load 75 each**)
+and the four R3s are **identical** (34 calls, weighted load 75 each) — so R2 and R3 now carry the *same*
+weighted load, with per-call inconvenience averages of 2.27–2.34 (R2) and 2.21 (R3). Patel is the single
+intentional outlier (36 calls, his 12 preserved backup days). No R3 works a Sunday at all (the rule's
+ideal), and the heaviest-loaded R3 (Mautino, formerly 9 Fridays + 6 Saturdays) is now level with peers.
 
-### C.4 Deliberate structural decisions (please confirm)
+### C.4 Deliberate structural decisions
 1. **Winter intern coverage (12/20–1/2).** Interns are added to the holiday block so Christmas / New
    Year's have intern call, per the rule "interns schedule Thanksgiving, Christmas and New Years" and
    your note that interns work that period. (Preliminary had seniors covering solo.)
-2. **Uniform one-intern-+-one-senior coverage.** The preliminary's 12 "second-senior" days (all Patel,
-   Jul–Sep) and the missing 8/20 night-float intern are normalized to the standard 1+1. This is why
-   Patel's total drops from 35 toward the class average. *If Patel's extra early-year volume is
-   intentional, say so and I'll preserve it.*
+2. **Patel's extra days are PRESERVED.** Patel keeps his 12 early-year "second-senior" backup days and
+   his elevated total (35–36 vs the class's 33), reflecting his off-cycle volume. Ten of the twelve
+   original dates are kept exactly; the two that were themselves rule violations — **9/10 (Nexplanon
+   "do-not-schedule")** and **9/27 (GYN/CM Sunday)** — are relocated to two other Patel-eligible
+   July–September weekdays. Every other senior remains at the standard one-senior-per-day, so Patel is
+   the single intentional outlier; the partner on each of his backup days is rotated across the class.
+3. **8/20 night-float intern restored.** The preliminary's missing intern on 8/20 (Hanna Hard's NF
+   block) is filled.
 
 ---
 
@@ -133,7 +139,20 @@ load is slightly lighter, by rule.
   day-mix identical (tightest possible balance), but it breaks the R3-no-Sunday rule, so it was not used.
 - **Preserve the R2-Sunday / R3-Friday split (adopted).** Slightly less uniform across classes but
   faithful to program structure; this is the Version 2 you have.
-- **Keep the preliminary's exact coverage (no winter interns, keep Patel's extra days).** Available on
-  request as a variant of Version 2 if the structural decisions in C.4 should be reverted.
 - **Minimal vs full.** Version 1 if you want the smallest change that is rule-clean; Version 2 if you
   want the fairest calendar.
+
+---
+
+## F. Workbook tracking tables (both Excel versions)
+
+Both workbooks keep the program's original **live formulas** — the monthly per-resident `COUNTIF`
+totals (cols AH–AO), the **"Day of Weeks Tracking"** tables (M/T · W/TH · F · Sun · Sat) on every
+month tab, and the **YTD** tab's cross-month `SUM` rollups. None of these were replaced with static
+numbers; the formulas are intact and will recompute if you edit any cell.
+
+Because the schedule cells changed, every formula's cached result was **recomputed and written back**,
+so the tables show correct numbers immediately (no "open and recalc" needed). The recomputed values
+were then **verified cell-by-cell against the solved schedule**: all 17 residents' YTD totals and all
+five day-of-week groups match exactly, on every month tab and on the YTD tab. (The workbook is also
+flagged to fully recalculate on open, so Excel will confirm the same numbers.)
