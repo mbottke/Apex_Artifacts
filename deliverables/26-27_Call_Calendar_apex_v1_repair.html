@@ -7,16 +7,17 @@
 <style>
 :root{
   color-scheme:light;
-  --font-sans:"Inter Tight","Inter",-apple-system,system-ui,sans-serif;
-  --font-serif:"Fraunces","Source Serif Pro",Georgia,serif;
-  --font-mono:"JetBrains Mono","IBM Plex Mono",ui-monospace,monospace;
-  --n-50:oklch(96% .020 85);--n-100:oklch(93% .022 85);--n-200:oklch(88% .020 80);
-  --n-300:oklch(78% .018 75);--n-400:oklch(60% .014 70);--n-500:oklch(45% .012 65);
-  --n-600:oklch(32% .010 60);--n-700:oklch(20% .008 50);--n-800:oklch(14% .006 50);--n-900:oklch(8% .004 50);
-  --r1:oklch(45% .14 250);--r1-soft:oklch(95% .03 250);
-  --r2:oklch(48% .12 150);--r2-soft:oklch(95% .035 150);
-  --r3:oklch(52% .15 40);--r3-soft:oklch(95% .04 50);
-  --accent:oklch(48% .18 40);--gold:oklch(70% .14 75);
+  --font-sans:-apple-system,"Segoe UI",Roboto,"Liberation Sans",Arial,sans-serif;
+  --font-serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Liberation Serif",serif;
+  --font-mono:"DejaVu Sans Mono","JetBrains Mono","IBM Plex Mono",ui-monospace,monospace;
+  --paper:#ffffff;
+  --n-50:#f8f4ec;--n-100:#f1ece0;--n-200:#e2dccd;
+  --n-300:#cfc7b4;--n-400:#a59c89;--n-500:#7c776e;
+  --n-600:#5c574f;--n-700:#352f28;--n-800:#1c1b19;--n-900:#0e0d0c;
+  --r1:#2f49a8;--r1-soft:#eef1fb;
+  --r2:#2f6d45;--r2-soft:#ecf4ee;
+  --r3:#a8521f;--r3-soft:#f8efe6;
+  --accent:#243a8f;--accent2:#9d3611;--gold:#caa53b;
   --s-1:.25rem;--s-2:.5rem;--s-3:.75rem;--s-4:1rem;--s-6:1.5rem;--s-8:2rem;
   --r-sm:5px;--r-md:9px;--r-lg:16px;
   --sh-sm:0 1px 2px rgb(15 23 42/.05),0 1px 3px rgb(15 23 42/.07);
@@ -24,8 +25,9 @@
   --sh-lg:0 16px 40px rgb(15 23 42/.10),0 4px 10px rgb(15 23 42/.08);
 }
 *{box-sizing:border-box}
+[hidden]{display:none!important}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--n-50);color:var(--n-800);
+body{margin:0;background:var(--paper);color:var(--n-800);
   font-family:var(--font-sans);font-size:15px;line-height:1.5;-webkit-font-smoothing:antialiased}
 h1,h2,h3{font-family:var(--font-serif);font-weight:600;letter-spacing:-.01em;margin:0}
 .wrap{max-width:1320px;margin:0 auto;padding:var(--s-6) var(--s-6) var(--s-8)}
@@ -36,7 +38,7 @@ h1,h2,h3{font-family:var(--font-serif);font-weight:600;letter-spacing:-.01em;mar
 .lede{color:var(--n-600);max-width:62ch;font-size:1rem}
 .lede b{color:var(--n-800);font-weight:600}
 /* ---- controls ---- */
-.controls{position:sticky;top:0;z-index:20;background:color-mix(in oklab,var(--n-50) 88%,transparent);
+.controls{position:sticky;top:0;z-index:20;background:color-mix(in oklab,var(--paper) 90%,transparent);
   backdrop-filter:blur(8px);padding:var(--s-3) 0;margin-bottom:var(--s-4);border-bottom:1px solid var(--n-200)}
 .ctl-row{display:flex;flex-wrap:wrap;gap:var(--s-2) var(--s-4);align-items:center}
 .ctl-label{font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--n-500);margin-right:var(--s-1)}
@@ -81,6 +83,26 @@ h1,h2,h3{font-family:var(--font-serif);font-weight:600;letter-spacing:-.01em;mar
 .nm.s2{color:var(--r2);background:var(--r2-soft)}
 .nm.s3{color:var(--r3);background:var(--r3-soft)}
 .nm:focus-visible{outline:2px solid var(--accent);outline-offset:1px;border-radius:3px}
+/* ---- view toggle + single-month view ---- */
+.viewtoggle{display:inline-flex;border:1px solid var(--n-300);border-radius:999px;overflow:hidden;background:#fff}
+.vt{font:inherit;font-size:.8rem;font-weight:600;border:0;background:transparent;color:var(--n-600);padding:5px 15px;cursor:pointer}
+.vt[aria-selected="true"]{background:var(--accent);color:#fff}
+.vt:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.monthnav{display:inline-flex;align-items:center;gap:6px}
+.navbtn{font:inherit;font-size:1.05rem;line-height:1;border:1px solid var(--n-300);background:#fff;color:var(--n-700);
+  width:30px;height:30px;border-radius:7px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center}
+.navbtn.txt{width:auto;padding:0 11px;font-size:.76rem;font-weight:600}
+.navbtn:hover{border-color:var(--n-500)} .navbtn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.mv-label{font-family:var(--font-serif);font-weight:600;font-size:1.08rem;min-width:9.5em;text-align:center}
+#monthview .bigmonth{background:#fff;border:1px solid var(--n-200);border-radius:var(--r-md);box-shadow:var(--sh-sm);padding:6px 8px 10px;max-width:940px}
+.dow-head.big{grid-template-columns:repeat(7,minmax(0,1fr));gap:4px;font-size:.72rem;padding:7px 4px 5px;font-weight:700}
+.days.big{grid-template-columns:repeat(7,minmax(0,1fr));gap:4px;padding:0 4px 4px}
+.days.big .cell{min-height:98px;padding:5px 6px;font-size:.78rem;border-radius:7px}
+.days.big .cell .num{font-size:.78rem}
+.days.big .hname{display:block;font-size:.58rem;font-weight:700;color:var(--accent2);margin-top:1px;
+  text-transform:uppercase;letter-spacing:.03em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.days.big .nm{font-size:.84rem;line-height:1.45;padding:2px 7px;margin-top:4px}
+.days.big .nm .roletag{font-size:.58rem;font-weight:800;opacity:.7;margin-right:5px;font-family:var(--font-mono)}
 /* selection highlight */
 body.has-sel .nm{opacity:.3;filter:saturate(.55)}
 body.has-sel .nm.hit{opacity:1;filter:none;outline:2px solid var(--ring);outline-offset:0;font-weight:700}
@@ -148,6 +170,18 @@ kbd{font-family:var(--font-mono);font-size:.7rem;background:var(--n-100);border:
 
   <div class="controls">
     <div class="ctl-row" style="margin-bottom:8px">
+      <div class="viewtoggle" role="tablist" aria-label="Calendar view">
+        <button id="vt-year" class="vt" role="tab" aria-selected="true">Year</button>
+        <button id="vt-month" class="vt" role="tab" aria-selected="false">Month</button>
+      </div>
+      <div class="monthnav" id="monthnav" hidden>
+        <button id="mv-prev" class="navbtn" aria-label="Previous month">‹</button>
+        <span class="mv-label" id="mv-label">—</span>
+        <button id="mv-next" class="navbtn" aria-label="Next month">›</button>
+        <button id="mv-start" class="navbtn txt" title="Jump to the first month of the year">Start</button>
+      </div>
+    </div>
+    <div class="ctl-row" style="margin-bottom:8px">
       <span class="ctl-label">Class</span>
       <div class="chips" id="pgychips"></div>
       <span class="ctl-label" style="margin-left:8px">Resident</span>
@@ -166,7 +200,15 @@ kbd{font-family:var(--font-mono);font-size:.7rem;background:var(--n-100);border:
   </div>
 
   <div class="grid-main">
-    <main class="months" id="months" aria-label="Month-by-month call calendar"></main>
+    <main class="viewarea" aria-label="Call calendar">
+      <div class="months" id="months" aria-label="Year overview"></div>
+      <section id="monthview" hidden aria-label="Single month">
+        <div class="bigmonth">
+          <div class="dow-head big" id="mv-dow"></div>
+          <div class="days big" id="monthgrid"></div>
+        </div>
+      </section>
+    </main>
     <aside class="panel" id="panel" aria-live="polite"></aside>
   </div>
 
@@ -244,22 +286,78 @@ buildResChips();
 document.getElementById('clearbtn').onclick=()=>select(null);
 
 // ---------- selection ----------
+function applyHighlight(){
+  document.querySelectorAll('.nm').forEach(el=>el.classList.toggle('hit',!!sel&&el.dataset.nm===sel));
+  document.querySelectorAll('.cell').forEach(c=>c.classList.toggle('cellhit',!!sel&&!!c.querySelector('.nm.hit')));
+}
 function select(nm){
   sel=nm;document.body.classList.toggle('has-sel',!!nm);
   document.getElementById('clearbtn').hidden=!nm;
   if(nm)document.body.style.setProperty('--ring',RING[PGY[nm]]);
-  document.querySelectorAll('.nm').forEach(el=>el.classList.toggle('hit',!!nm&&el.dataset.nm===nm));
-  // highlight the containing day cell in JS (robust fallback for browsers without :has())
-  document.querySelectorAll('.cell').forEach(c=>c.classList.toggle('cellhit',!!nm&&!!c.querySelector('.nm.hit')));
+  applyHighlight();
   [...resc.children].forEach(c=>c.setAttribute('aria-pressed',c.dataset.nm===nm));
-  renderPanel();
+  renderPanel(); updateHash();
 }
-document.getElementById('months').addEventListener('click',e=>{
+const viewarea=document.querySelector('.viewarea');
+viewarea.addEventListener('click',e=>{
   const t=e.target.closest('.nm');if(t)select(sel===t.dataset.nm?null:t.dataset.nm);
 });
-document.getElementById('months').addEventListener('keydown',e=>{
+viewarea.addEventListener('keydown',e=>{
   if((e.key==='Enter'||e.key===' ')&&e.target.classList.contains('nm')){e.preventDefault();select(e.target.dataset.nm);}
 });
+
+// ---------- single-month view + deep links ----------
+let view='year', monthIdx=0;
+document.getElementById('mv-dow').innerHTML=DOW.map(x=>`<span class="${(x==='Sat'||x==='Sun')?'we':''}">${x}</span>`).join('');
+function bigCell(y,m,d){
+  const ds=iso(y,m,d), rec=byDate[ds], wd=new Date(y,m,d).getDay(), we=(wd===0||wd===6);
+  let cls='cell'+(we?' we':'')+(rec&&rec.hol?' hol':'');
+  let inner=`<span class="num">${d}</span>`;
+  if(rec&&rec.hol)inner+=`<span class="hname" title="${rec.hol}">★ ${rec.hol}</span>`;
+  if(rec)[...(rec.interns||[]),...(rec.seniors||[])].forEach(nm=>{
+    inner+=`<span class="nm ${roleClass(nm)}" data-nm="${nm}" tabindex="0" role="button" title="${fullname[nm]||nm} · ${PGY[nm]} · ${ds}"><span class="roletag">${PGY[nm]}</span>${nm}</span>`;});
+  return `<div class="${cls}" data-d="${ds}">${inner}</div>`;
+}
+function renderMonthView(){
+  const [y,m]=MONTHS[monthIdx];
+  document.getElementById('mv-label').textContent=`${MNAME[m]} ${y}`;
+  const first=new Date(y,m,1), start=(first.getDay()+6)%7, dim=new Date(y,m+1,0).getDate();
+  let cells='';
+  for(let i=0;i<start;i++)cells+='<div class="cell empty"></div>';
+  for(let d=1;d<=dim;d++)cells+=bigCell(y,m,d);
+  document.getElementById('monthgrid').innerHTML=cells;
+  document.getElementById('mv-prev').disabled=monthIdx===0;
+  document.getElementById('mv-next').disabled=monthIdx===11;
+  applyHighlight();
+}
+function setView(v){
+  view=v;
+  document.getElementById('vt-year').setAttribute('aria-selected',v==='year');
+  document.getElementById('vt-month').setAttribute('aria-selected',v==='month');
+  document.getElementById('months').hidden=v!=='year';
+  document.getElementById('monthview').hidden=v!=='month';
+  document.getElementById('monthnav').hidden=v!=='month';
+  if(v==='month')renderMonthView();
+  updateHash();
+}
+function gotoMonth(i){monthIdx=Math.max(0,Math.min(11,i));renderMonthView();updateHash();}
+document.getElementById('vt-year').onclick=()=>setView('year');
+document.getElementById('vt-month').onclick=()=>setView('month');
+document.getElementById('mv-prev').onclick=()=>gotoMonth(monthIdx-1);
+document.getElementById('mv-next').onclick=()=>gotoMonth(monthIdx+1);
+document.getElementById('mv-start').onclick=()=>gotoMonth(0);
+function updateHash(){
+  const p=[];
+  if(view==='month')p.push('m='+MONTHS[monthIdx][0]+'-'+(MONTHS[monthIdx][1]+1));
+  if(sel)p.push('r='+encodeURIComponent(sel));
+  try{history.replaceState(null,'',location.pathname+(p.length?'#'+p.join('&'):''));}catch(e){}
+}
+(function readHash(){
+  const h=new URLSearchParams(location.hash.replace(/^#/,''));
+  const mm=h.get('m');
+  if(mm){const a=mm.split('-').map(Number); const i=MONTHS.findIndex(([Y,M])=>Y===a[0]&&M===a[1]-1); if(i>=0){monthIdx=i; setView('month');}}
+  const r=h.get('r'); if(r&&PGY[r])select(r);
+})();
 document.addEventListener('keydown',e=>{if(e.key==='Escape')select(null);});
 
 // ---------- side panel ----------
