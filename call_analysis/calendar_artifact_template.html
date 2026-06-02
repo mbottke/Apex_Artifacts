@@ -279,6 +279,34 @@ h1,.panel h2,.tool-head h2,.tool-head h2{text-wrap:balance}
 .cmdk-foot{display:flex;gap:16px;padding:9px 16px;border-top:1px solid var(--n-200);background:var(--n-50);font-size:.7rem;color:var(--n-500)}
 .cmdk-foot kbd{font-family:var(--font-mono);font-size:.64rem;background:#fff;border:1px solid var(--n-200);border-radius:4px;padding:0 4px;margin-right:2px}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+.jsnote{margin:0 0 16px;padding:11px 14px;background:var(--r1-soft);border:1px solid color-mix(in oklab,var(--r1) 32%,#fff);
+  border-radius:12px;font-size:.82rem;color:var(--n-700);line-height:1.5}
+.jsnote em{font-style:normal;font-weight:600;color:var(--n-800)}
+/* ===== mobile layout ===== */
+@media (max-width:680px){
+  .wrap{padding:14px 14px 28px}
+  .eyebrow{font-size:.68rem}
+  .mast{padding-bottom:12px;margin-bottom:12px}
+  .mast h1{font-size:clamp(1.7rem,7.6vw,2.15rem);letter-spacing:-.022em}
+  .lede{font-size:.92rem;max-width:none}
+  .controls{position:static;background:none;backdrop-filter:none;-webkit-backdrop-filter:none;border-bottom:0;padding:0 0 6px;margin-bottom:8px}
+  .ctl-row{gap:8px 10px}
+  .ctl-label{display:none}
+  #reschips{flex:1 1 100%;flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;
+    margin:0 -14px;padding:2px 14px 6px}
+  #reschips::-webkit-scrollbar{display:none}
+  #reschips .chip{flex:0 0 auto}
+  .findbtn kbd{display:none}
+  .legend{font-size:.72rem;gap:7px 12px}
+  .grid-main{gap:16px}
+  .months{grid-template-columns:1fr;gap:14px}
+  .panel{position:static;max-height:none;border-radius:16px}
+  .tool{padding:18px 15px;border-radius:16px;margin-top:26px}
+  .tool-head h2{font-size:1.3rem}
+  #monthview .bigmonth{padding:4px 4px 8px}
+  .days.big .cell{min-height:84px}
+  .daypop{width:min(280px,calc(100vw - 24px))}
+}
 @media print{
   .controls,.hint,.clearbtn,.tool,.daypop{display:none!important}
   body{background:#fff;font-size:10px}.wrap{max-width:100%;padding:0}
@@ -332,6 +360,11 @@ h1,.panel h2,.tool-head h2,.tool-head h2{text-wrap:balance}
       </div>
     </div>
   </div>
+
+  <p id="jsnote" class="jsnote" style="display:none">You’re viewing a static <em>preview</em>. The full-year schedule below is complete, but
+    search, resident selection, day details, and the swap planner need scripts — open this file in a web browser (or visit the
+    deployed link) to use them.</p>
+  <noscript><style>#jsnote{display:block!important}</style></noscript>
 
   <div class="grid-main">
     <main class="viewarea" aria-label="Call calendar">
@@ -518,6 +551,7 @@ function updateHash(){
   const mm=h.get('m');
   if(mm){const a=mm.split('-').map(Number); const i=MONTHS.findIndex(([Y,M])=>Y===a[0]&&M===a[1]-1); if(i>=0){monthIdx=i; setView('month');}}
   const r=h.get('r'); if(r&&PGY[r])select(r);
+  if(!mm && innerWidth<=680) setView('month');   // phones start in the cleaner single-month view
 })();
 document.addEventListener('keydown',e=>{if(e.key==='Escape')select(null);});
 
