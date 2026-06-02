@@ -213,6 +213,71 @@ body.filt-we .cell:not(.we):not(.hol):not(.empty){opacity:.34}
 .cand .c{display:flex;align-items:center;gap:11px;padding:9px 13px;border:1px solid var(--n-200);border-radius:12px;font-size:.86rem;background:#fff}
 .cand .c .nmn{font-weight:600;flex:1} .cand .c.soft{border-style:dashed;background:var(--n-50)}
 .cand .c .ct{color:var(--n-500);font-family:var(--font-mono);font-size:.72rem}
+/* ===== motion & micro-interactions ===== */
+:root{--ease:cubic-bezier(.32,.72,0,1);
+  --spring:linear(0,.105 8.7%,.42 19.6%,.815 32.5%,1.064 47.6%,1.084,1.06 64.6%,1.001 82.4%,.998 99.2%,1)}
+.vt,.chip,.navbtn,.filterbtn,.clearbtn,.copybtn,.tool-modes button,.cand .c,.dp-x{
+  transition:transform .14s var(--ease),background .16s var(--ease),color .16s var(--ease),border-color .16s var(--ease),box-shadow .2s var(--ease)}
+.vt:active,.chip:active,.navbtn:active,.filterbtn:active,.clearbtn:active,.copybtn:active,.tool-modes button:active,.dp-x:active{transform:scale(.95)}
+.nm{transition:transform .14s var(--ease),opacity .2s,filter .2s}
+.nm:active{transform:scale(.93)}
+/* sliding segmented indicator */
+.viewtoggle,.tool-modes{position:relative}
+.seg-ind{position:absolute;left:0;top:2px;bottom:2px;border-radius:7px;background:#fff;box-shadow:var(--sh-sm);z-index:0;
+  transition:transform .34s var(--ease),width .34s var(--ease)}
+.tool-modes .seg-ind{top:3px;bottom:3px;border-radius:8px}
+.vt,.tool-modes button{position:relative;z-index:1}
+.vt[aria-selected="true"],.tool-modes button[aria-selected="true"]{background:transparent;box-shadow:none}
+/* anchored day popover + caret */
+.daypop{animation:pop .26s var(--spring)}
+.dp-caret{position:absolute;width:13px;height:13px;background:rgb(255 255 255/.9);border:1px solid var(--n-200);
+  transform:rotate(45deg);z-index:-1;border-radius:2px}
+/* toast */
+.toast{position:fixed;left:50%;bottom:30px;transform:translateX(-50%) translateY(10px);z-index:90;
+  background:rgb(28 28 30/.92);color:#fff;font-size:.84rem;font-weight:560;padding:11px 20px;border-radius:999px;
+  box-shadow:var(--sh-lg);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);
+  opacity:0;pointer-events:none;transition:opacity .25s var(--ease),transform .4s var(--spring)}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+/* ===== type & materials ===== */
+h1,.panel h2,.tool-head h2,.tool-head h2{text-wrap:balance}
+.lede,.tool-head p,.daypop .dp-rot{text-wrap:pretty}
+.statbig .v,.eq-row .val,.fp-v span,.cell .num,.cand .c .ct,.mv-label,.daypop .dp-date,.verdict{font-variant-numeric:tabular-nums}
+.month,.panel,.tool{box-shadow:var(--sh-md),inset 0 1px 0 rgb(255 255 255/.65)}
+.daypop{box-shadow:var(--sh-lg),inset 0 1px 0 rgb(255 255 255/.6)}
+/* SF-symbol-style icons */
+.ico{display:inline-block;width:1em;height:1em;vertical-align:-.12em;stroke:currentColor;fill:none;
+  stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.navbtn .ico{width:15px;height:15px;stroke-width:1.85}
+.clearbtn{display:inline-flex;align-items:center;gap:3px}
+/* ===== pro navigation: condensing title + command palette ===== */
+.nav-title{font-family:var(--font-serif);font-weight:700;font-size:1.02rem;letter-spacing:-.02em;color:var(--n-800);
+  max-width:0;opacity:0;overflow:hidden;white-space:nowrap;align-self:center;
+  transition:max-width .45s var(--ease),opacity .3s var(--ease),margin .45s var(--ease)}
+.controls.condensed .nav-title{max-width:60vw;opacity:1;margin-right:14px}
+.findbtn{margin-left:auto;display:inline-flex;align-items:center;gap:7px;font:inherit;font-size:.8rem;font-weight:510;
+  color:var(--n-600);background:var(--n-50);border:1px solid var(--n-200);border-radius:999px;padding:5px 10px 5px 12px;cursor:pointer}
+.findbtn:hover{border-color:var(--n-400)} .findbtn .ico{width:14px;height:14px;color:var(--n-500)}
+.findbtn kbd{font-family:var(--font-mono);font-size:.64rem;background:#fff;border:1px solid var(--n-200);border-radius:5px;padding:1px 5px;color:var(--n-500)}
+.cmdk{position:fixed;inset:0;z-index:100;background:rgb(0 0 0/.26);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px);
+  align-items:flex-start;justify-content:center;padding-top:12vh}
+.cmdk[hidden]{display:none} .cmdk:not([hidden]){display:flex;animation:fade .2s var(--ease)}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+.cmdk-panel{width:min(560px,92vw);background:rgb(255 255 255/.85);backdrop-filter:saturate(180%) blur(30px);
+  -webkit-backdrop-filter:saturate(180%) blur(30px);border:1px solid var(--n-200);border-radius:18px;
+  box-shadow:var(--sh-lg),inset 0 1px 0 rgb(255 255 255/.7);overflow:hidden;animation:pop .26s var(--spring);transform-origin:top center}
+.cmdk-search{display:flex;align-items:center;gap:10px;padding:15px 18px;border-bottom:1px solid var(--n-200)}
+.cmdk-search .ico{width:18px;height:18px;color:var(--n-400);flex:none}
+.cmdk-search input{flex:1;border:0;outline:0;background:none;font:inherit;font-size:1.05rem;color:var(--n-800);letter-spacing:-.01em}
+.cmdk-search input::placeholder{color:var(--n-400)}
+.cmdk-list{list-style:none;margin:0;padding:7px;max-height:46vh;overflow:auto}
+.cmdk-item{display:flex;align-items:center;gap:11px;padding:9px 12px;border-radius:11px;cursor:pointer;font-size:.9rem}
+.cmdk-item .nmn{font-weight:560;color:var(--n-800)} .cmdk-item .sub{color:var(--n-500);font-size:.76rem;margin-left:auto}
+.cmdk-item[aria-selected="true"]{background:var(--accent)}
+.cmdk-item[aria-selected="true"] .nmn,.cmdk-item[aria-selected="true"] .sub{color:#fff}
+.cmdk-item[aria-selected="true"] .dp-tag{box-shadow:0 0 0 1.5px rgb(255 255 255/.55)}
+.cmdk-empty{padding:24px;text-align:center;color:var(--n-400);font-size:.86rem}
+.cmdk-foot{display:flex;gap:16px;padding:9px 16px;border-top:1px solid var(--n-200);background:var(--n-50);font-size:.7rem;color:var(--n-500)}
+.cmdk-foot kbd{font-family:var(--font-mono);font-size:.64rem;background:#fff;border:1px solid var(--n-200);border-radius:4px;padding:0 4px;margin-right:2px}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 @media print{
   .controls,.hint,.clearbtn,.tool,.daypop{display:none!important}
@@ -236,6 +301,7 @@ body.filt-we .cell:not(.we):not(.hol):not(.empty){opacity:.34}
 
   <div class="controls">
     <div class="ctl-row" style="margin-bottom:8px">
+      <span class="nav-title" id="navTitle" aria-hidden="true">Resident On-Call Schedule</span>
       <div class="viewtoggle" role="tablist" aria-label="Calendar view">
         <button id="vt-year" class="vt" role="tab" aria-selected="true">Year</button>
         <button id="vt-month" class="vt" role="tab" aria-selected="false">Month</button>
@@ -246,6 +312,7 @@ body.filt-we .cell:not(.we):not(.hol):not(.empty){opacity:.34}
         <button id="mv-next" class="navbtn" aria-label="Next month">›</button>
         <button id="mv-start" class="navbtn txt" title="Jump to the first month of the year">Start</button>
       </div>
+      <button class="findbtn" id="findbtn" title="Quick find (⌘K / Ctrl-K)"><span id="findico"></span>Find<kbd>⌘K</kbd></button>
     </div>
     <div class="ctl-row" style="margin-bottom:8px">
       <span class="ctl-label">Class</span>
@@ -300,6 +367,14 @@ body.filt-we .cell:not(.we):not(.hol):not(.empty){opacity:.34}
   <footer id="foot"></footer>
 </div>
 <div id="daypop" class="daypop" hidden></div>
+<div id="cmdk" class="cmdk" hidden>
+  <div class="cmdk-panel" role="dialog" aria-modal="true" aria-label="Quick find">
+    <div class="cmdk-search"><span id="cmdk-ico"></span>
+      <input id="cmdk-input" type="text" placeholder="Search residents or jump to a month…" autocomplete="off" spellcheck="false" aria-label="Search"></div>
+    <ul class="cmdk-list" id="cmdk-list" role="listbox"></ul>
+    <div class="cmdk-foot"><span><kbd>↑</kbd><kbd>↓</kbd>navigate</span><span><kbd>↵</kbd>open</span><span><kbd>esc</kbd>close</span></div>
+  </div>
+</div>
 
 <script id="payload" type="application/json">/*__DATA__*/</script>
 <script>
@@ -531,7 +606,7 @@ function openDay(ds,ev){
     const rot=rotOn(n,ds)||'Open block — available';
     return `<div class="dp-row"><span class="dp-tag" style="background:${tagColor(n)}">${PGY[n]}</span>`+
       `<span><span class="dp-name">${fullname[n]||n}</span><br><span class="dp-rot">${rot}</span></span></div>`;}).join('');
-  daypop.innerHTML=`<button class="dp-x" aria-label="Close">×</button>`+
+  daypop.innerHTML=`<button class="dp-x" aria-label="Close">${ICO.x}</button>`+
     `<div class="dp-date">${longDate(ds)}</div>`+
     (rec.hol?`<div class="dp-hol">★ ${rec.hol}${rec.major?' · major holiday':''}</div>`
       :we?`<div class="dp-hol" style="color:var(--n-400)">Weekend</div>`:'')+
@@ -542,6 +617,10 @@ function openDay(ds,ev){
   if(x+w+pad>innerWidth)x=ev.clientX-w-14; if(x<pad)x=pad;
   if(y+h+pad>innerHeight)y=Math.max(pad,innerHeight-h-pad);
   daypop.style.left=x+'px';daypop.style.top=y+'px';
+  const below=y>ev.clientY, cx=Math.max(16,Math.min(w-16,ev.clientX-x));
+  daypop.style.transformOrigin=(below?'top':'bottom')+' '+cx+'px';
+  const caret=document.createElement('div');caret.className='dp-caret';
+  caret.style.left=(cx-6)+'px';caret.style[below?'top':'bottom']='-6px';daypop.appendChild(caret);
   daypop.querySelector('.dp-x').onclick=closeDay;
 }
 function closeDay(){daypop.hidden=true;}
@@ -657,7 +736,7 @@ function renderChecks(C,proposal){
     (proposal?`<div class="proposal"><div class="fp-title">Proposal to send</div><textarea readonly>${proposal}</textarea>`+
       `<button class="copybtn" id="copyp">Copy proposal</button></div>`:'');
   const cp=document.getElementById('copyp');
-  if(cp)cp.onclick=()=>{try{navigator.clipboard.writeText(proposal);}catch(e){}cp.textContent='Copied ✓';setTimeout(()=>cp.textContent='Copy proposal',1400);};
+  if(cp)cp.onclick=()=>{try{navigator.clipboard.writeText(proposal).catch(()=>{});}catch(e){}cp.textContent='Copied ✓';setTimeout(()=>cp.textContent='Copy proposal',1400);};
 }
 function renderCover(A,dA){
   const cands=runCover(A,dA),r=byDate[dA];
@@ -670,7 +749,7 @@ function renderCover(A,dA){
     :`<p class="note">No colleague in the same class is eligible — every candidate is on an incompatible rotation, on leave, already on call, post-call, or blocked by a Sunday/holiday rule. Try another date or escalate to the chief.</p>`;
   TR.innerHTML=head+list;
   const cp=document.getElementById('copyp');
-  if(cp)cp.onclick=()=>{try{navigator.clipboard.writeText(proposalCover(A,dA,cands));}catch(e){}cp.textContent='Copied ✓';setTimeout(()=>cp.textContent='Copy request',1400);};
+  if(cp)cp.onclick=()=>{try{navigator.clipboard.writeText(proposalCover(A,dA,cands)).catch(()=>{});}catch(e){}cp.textContent='Copied ✓';setTimeout(()=>cp.textContent='Copy request',1400);};
 }
 function runTool(){
   const A=val('s-a'),dA=val('s-ad');
@@ -717,6 +796,70 @@ document.querySelectorAll('.tool-modes button').forEach(b=>b.onclick=()=>{
   renderToolForm();
 });
 renderToolForm();
+
+// ---------- micro-interactions: icons, sliding segments, toast ----------
+const ICO={
+  chevL:'<svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3.5 5.5 8 10 12.5"/></svg>',
+  chevR:'<svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5"/></svg>',
+  x:'<svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8"/></svg>',
+  search:'<svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="4.2"/><path d="M10.6 10.6 14 14"/></svg>'
+};
+document.getElementById('mv-prev').innerHTML=ICO.chevL;
+document.getElementById('mv-next').innerHTML=ICO.chevR;
+(function(){const cb=document.getElementById('clearbtn');if(cb)cb.innerHTML=ICO.x+'<span>clear</span>';})();
+function placeSeg(box){if(!box)return;const s=box.querySelector('[aria-selected="true"]');if(!s)return;
+  let ind=box.querySelector('.seg-ind');
+  if(!ind){ind=document.createElement('div');ind.className='seg-ind';box.insertBefore(ind,box.firstChild);}
+  ind.style.width=s.offsetWidth+'px';ind.style.transform='translateX('+s.offsetLeft+'px)';}
+const segView=()=>placeSeg(document.querySelector('.viewtoggle')),
+      segModes=()=>placeSeg(document.querySelector('.tool-modes'));
+['vt-year','vt-month'].forEach(id=>document.getElementById(id).addEventListener('click',()=>requestAnimationFrame(segView)));
+document.querySelectorAll('.tool-modes button').forEach(b=>b.addEventListener('click',()=>requestAnimationFrame(segModes)));
+segView();segModes();
+addEventListener('resize',()=>{segView();segModes();});addEventListener('load',()=>{segView();segModes();});
+let toastT;function toast(msg){let t=document.getElementById('toast');
+  if(!t){t=document.createElement('div');t.id='toast';t.className='toast';t.setAttribute('role','status');document.body.appendChild(t);}
+  t.textContent=msg;t.classList.add('show');clearTimeout(toastT);toastT=setTimeout(()=>t.classList.remove('show'),1700);}
+document.addEventListener('click',e=>{if(e.target.closest('#copyp'))toast('Copied to clipboard');});
+
+// ---------- command palette (⌘K) + condensing title ----------
+document.getElementById('findico').innerHTML=ICO.search;
+document.getElementById('cmdk-ico').innerHTML=ICO.search;
+const cmdk=document.getElementById('cmdk'),cmInput=document.getElementById('cmdk-input'),cmList=document.getElementById('cmdk-list');
+const CM_ITEMS=[
+  ...ALLRES.map(n=>({type:'res',key:n,label:fullname[n]||n,sub:'Resident · '+PGY[n],role:PGY[n],q:(n+' '+(fullname[n]||'')+' '+PGY[n]).toLowerCase()})),
+  ...MONTHS.map(([y,m],i)=>({type:'month',key:i,label:MNAME[m]+' '+y,sub:'Jump to month',q:(MNAME[m]+' '+y).toLowerCase()}))
+];
+let cmF=[],cmA=0,cmOpen=false;
+function openCmd(){cmdk.hidden=false;cmOpen=true;cmInput.value='';cmBuild('');cmInput.focus();}
+function closeCmd(){cmdk.hidden=true;cmOpen=false;}
+function cmBuild(q){q=q.trim().toLowerCase();cmF=CM_ITEMS.filter(it=>!q||it.q.includes(q));cmA=0;cmRender();}
+function cmRender(){
+  if(!cmF.length){cmList.innerHTML='<li class="cmdk-empty">No matches</li>';return;}
+  cmList.innerHTML=cmF.map((it,i)=>{
+    const tag=it.type==='res'?`<span class="dp-tag" style="background:${tagColor(it.key)}">${it.role}</span>`
+      :`<span class="dp-tag" style="background:var(--n-400)">MO</span>`;
+    return `<li class="cmdk-item" role="option" data-i="${i}" aria-selected="${i===cmA}">${tag}<span class="nmn">${it.label}</span><span class="sub">${it.sub}</span></li>`;
+  }).join('');
+  const act=cmList.querySelector('[aria-selected="true"]');if(act)act.scrollIntoView({block:'nearest'});
+}
+function cmChoose(it){if(!it)return;if(it.type==='res')select(it.key);else{monthIdx=it.key;setView('month');segView();}closeCmd();}
+cmInput.addEventListener('input',()=>cmBuild(cmInput.value));
+cmInput.addEventListener('keydown',e=>{
+  if(e.key==='ArrowDown'){e.preventDefault();cmA=Math.min(cmF.length-1,cmA+1);cmRender();}
+  else if(e.key==='ArrowUp'){e.preventDefault();cmA=Math.max(0,cmA-1);cmRender();}
+  else if(e.key==='Enter'){e.preventDefault();cmChoose(cmF[cmA]);}
+  else if(e.key==='Escape'){e.preventDefault();e.stopPropagation();closeCmd();}
+});
+cmList.addEventListener('click',e=>{const li=e.target.closest('.cmdk-item');if(li)cmChoose(cmF[+li.dataset.i]);});
+cmList.addEventListener('mousemove',e=>{const li=e.target.closest('.cmdk-item');if(li&&+li.dataset.i!==cmA){cmA=+li.dataset.i;cmRender();}});
+cmdk.addEventListener('click',e=>{if(e.target===cmdk)closeCmd();});
+document.getElementById('findbtn').addEventListener('click',openCmd);
+document.addEventListener('keydown',e=>{if((e.metaKey||e.ctrlKey)&&(e.key==='k'||e.key==='K')){e.preventDefault();cmOpen?closeCmd():openCmd();}});
+const _mastH1=document.querySelector('.mast h1');
+if('IntersectionObserver'in window&&_mastH1)
+  new IntersectionObserver(([en])=>document.querySelector('.controls').classList.toggle('condensed',!en.isIntersecting),
+    {rootMargin:'-14px 0px 0px 0px',threshold:0}).observe(_mastH1);
 
 // ---------- footer / method ----------
 document.getElementById('foot').innerHTML=`
