@@ -41,8 +41,17 @@ for n in PGY:
               'avg':round(wl/tot,2) if tot else 0,'holidays':hols}
 # rotation spans per resident (for tooltips / context)
 rspans={n:[{'s':s,'e':e,'r':r} for s,e,r in ROT[n]] for n in PGY}
+# eligibility matrices (re-used verbatim from the optimizer prep) -> compact per-resident bitstrings
+PREP=json.load(open(B+'rebuild_prep.json'))
+EH=PREP['elig_hard']; ES=PREP['elig_soft']
+order=[x['d'] for x in days]
+elig ={n:''.join('1' if EH[n][ds] else '0' for ds in order) for n in PGY}
+eligS={n:''.join('1' if ES[n][ds] else '0' for ds in order) for n in PGY}
+SPECIAL=['2026-07-04','2026-09-07','2027-03-28','2027-05-31']
+WINTER =['2026-11-26','2026-12-25','2027-01-01']
 out={'which':WHICH,'INT':INT,'R2':R2,'R3':R3,'PGY':PGY,
      'days':days,'stats':stats,'rotations':rspans,
+     'elig':elig,'eligSoft':eligS,'special':SPECIAL,'winterMaj':WINTER,
      'fullname':{'Hard':'Hanna Hard','Oehm':'Chloe Oehm','Schutt':'Brady Schutt','Stanek':'Kiana Stanek',
       'Strand':'Paul Strand','Wohlgemuth':'Morgan Wohlgemuth','Beutel':'Amy Beutel','Bottke':'Michael Bottke',
       'Bower':'Brooke Bower','Gaspar':'McKenzie Sundall Gaspar','Kendrick':'Nick Kendrick',

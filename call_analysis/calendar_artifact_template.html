@@ -149,9 +149,73 @@ kbd{font-family:var(--font-mono);font-size:.7rem;background:var(--n-100);border:
 .clearbtn{font:inherit;font-size:.78rem;border:1px solid var(--n-300);background:#fff;border-radius:var(--r-sm);
   padding:3px 10px;cursor:pointer;color:var(--n-600)}
 .clearbtn:hover{border-color:var(--n-500)}
+.filterbtn{font:inherit;font-size:.78rem;font-weight:510;border:1px solid var(--n-200);background:var(--n-50);
+  color:var(--n-600);border-radius:999px;padding:5px 12px;cursor:pointer;display:inline-flex;gap:6px;align-items:center}
+.filterbtn:hover{border-color:var(--n-400)}
+.filterbtn[aria-pressed="true"]{background:var(--n-800);color:#fff;border-color:transparent}
+.filterbtn[aria-pressed="true"]::before{content:"✓";font-size:.72rem}
+/* role / weekend calendar filters (dimming) */
+body[data-rolef="R1"] .nm:not(.i),body[data-rolef="R2"] .nm:not(.s2),body[data-rolef="R3"] .nm:not(.s3){opacity:.18;filter:saturate(.35)}
+body.filt-we .cell:not(.we):not(.hol):not(.empty){opacity:.34}
+.cell:not(.empty){cursor:pointer}
+/* ---- day-detail popover ---- */
+.daypop{position:fixed;z-index:60;width:250px;background:rgb(255 255 255/.9);backdrop-filter:saturate(180%) blur(20px);
+  -webkit-backdrop-filter:saturate(180%) blur(20px);border:1px solid var(--n-200);border-radius:16px;
+  box-shadow:var(--sh-lg);padding:14px 15px 12px;font-size:.82rem;animation:pop .15s var(--ease,ease)}
+@keyframes pop{from{opacity:0;transform:translateY(4px) scale(.985)}to{opacity:1;transform:none}}
+.daypop .dp-date{font-family:var(--font-serif);font-weight:700;font-size:1rem;letter-spacing:-.01em;padding-right:16px}
+.daypop .dp-hol{color:var(--accent2);font-weight:600;font-size:.73rem;margin-top:1px}
+.daypop .dp-row{display:flex;align-items:flex-start;gap:9px;margin-top:10px}
+.daypop .dp-tag,.cand .dp-tag{font-family:var(--font-mono);font-size:.58rem;font-weight:800;padding:2px 5px;border-radius:5px;color:#fff;flex:none;margin-top:1px}
+.daypop .dp-name{font-weight:600}
+.daypop .dp-rot{color:var(--n-500);font-size:.74rem}
+.daypop .dp-x{position:absolute;top:8px;right:10px;cursor:pointer;color:var(--n-400);border:0;background:none;font-size:1.1rem;line-height:1}
+.daypop .dp-note{margin-top:10px;font-size:.69rem;color:var(--n-400);border-top:1px solid var(--n-100);padding-top:7px}
+/* ---- switch & coverage tool ---- */
+.tool{margin-top:var(--s-8);background:#fff;border:1px solid var(--n-200);border-radius:20px;box-shadow:var(--sh-md);
+  padding:clamp(18px,3vw,30px);scroll-margin-top:80px}
+.tool-head h2{font-size:1.5rem;letter-spacing:-.02em}
+.tool-head p{color:var(--n-500);font-size:.9rem;max-width:58ch;margin-top:5px;line-height:1.5}
+.tool-modes{display:inline-flex;background:var(--n-50);border-radius:11px;padding:3px;gap:2px;margin:18px 0 2px}
+.tool-modes button{font:inherit;font-size:.85rem;font-weight:560;border:0;background:transparent;color:var(--n-600);
+  padding:7px 17px;border-radius:8px;cursor:pointer;transition:background .15s}
+.tool-modes button[aria-selected="true"]{background:#fff;color:var(--n-800);box-shadow:var(--sh-sm)}
+.tool-modes button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.tool-grid{display:grid;grid-template-columns:1fr;gap:22px;margin-top:20px}
+@media(min-width:800px){.tool-grid{grid-template-columns:minmax(0,340px) 1fr;gap:30px}}
+.tool-form{display:flex;flex-direction:column;gap:13px}
+.fld{display:flex;flex-direction:column;gap:5px}
+.fld label{font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:var(--n-500)}
+.fld select{font:inherit;font-size:.92rem;padding:10px 32px 10px 12px;border:1px solid var(--n-300);border-radius:11px;
+  background:#fff;color:var(--n-800);-webkit-appearance:none;appearance:none;cursor:pointer;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'><path d='M2.5 4.5L6 8l3.5-3.5' fill='none' stroke='%2386868b' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+  background-repeat:no-repeat;background-position:right 12px center}
+.fld select:focus-visible{outline:2px solid var(--accent);outline-offset:1px;border-color:var(--accent)}
+.tool-result{min-height:120px}
+.verdict{display:inline-flex;align-items:center;gap:8px;font-weight:650;font-size:.95rem;padding:8px 15px;border-radius:999px}
+.verdict.ok{background:var(--r2-soft);color:var(--r2)}
+.verdict.warn{background:#fdf3e0;color:#9a6a00}
+.verdict.bad{background:#fdecea;color:#c0392b}
+.verdict.idle{background:var(--n-50);color:var(--n-500);font-weight:560}
+.checks{list-style:none;margin:15px 0 0;display:flex;flex-direction:column;gap:8px}
+.checks li{display:flex;gap:10px;font-size:.85rem;align-items:flex-start;line-height:1.4}
+.checks .ic{flex:none;width:18px;height:18px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;
+  font-size:.66rem;font-weight:800;color:#fff;margin-top:1px}
+.checks .ok .ic{background:var(--r2)} .checks .bad .ic{background:#c0392b} .checks .warn .ic{background:#d99a00}
+.checks .ct{color:var(--n-500)} .checks b{color:var(--n-800);font-weight:600}
+.proposal{margin-top:18px}
+.proposal textarea{width:100%;min-height:104px;font-family:var(--font-mono);font-size:.74rem;line-height:1.55;
+  border:1px solid var(--n-200);border-radius:12px;padding:12px 13px;background:var(--n-50);color:var(--n-700);resize:vertical}
+.copybtn{margin-top:9px;font:inherit;font-size:.82rem;font-weight:560;background:var(--accent);color:#fff;border:0;
+  border-radius:10px;padding:9px 18px;cursor:pointer;transition:background .15s}
+.copybtn:hover{background:#0077ed} .copybtn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.cand{display:flex;flex-direction:column;gap:7px;margin-top:8px}
+.cand .c{display:flex;align-items:center;gap:11px;padding:9px 13px;border:1px solid var(--n-200);border-radius:12px;font-size:.86rem;background:#fff}
+.cand .c .nmn{font-weight:600;flex:1} .cand .c.soft{border-style:dashed;background:var(--n-50)}
+.cand .c .ct{color:var(--n-500);font-family:var(--font-mono);font-size:.72rem}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 @media print{
-  .controls,.hint,.clearbtn{display:none!important}
+  .controls,.hint,.clearbtn,.tool,.daypop{display:none!important}
   body{background:#fff;font-size:10px}.wrap{max-width:100%;padding:0}
   .months{grid-template-columns:repeat(3,1fr);gap:6px}
   .grid-main{grid-template-columns:1fr}.panel{display:none}
@@ -188,6 +252,7 @@ kbd{font-family:var(--font-mono);font-size:.7rem;background:var(--n-100);border:
       <div class="chips" id="pgychips"></div>
       <span class="ctl-label" style="margin-left:8px">Resident</span>
       <div class="chips" id="reschips"></div>
+      <button class="filterbtn" id="filt-we" aria-pressed="false" title="Dim everything except weekend and holiday call">Weekends &amp; holidays</button>
       <button class="clearbtn" id="clearbtn" hidden>✕ clear</button>
     </div>
     <div class="ctl-row">
@@ -214,8 +279,27 @@ kbd{font-family:var(--font-mono);font-size:.7rem;background:var(--n-100);border:
     <aside class="panel" id="panel" aria-live="polite"></aside>
   </div>
 
+  <section class="tool" id="switchtool" aria-label="Switch and coverage planner">
+    <div class="tool-head">
+      <h2>Switch &amp; Coverage Planner</h2>
+      <p>Plan a one-for-one swap, give a shift away, or find who can cover — each option is checked live against
+        every program rule (rotation eligibility, approved leave, post-call rest, R3 Sundays, and holiday caps)
+        before you send it to the chief. This planner never changes the official schedule.</p>
+    </div>
+    <div class="tool-modes" role="tablist" aria-label="Planner mode">
+      <button data-mode="swap" aria-selected="true" role="tab">Swap 1-for-1</button>
+      <button data-mode="give" aria-selected="false" role="tab">Give away</button>
+      <button data-mode="cover" aria-selected="false" role="tab">Find coverage</button>
+    </div>
+    <div class="tool-grid">
+      <div class="tool-form" id="tool-form"></div>
+      <div class="tool-result" id="tool-result"></div>
+    </div>
+  </section>
+
   <footer id="foot"></footer>
 </div>
+<div id="daypop" class="daypop" hidden></div>
 
 <script id="payload" type="application/json">/*__DATA__*/</script>
 <script>
@@ -269,7 +353,7 @@ const pgyc=document.getElementById('pgychips');
 [['all','All'],['R1','Interns'],['R2','R2'],['R3','R3']].forEach(([p,lab])=>{
   const b=document.createElement('button');b.className='chip';b.dataset.pgy=p;
   b.setAttribute('aria-pressed',p==='all');b.innerHTML=(p==='all'?'':`<span class="dot" style="background:${ROLEC[p]}"></span>`)+lab;
-  b.onclick=()=>{pgyFilter=p;[...pgyc.children].forEach(c=>c.setAttribute('aria-pressed',c.dataset.pgy===p));buildResChips();};
+  b.onclick=()=>{pgyFilter=p;[...pgyc.children].forEach(c=>c.setAttribute('aria-pressed',c.dataset.pgy===p));buildResChips();applyFilters();};
   pgyc.appendChild(b);
 });
 const resc=document.getElementById('reschips');
@@ -426,6 +510,213 @@ function overviewHTML(){
     single exception); R2 residents carry seven to eight Sundays each.</p>`;
 }
 renderPanel();
+
+// ---------- calendar filters (role focus + weekend/holiday) ----------
+let filtWE=false;
+function applyFilters(){
+  if(pgyFilter==='all')document.body.removeAttribute('data-rolef');
+  else document.body.setAttribute('data-rolef',pgyFilter);
+  document.body.classList.toggle('filt-we',filtWE);
+}
+document.getElementById('filt-we').onclick=function(){filtWE=!filtWE;this.setAttribute('aria-pressed',filtWE);applyFilters();};
+
+// ---------- tap-a-day detail popover ----------
+const daypop=document.getElementById('daypop');
+function tagColor(n){return PGY[n]==='R1'?'var(--r1)':PGY[n]==='R2'?'var(--r2)':'var(--r3)';}
+function longDate(ds){return new Date(ds+'T00:00').toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric',year:'numeric'});}
+function openDay(ds,ev){
+  const rec=byDate[ds];if(!rec)return;
+  const we=[0,6].includes(new Date(ds+'T00:00').getDay());
+  const rows=[...(rec.interns||[]),...(rec.seniors||[])].map(n=>{
+    const rot=rotOn(n,ds)||'Open block — available';
+    return `<div class="dp-row"><span class="dp-tag" style="background:${tagColor(n)}">${PGY[n]}</span>`+
+      `<span><span class="dp-name">${fullname[n]||n}</span><br><span class="dp-rot">${rot}</span></span></div>`;}).join('');
+  daypop.innerHTML=`<button class="dp-x" aria-label="Close">×</button>`+
+    `<div class="dp-date">${longDate(ds)}</div>`+
+    (rec.hol?`<div class="dp-hol">★ ${rec.hol}${rec.major?' · major holiday':''}</div>`
+      :we?`<div class="dp-hol" style="color:var(--n-400)">Weekend</div>`:'')+
+    rows+`<div class="dp-note">Rotation each resident is on this day · tap a name to highlight their year.</div>`;
+  daypop.hidden=false;
+  const pad=10,w=daypop.offsetWidth,h=daypop.offsetHeight;
+  let x=ev.clientX+14,y=ev.clientY+12;
+  if(x+w+pad>innerWidth)x=ev.clientX-w-14; if(x<pad)x=pad;
+  if(y+h+pad>innerHeight)y=Math.max(pad,innerHeight-h-pad);
+  daypop.style.left=x+'px';daypop.style.top=y+'px';
+  daypop.querySelector('.dp-x').onclick=closeDay;
+}
+function closeDay(){daypop.hidden=true;}
+viewarea.addEventListener('click',e=>{
+  if(e.target.closest('.nm'))return;
+  const cell=e.target.closest('.cell');if(!cell||cell.classList.contains('empty'))return;
+  if(cell.dataset.d)openDay(cell.dataset.d,e);
+});
+document.addEventListener('click',e=>{if(!daypop.hidden&&!e.target.closest('#daypop')&&!e.target.closest('.cell'))closeDay();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeDay();});
+window.addEventListener('scroll',()=>{if(!daypop.hidden)closeDay();},{passive:true});
+
+// ---------- switch & coverage planner (validated against the optimizer's own rule model) ----------
+const ELIG=DATA.elig,ELIGS=DATA.eligSoft,SPECIAL=new Set(DATA.special),WINTER=new Set(DATA.winterMaj);
+const dayIdx=Object.fromEntries(days.map((x,i)=>[x.d,i]));
+const ALLRES=[...INT,...R2,...R3];
+const datesOf={};ALLRES.forEach(n=>datesOf[n]=days.filter(x=>(x.interns||[]).includes(n)||(x.seniors||[]).includes(n)).map(x=>x.d));
+const isInt=n=>PGY[n]==='R1', grp=n=>isInt(n)?'INT':'SEN';
+const eligible=(n,ds)=>{const i=dayIdx[ds];return i!=null&&ELIG[n]&&ELIG[n][i]==='1';};
+const softblk =(n,ds)=>{const i=dayIdx[ds];return i!=null&&ELIGS[n]&&ELIGS[n][i]==='1';};
+const onCallN =(n,ds)=>{const r=byDate[ds];return !!r&&((r.interns||[]).includes(n)||(r.seniors||[]).includes(n));};
+const shiftISO=(ds,k)=>{const d=new Date(ds+'T00:00');d.setDate(d.getDate()+k);return d.toISOString().slice(0,10);};
+const isSun=ds=>new Date(ds+'T00:00').getDay()===0;
+const dlabel=ds=>{const r=byDate[ds];return new Date(ds+'T00:00').toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric',year:'numeric'})+(r&&r.hol?' ★':'');};
+const rotName=(n,ds)=>rotOn(n,ds)||'open block (available)';
+function backToBack(n,ds,ignore){const p=shiftISO(ds,-1),q=shiftISO(ds,1);return (p!==ignore&&onCallN(n,p))||(q!==ignore&&onCallN(n,q));}
+function holCheck(n,recvDS,giveDS){
+  const rec=byDate[recvDS];if(!rec||!rec.hol)return null;
+  let c=0,sp=0,wi=0,ws=0;(stats[n].holidays||[]).forEach(h=>{c++;if(SPECIAL.has(h.d))sp++;if(WINTER.has(h.d))wi++;ws+=h.major?2:1;});
+  if(giveDS){const g=byDate[giveDS];if(g&&g.hol&&onCallN(n,giveDS)){c--;if(SPECIAL.has(giveDS))sp--;if(WINTER.has(giveDS))wi--;ws-=g.major?2:1;}}
+  c++;if(SPECIAL.has(recvDS))sp++;if(WINTER.has(recvDS))wi++;ws+=rec.major?2:1;
+  if(isInt(n)){if(c>3)return `${n} would hold ${c} holidays (intern cap 3)`;
+    if(sp>1)return `${n} would hold two of the four "mix-up" holidays (cap 1)`;
+    if(wi>1)return `${n} would hold two winter-major holidays (cap 1)`;}
+  else if(ws>2)return `${n}'s holiday weight would reach ${ws} (senior cap 2; a major holiday counts double)`;
+  return null;
+}
+function placeChecks(n,ds,giveDS){
+  const C=[];
+  if(eligible(n,ds))C.push(['ok',`${n} is eligible on ${dlabel(ds)}`,`on ${rotName(n,ds)}`]);
+  else C.push(['bad',`${n} is not eligible on ${dlabel(ds)}`,`${rotName(n,ds)} — no-call rotation, a restricted weekday for it, or approved leave`]);
+  if(PGY[n]==='R3'&&isSun(ds))C.push(['bad',`${n} is an R3 — no Sunday call`,'program rule: R3 residents are not assigned Sunday senior call']);
+  if(onCallN(n,ds))C.push(['bad',`${n} is already on call ${dlabel(ds)}`,'']);
+  if(backToBack(n,ds,giveDS))C.push(['bad',`Post-call conflict for ${n}`,'this would create back-to-back call days']);
+  else C.push(['ok','No post-call conflict',`${n} has no call the day before or after`]);
+  const hc=holCheck(n,ds,giveDS);
+  if(hc)C.push(['bad','Holiday cap exceeded',hc]);
+  else if(byDate[ds]&&byDate[ds].hol)C.push(['ok','Holiday caps respected',byDate[ds].hol]);
+  if(softblk(n,ds)&&eligible(n,ds))C.push(['warn',`${n} is soft-blocked here`,'Community-Based Practice or R3 Orthopaedics — discouraged but permitted']);
+  return C;
+}
+const verdict=C=>C.some(c=>c[0]==='bad')?'bad':C.some(c=>c[0]==='warn')?'warn':'ok';
+function runSwap(A,dA,B,dB){
+  const C=[];
+  if(grp(A)!==grp(B))C.push(['bad','Different coverage roles',`${A} (${PGY[A]}) and ${B} (${PGY[B]}) staff different slots — interns and seniors are not interchangeable`]);
+  else C.push(['ok','Same coverage role',grp(A)==='INT'?'both interns':'both seniors (R2 and R3 may swap with each other)']);
+  return C.concat(placeChecks(B,dA,dB),placeChecks(A,dB,dA));
+}
+function runGive(A,dA,B){
+  const C=[];
+  if(grp(A)!==grp(B))C.push(['bad','Different coverage roles',`${A} (${PGY[A]}) and ${B} (${PGY[B]}) staff different slots`]);
+  else C.push(['ok','Same coverage role',grp(A)==='INT'?'both interns':'both seniors']);
+  return C.concat(placeChecks(B,dA,null));
+}
+function runCover(A,dA){
+  const g=grp(A),out=[];
+  ALLRES.filter(n=>n!==A&&grp(n)===g).forEach(n=>{
+    const C=placeChecks(n,dA,null);
+    if(!C.some(c=>c[0]==='bad'))out.push({n,soft:C.some(c=>c[0]==='warn'),wl:stats[n].wload,tot:stats[n].total});
+  });
+  return out.sort((a,b)=>a.wl-b.wl||a.tot-b.tot);
+}
+const verb={rebuilt:'Full Rebuild',repaired:'Minimal Repair'}[which]||which;
+function proposalSwap(A,dA,B,dB,v){return `CALL SWAP — checked against the 2026–27 program rules (${verb})
+• ${fullname[A]||A} (${PGY[A]}) gives ${dlabel(dA).replace(' ★','')}
+• ${fullname[B]||B} (${PGY[B]}) gives ${dlabel(dB).replace(' ★','')}
+→ ${A} and ${B} trade these two dates.
+Status: ${v==='ok'?'CLEAR — no rule conflicts':'CAUTION — permitted, see notes'} · totals unchanged for both.
+Pending coordinator/chief approval. This planner does not modify the official schedule.`;}
+function proposalGive(A,dA,B,v){return `CALL GIVEAWAY — checked against the 2026–27 program rules (${verb})
+• ${fullname[A]||A} (${PGY[A]}) gives ${dlabel(dA).replace(' ★','')} to ${fullname[B]||B} (${PGY[B]}).
+Status: ${v==='ok'?'CLEAR — no rule conflicts':'CAUTION — permitted, see notes'} · effect: ${A} −1 call, ${B} +1 call.
+Pending coordinator/chief approval. This planner does not modify the official schedule.`;}
+function proposalCover(A,dA,cands){return `COVERAGE REQUEST — ${verb}
+${fullname[A]||A} (${PGY[A]}) needs coverage for ${dlabel(dA).replace(' ★','')}.
+Eligible (ranked, most rested first): ${cands.slice(0,6).map(c=>`${c.n} (${PGY[c.n]}, ${c.tot} calls)`).join(' · ')||'none — escalate to chief'}.
+All listed residents satisfy rotation, leave, post-call, Sunday and holiday rules. Approval required before any change.`;}
+
+let toolMode='swap';
+const TF=document.getElementById('tool-form'),TR=document.getElementById('tool-result');
+const val=id=>{const e=document.getElementById(id);return e?e.value:'';};
+function optsRes(g,exclude){
+  const og=(lab,arr)=>{arr=arr.filter(n=>n!==exclude);return arr.length?`<optgroup label="${lab}">`+arr.map(n=>`<option value="${n}">${n} — ${fullname[n]||n}</option>`).join('')+'</optgroup>':'';};
+  let h='<option value="">— choose —</option>';
+  if(!g||g==='INT')h+=og('Interns · R1',INT);
+  if(!g||g==='SEN'){h+=og('Seniors · R2',R2);h+=og('Seniors · R3',R3);}
+  return h;
+}
+function optsShift(n){
+  let h='<option value="">— choose a date —</option>';
+  if(n)h+=datesOf[n].map(ds=>`<option value="${ds}">${dlabel(ds)}</option>`).join('');
+  return h;
+}
+function idleResult(){return `<div class="verdict idle">Awaiting your selection</div><p class="note" style="margin-top:11px">`+
+  (toolMode==='cover'?'Choose who needs coverage and which shift — every eligible colleague in the same class is listed, ranked by who is least loaded.'
+   :toolMode==='give'?'Choose the shift to give away and a colleague to receive it; the tool checks the handoff against every rule.'
+   :'Pick two residents and one shift each; the tool checks the trade against every program rule.')+'</p>';}
+function renderChecks(C,proposal){
+  const v=verdict(C),vt={ok:'Clear to propose',warn:'Allowed — with cautions',bad:'Rule conflict — not allowed'}[v],vi={ok:'✓',warn:'!',bad:'✕'}[v];
+  TR.innerHTML=`<div class="verdict ${v}">${vi} ${vt}</div>`+
+    `<ul class="checks">${C.map(c=>`<li class="${c[0]}"><span class="ic">${c[0]==='ok'?'✓':c[0]==='warn'?'!':'✕'}</span>`+
+      `<span><b>${c[1]}</b>${c[2]?` <span class="ct">— ${c[2]}</span>`:''}</span></li>`).join('')}</ul>`+
+    (proposal?`<div class="proposal"><div class="fp-title">Proposal to send</div><textarea readonly>${proposal}</textarea>`+
+      `<button class="copybtn" id="copyp">Copy proposal</button></div>`:'');
+  const cp=document.getElementById('copyp');
+  if(cp)cp.onclick=()=>{try{navigator.clipboard.writeText(proposal);}catch(e){}cp.textContent='Copied ✓';setTimeout(()=>cp.textContent='Copy proposal',1400);};
+}
+function renderCover(A,dA){
+  const cands=runCover(A,dA),r=byDate[dA];
+  const head=`<div class="verdict ${cands.length?'ok':'bad'}">${cands.length?'✓ '+cands.length+' eligible':'✕ none eligible'}</div>`+
+    `<p class="note" style="margin:11px 0 2px">Same-class residents who can legally cover <b>${fullname[A]||A}</b> on <b>${dlabel(dA).replace(' ★','')}</b>${r&&r.hol?' — '+r.hol:''}, ranked by lowest current workload.</p>`;
+  const list=cands.length?`<div class="cand">${cands.map(c=>`<div class="c ${c.soft?'soft':''}">`+
+      `<span class="dp-tag" style="background:${tagColor(c.n)}">${PGY[c.n]}</span><span class="nmn">${fullname[c.n]||c.n}</span>`+
+      `<span class="ct">${c.tot} calls · load ${c.wl}${c.soft?' · soft-blocked':''}</span></div>`).join('')}</div>`+
+      `<div class="proposal"><textarea readonly>${proposalCover(A,dA,cands)}</textarea><button class="copybtn" id="copyp">Copy request</button></div>`
+    :`<p class="note">No colleague in the same class is eligible — every candidate is on an incompatible rotation, on leave, already on call, post-call, or blocked by a Sunday/holiday rule. Try another date or escalate to the chief.</p>`;
+  TR.innerHTML=head+list;
+  const cp=document.getElementById('copyp');
+  if(cp)cp.onclick=()=>{try{navigator.clipboard.writeText(proposalCover(A,dA,cands));}catch(e){}cp.textContent='Copied ✓';setTimeout(()=>cp.textContent='Copy request',1400);};
+}
+function runTool(){
+  const A=val('s-a'),dA=val('s-ad');
+  if(toolMode==='cover'){if(A&&dA)renderCover(A,dA);else TR.innerHTML=idleResult();return;}
+  const B=val('s-b');
+  if(toolMode==='give'){
+    if(!A||!dA||!B){TR.innerHTML=idleResult();return;}
+    const C=runGive(A,dA,B),v=verdict(C);renderChecks(C,v!=='bad'?proposalGive(A,dA,B,v):null);return;}
+  const dB=val('s-bd');
+  if(!A||!dA||!B||!dB){TR.innerHTML=idleResult();return;}
+  const C=runSwap(A,dA,B,dB),v=verdict(C);renderChecks(C,v!=='bad'?proposalSwap(A,dA,B,dB,v):null);
+}
+function renderToolForm(){
+  const fld=(id,lab,inner)=>`<div class="fld"><label for="${id}">${lab}</label>${inner}</div>`;
+  let h;
+  if(toolMode==='cover')
+    h=fld('s-a','Resident who needs coverage',`<select id="s-a">${optsRes(null,'')}</select>`)
+     +fld('s-ad','Shift to cover',`<select id="s-ad">${optsShift('')}</select>`);
+  else if(toolMode==='give')
+    h=fld('s-a','Resident giving the shift',`<select id="s-a">${optsRes(null,'')}</select>`)
+     +fld('s-ad','Shift to give away',`<select id="s-ad">${optsShift('')}</select>`)
+     +fld('s-b','Colleague taking it (same class)',`<select id="s-b"><option value="">— choose a resident first —</option></select>`);
+  else
+    h=fld('s-a','Resident A',`<select id="s-a">${optsRes(null,'')}</select>`)
+     +fld('s-ad','A’s shift',`<select id="s-ad">${optsShift('')}</select>`)
+     +fld('s-b','Resident B (same class)',`<select id="s-b"><option value="">— choose A first —</option></select>`)
+     +fld('s-bd','B’s shift',`<select id="s-bd">${optsShift('')}</select>`);
+  TF.innerHTML=h;
+  const A=document.getElementById('s-a');
+  A.onchange=()=>{
+    document.getElementById('s-ad').innerHTML=optsShift(A.value);
+    const B=document.getElementById('s-b');if(B)B.innerHTML=A.value?optsRes(grp(A.value),A.value):'<option value="">— choose A first —</option>';
+    const bd=document.getElementById('s-bd');if(bd)bd.innerHTML=optsShift('');
+    runTool();
+  };
+  document.getElementById('s-ad').onchange=runTool;
+  const B=document.getElementById('s-b');if(B)B.onchange=()=>{const bd=document.getElementById('s-bd');if(bd)bd.innerHTML=optsShift(B.value);runTool();};
+  const bd=document.getElementById('s-bd');if(bd)bd.onchange=runTool;
+  TR.innerHTML=idleResult();
+}
+document.querySelectorAll('.tool-modes button').forEach(b=>b.onclick=()=>{
+  toolMode=b.dataset.mode;
+  document.querySelectorAll('.tool-modes button').forEach(x=>x.setAttribute('aria-selected',x===b));
+  renderToolForm();
+});
+renderToolForm();
 
 // ---------- footer / method ----------
 document.getElementById('foot').innerHTML=`
