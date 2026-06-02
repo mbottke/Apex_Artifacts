@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>UPH Family Medicine — 2026–2027 Resident Call Calendar</title>
 <style>
 :root{
@@ -282,6 +282,32 @@ h1,.panel h2,.tool-head h2,.tool-head h2{text-wrap:balance}
 .jsnote{margin:0 0 16px;padding:11px 14px;background:var(--r1-soft);border:1px solid color-mix(in oklab,var(--r1) 32%,#fff);
   border-radius:12px;font-size:.82rem;color:var(--n-700);line-height:1.5}
 .jsnote em{font-style:normal;font-weight:600;color:var(--n-800)}
+/* ===== mobile bottom toolbar + reusable bottom sheet (active only ≤680px) ===== */
+.mobilebar{display:none}
+.sheet[hidden]{display:none}
+.sheet{position:fixed;inset:0;z-index:80}
+.sheet-scrim{position:absolute;inset:0;background:rgb(0 0 0/.32);opacity:0;
+  transition:opacity .3s var(--ease);backdrop-filter:blur(2px);-webkit-backdrop-filter:blur(2px)}
+.sheet-panel{position:absolute;left:0;right:0;bottom:0;background:rgb(255 255 255/.97);
+  backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);
+  border-radius:22px 22px 0 0;box-shadow:0 -12px 44px rgb(0 0 0/.20),inset 0 1px 0 rgb(255 255 255/.7);
+  padding:0 18px calc(18px + env(safe-area-inset-bottom));max-height:84vh;overflow:auto;
+  transform:translateY(100%);transition:transform .36s var(--spring);will-change:transform}
+.sheet.open .sheet-scrim{opacity:1}
+.sheet.open .sheet-panel{transform:none}
+.sheet-grab{display:block;width:100%;height:26px;border:0;background:none;cursor:grab;position:sticky;top:0;
+  margin-bottom:4px;-webkit-tap-highlight-color:transparent}
+.sheet-grab::before{content:"";position:absolute;top:9px;left:50%;transform:translateX(-50%);
+  width:40px;height:5px;border-radius:3px;background:var(--n-300)}
+.sheet-title{font-family:var(--font-serif);font-weight:700;font-size:1.18rem;letter-spacing:-.01em;margin:0 0 12px}
+.monthpick-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;padding-bottom:4px}
+.monthpick-grid button{font:inherit;font-size:.92rem;font-weight:560;min-height:58px;border:1px solid var(--n-200);
+  background:var(--n-50);color:var(--n-800);border-radius:13px;cursor:pointer;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:2px;line-height:1.1;transition:transform .14s var(--ease),background .15s}
+.monthpick-grid button .yy{font-family:var(--font-mono);font-size:.62rem;color:var(--n-400);font-weight:500}
+.monthpick-grid button[aria-current="true"]{border-color:var(--accent);background:var(--r1-soft);color:var(--accent)}
+.monthpick-grid button[aria-current="true"] .yy{color:var(--accent)}
+.monthpick-grid button:active{transform:scale(.96)}
 /* ===== mobile layout ===== */
 @media (max-width:680px){
   .wrap{padding:14px 14px 28px}
@@ -306,9 +332,38 @@ h1,.panel h2,.tool-head h2,.tool-head h2{text-wrap:balance}
   #monthview .bigmonth{padding:4px 4px 8px}
   .days.big .cell{min-height:84px}
   .daypop{width:min(280px,calc(100vw - 24px))}
+  /* --- bottom toolbar replaces the top nav row on phones --- */
+  #navrow{display:none}
+  .wrap{padding-bottom:calc(74px + env(safe-area-inset-bottom))}
+  .mobilebar{display:flex;align-items:center;gap:6px;position:fixed;left:0;right:0;bottom:0;z-index:70;
+    padding:7px max(12px,env(safe-area-inset-left)) calc(7px + env(safe-area-inset-bottom)) max(12px,env(safe-area-inset-right));
+    background:rgb(255 255 255/.84);backdrop-filter:saturate(180%) blur(22px);
+    -webkit-backdrop-filter:saturate(180%) blur(22px);border-top:1px solid var(--n-200)}
+  .mb-seg{display:inline-flex;background:var(--n-100);border-radius:11px;padding:3px;gap:2px;flex:none}
+  .mb-segb{font:inherit;font-size:.82rem;font-weight:600;border:0;background:transparent;color:var(--n-600);
+    min-height:44px;padding:0 11px;border-radius:8px;cursor:pointer}
+  .mb-segb[aria-selected="true"]{background:#fff;color:var(--n-800);box-shadow:var(--sh-sm)}
+  .mb-nav{display:inline-flex;align-items:center;gap:2px;flex:1;justify-content:center;min-width:0}
+  .mb-label{font:inherit;font-family:var(--font-serif);font-weight:650;font-size:1rem;color:var(--n-800);
+    background:none;border:0;cursor:pointer;min-height:44px;padding:0 6px;border-radius:8px;min-width:0;
+    white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .mb-label::after{content:"▾";font-size:.66em;color:var(--n-400);margin-left:4px}
+  .mb-jump{font:inherit;font-size:.92rem;font-weight:560;color:var(--n-700);background:var(--n-50);
+    border:1px solid var(--n-200);border-radius:11px;min-height:44px;padding:0 14px;cursor:pointer;flex:1;
+    display:inline-flex;align-items:center;justify-content:center;gap:5px}
+  .mb-jump::after{content:"▾";color:var(--n-400)}
+  .mb-find{margin-left:auto;width:44px;height:44px;flex:none;border:1px solid var(--n-200);background:var(--n-50);
+    color:var(--n-600);border-radius:12px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center}
+  .mb-find .ico{width:19px;height:19px}
+  .navbtn{width:40px;height:44px}
+  /* --- larger touch targets on phones --- */
+  .chip{padding:9px 14px;min-height:44px}
+  .filterbtn,.clearbtn{padding:9px 14px;min-height:44px}
+  .fld select{padding:13px 34px 13px 14px;font-size:1rem}
+  .days.big .nm{min-height:32px;display:flex;align-items:center}
 }
 @media print{
-  .controls,.hint,.clearbtn,.tool,.daypop{display:none!important}
+  .controls,.hint,.clearbtn,.tool,.daypop,.mobilebar,.sheet{display:none!important}
   body{background:#fff;font-size:10px}.wrap{max-width:100%;padding:0}
   .months{grid-template-columns:repeat(3,1fr);gap:6px}
   .grid-main{grid-template-columns:1fr}.panel{display:none}
@@ -328,7 +383,7 @@ h1,.panel h2,.tool-head h2,.tool-head h2{text-wrap:balance}
   </header>
 
   <div class="controls">
-    <div class="ctl-row" style="margin-bottom:8px">
+    <div class="ctl-row" id="navrow" style="margin-bottom:8px">
       <span class="nav-title" id="navTitle" aria-hidden="true">Resident On-Call Schedule</span>
       <div class="viewtoggle" role="tablist" aria-label="Calendar view">
         <button id="vt-year" class="vt" role="tab" aria-selected="true">Year</button>
@@ -364,7 +419,7 @@ h1,.panel h2,.tool-head h2,.tool-head h2{text-wrap:balance}
   <p id="jsnote" class="jsnote" style="display:none">You’re viewing a static <em>preview</em>. The full-year schedule below is complete, but
     search, resident selection, day details, and the swap planner need scripts — open this file in a web browser (or visit the
     deployed link) to use them.</p>
-  <noscript><style>#jsnote{display:block!important}</style></noscript>
+  <noscript><style>#jsnote{display:block!important}.mobilebar{display:none!important}</style></noscript>
 
   <div class="grid-main">
     <main class="viewarea" aria-label="Call calendar">
@@ -398,6 +453,26 @@ h1,.panel h2,.tool-head h2,.tool-head h2{text-wrap:balance}
   </section>
 
   <footer id="foot"></footer>
+</div>
+<nav class="mobilebar" id="mobilebar" aria-label="Calendar navigation">
+  <div class="mb-seg" role="tablist" aria-label="Calendar view">
+    <button id="mvt-year" class="mb-segb" role="tab" aria-selected="true">Year</button>
+    <button id="mvt-month" class="mb-segb" role="tab" aria-selected="false">Month</button>
+  </div>
+  <div class="mb-nav" id="mb-nav" hidden>
+    <button class="navbtn mb-arrow" id="mb-prev" aria-label="Previous month">‹</button>
+    <button class="mb-label" id="mb-label" aria-haspopup="dialog" aria-label="Jump to month">Jul 2026</button>
+    <button class="navbtn mb-arrow" id="mb-next" aria-label="Next month">›</button>
+  </div>
+  <button class="mb-jump" id="mb-jump" aria-haspopup="dialog">Jump to month</button>
+  <button class="mb-find" id="mb-find" aria-label="Find a resident or month"></button>
+</nav>
+<div class="sheet" id="sheet" hidden>
+  <div class="sheet-scrim" id="sheet-scrim"></div>
+  <div class="sheet-panel" id="sheet-panel" role="dialog" aria-modal="true" aria-label="Details">
+    <button class="sheet-grab" id="sheet-grab" aria-label="Close"></button>
+    <div class="sheet-body" id="sheet-body"></div>
+  </div>
 </div>
 <div id="daypop" class="daypop" hidden></div>
 <div id="cmdk" class="cmdk" hidden>
@@ -522,7 +597,7 @@ function renderMonthView(){
   document.getElementById('monthgrid').innerHTML=cells;
   document.getElementById('mv-prev').disabled=monthIdx===0;
   document.getElementById('mv-next').disabled=monthIdx===11;
-  applyHighlight();
+  applyHighlight();syncBar();
 }
 function setView(v){
   view=v;
@@ -532,7 +607,7 @@ function setView(v){
   document.getElementById('monthview').hidden=v!=='month';
   document.getElementById('monthnav').hidden=v!=='month';
   if(v==='month')renderMonthView();
-  updateHash();
+  syncBar();updateHash();
 }
 function gotoMonth(i){monthIdx=Math.max(0,Math.min(11,i));renderMonthView();updateHash();}
 document.getElementById('vt-year').onclick=()=>setView('year');
@@ -554,6 +629,54 @@ function updateHash(){
   if(!mm && innerWidth<=680) setView('month');   // phones start in the cleaner single-month view
 })();
 document.addEventListener('keydown',e=>{if(e.key==='Escape')select(null);});
+
+// ---------- reusable bottom sheet + month picker (mobile) ----------
+const sheet=document.getElementById('sheet'),sheetPanel=document.getElementById('sheet-panel'),
+      sheetBody=document.getElementById('sheet-body'),sheetScrim=document.getElementById('sheet-scrim'),
+      sheetGrab=document.getElementById('sheet-grab');
+let sheetCloseT;
+function openSheet(html,label){
+  clearTimeout(sheetCloseT);sheetBody.innerHTML=html;
+  if(label)sheetPanel.setAttribute('aria-label',label);
+  sheet.hidden=false;sheetPanel.style.transform='';document.body.style.overflow='hidden';
+  requestAnimationFrame(()=>sheet.classList.add('open'));
+}
+function closeSheet(){
+  sheet.classList.remove('open');sheetPanel.style.transform='';document.body.style.overflow='';
+  sheetCloseT=setTimeout(()=>{sheet.hidden=true;sheetBody.innerHTML='';},340);
+}
+if(sheetScrim)sheetScrim.addEventListener('click',closeSheet);
+if(sheetGrab)sheetGrab.addEventListener('click',closeSheet);
+document.addEventListener('keydown',e=>{if(sheet&&!sheet.hidden&&e.key==='Escape'){e.stopPropagation();closeSheet();}});
+(function(){if(!sheetGrab)return;let sy=null,dy=0;
+  const mv=e=>{const y=e.touches?e.touches[0].clientY:e.clientY;dy=Math.max(0,y-sy);sheetPanel.style.transform='translateY('+dy+'px)';};
+  const up=()=>{document.removeEventListener('touchmove',mv);document.removeEventListener('touchend',up);
+    document.removeEventListener('mousemove',mv);document.removeEventListener('mouseup',up);
+    sheetPanel.style.transition='';if(dy>90)closeSheet();else sheetPanel.style.transform='';sy=null;};
+  const dn=e=>{sy=e.touches?e.touches[0].clientY:e.clientY;dy=0;sheetPanel.style.transition='none';
+    document.addEventListener('touchmove',mv,{passive:true});document.addEventListener('touchend',up);
+    document.addEventListener('mousemove',mv);document.addEventListener('mouseup',up);};
+  sheetGrab.addEventListener('touchstart',dn,{passive:true});sheetGrab.addEventListener('mousedown',dn);
+})();
+function openMonthPicker(){
+  const cur=monthIdx;
+  const grid=MONTHS.map(([y,m],i)=>`<button data-i="${i}" aria-current="${i===cur}"><span>${MNAME[m]}</span><span class="yy">${y}</span></button>`).join('');
+  openSheet(`<div class="sheet-title">Jump to month</div><div class="monthpick-grid" id="mpg">${grid}</div>`,'Jump to month');
+  const g=document.getElementById('mpg');
+  if(g)g.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;monthIdx=+b.dataset.i;setView('month');closeSheet();});
+}
+function syncBar(){
+  const inMonth=(view==='month');
+  const yb=document.getElementById('mvt-year'),mb=document.getElementById('mvt-month');
+  if(yb)yb.setAttribute('aria-selected',!inMonth);
+  if(mb)mb.setAttribute('aria-selected',inMonth);
+  const nav=document.getElementById('mb-nav'),jump=document.getElementById('mb-jump');
+  if(nav)nav.hidden=!inMonth;if(jump)jump.hidden=inMonth;
+  const lab=document.getElementById('mb-label');
+  if(lab){const a=MONTHS[monthIdx];lab.textContent=MNAME[a[1]].slice(0,3)+' '+a[0];}
+  const pv=document.getElementById('mb-prev'),nx=document.getElementById('mb-next');
+  if(pv)pv.disabled=monthIdx===0;if(nx)nx.disabled=monthIdx===11;
+}
 
 // ---------- side panel ----------
 function rotOn(nm,ds){const sp=rotations[nm]||[];for(const x of sp){if(ds>=x.s&&ds<=x.e)return x.r;}return null;}
@@ -840,6 +963,17 @@ const ICO={
 };
 document.getElementById('mv-prev').innerHTML=ICO.chevL;
 document.getElementById('mv-next').innerHTML=ICO.chevR;
+// ---------- mobile bottom toolbar wiring ----------
+(function(){
+  const y=document.getElementById('mvt-year'),m=document.getElementById('mvt-month');
+  if(y)y.onclick=()=>setView('year');if(m)m.onclick=()=>setView('month');
+  const pv=document.getElementById('mb-prev'),nx=document.getElementById('mb-next');
+  if(pv)pv.onclick=()=>gotoMonth(monthIdx-1);if(nx)nx.onclick=()=>gotoMonth(monthIdx+1);
+  const lab=document.getElementById('mb-label'),jp=document.getElementById('mb-jump');
+  if(lab)lab.onclick=openMonthPicker;if(jp)jp.onclick=openMonthPicker;
+  const fb=document.getElementById('mb-find');if(fb){fb.innerHTML=ICO.search;fb.onclick=openCmd;}
+  syncBar();
+})();
 (function(){const cb=document.getElementById('clearbtn');if(cb)cb.innerHTML=ICO.x+'<span>clear</span>';})();
 function placeSeg(box){if(!box)return;const s=box.querySelector('[aria-selected="true"]');if(!s)return;
   let ind=box.querySelector('.seg-ind');
