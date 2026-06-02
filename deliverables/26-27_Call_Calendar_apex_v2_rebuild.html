@@ -4,6 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>UPH Family Medicine — 2026–2027 Resident Call Calendar</title>
+<meta name="theme-color" content="#ffffff">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="On-Call">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/icon-192.png">
+<link rel="manifest" href="/manifest.webmanifest">
 <style>
 :root{
   color-scheme:light;
@@ -209,6 +217,13 @@ body.filt-we .cell:not(.we):not(.hol):not(.empty){opacity:.34}
 .copybtn{margin-top:9px;font:inherit;font-size:.82rem;font-weight:560;background:var(--accent);color:#fff;border:0;
   border-radius:10px;padding:9px 18px;cursor:pointer;transition:background .15s}
 .copybtn:hover{background:#0077ed} .copybtn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.prop-actions{display:flex;gap:9px;flex-wrap:wrap;align-items:center;margin-top:9px}
+.prop-actions .copybtn{margin-top:0}
+.sharebtn{font:inherit;font-size:.82rem;font-weight:560;background:var(--n-50);color:var(--n-700);border:1px solid var(--n-300);
+  border-radius:10px;padding:9px 16px;cursor:pointer;display:inline-flex;align-items:center;gap:6px;transition:transform .14s var(--ease),border-color .16s}
+.sharebtn:hover{border-color:var(--n-500)} .sharebtn:active{transform:scale(.96)} .sharebtn .ico{width:14px;height:14px}
+.fld label .stepn{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:50%;
+  background:var(--n-200);color:var(--n-600);font-size:.62rem;font-weight:700;margin-right:7px;font-family:var(--font-mono);vertical-align:-.15em}
 .cand{display:flex;flex-direction:column;gap:7px;margin-top:8px}
 .cand .c{display:flex;align-items:center;gap:11px;padding:9px 13px;border:1px solid var(--n-200);border-radius:12px;font-size:.86rem;background:#fff}
 .cand .c .nmn{font-weight:600;flex:1} .cand .c.soft{border-style:dashed;background:var(--n-50)}
@@ -328,7 +343,7 @@ h1,.panel h2,.tool-head h2,.tool-head h2{text-wrap:balance}
 @keyframes mslideL{from{opacity:.35;transform:translateX(-26px)}to{opacity:1;transform:none}}
 /* ===== mobile layout ===== */
 @media (max-width:680px){
-  .wrap{padding:14px 14px 28px}
+  .wrap{padding:calc(14px + env(safe-area-inset-top)) calc(14px + env(safe-area-inset-right)) 28px calc(14px + env(safe-area-inset-left))}
   .eyebrow{font-size:.68rem}
   .mast{padding-bottom:12px;margin-bottom:12px}
   .mast h1{font-size:clamp(1.7rem,7.6vw,2.15rem);letter-spacing:-.022em}
@@ -415,7 +430,7 @@ h1,.panel h2,.tool-head h2,.tool-head h2{text-wrap:balance}
       </div>
       <button class="findbtn" id="findbtn" title="Quick find (⌘K / Ctrl-K)"><span id="findico"></span>Find<kbd>⌘K</kbd></button>
     </div>
-    <div class="ctl-row" style="margin-bottom:8px">
+    <div class="ctl-row" id="ctlfilters" style="margin-bottom:8px">
       <span class="ctl-label">Class</span>
       <div class="chips" id="pgychips"></div>
       <span class="ctl-label" style="margin-left:8px">Resident</span>
@@ -437,7 +452,7 @@ h1,.panel h2,.tool-head h2,.tool-head h2{text-wrap:balance}
   <p id="jsnote" class="jsnote" style="display:none">You’re viewing a static <em>preview</em>. The full-year schedule below is complete, but
     search, resident selection, day details, and the swap planner need scripts — open this file in a web browser (or visit the
     deployed link) to use them.</p>
-  <noscript><style>#jsnote{display:block!important}.mobilebar{display:none!important}</style></noscript>
+  <noscript><style>#jsnote{display:block!important}.mobilebar,#navrow,#ctlfilters,#switchtool{display:none!important}</style></noscript>
 
   <div class="grid-main">
     <main class="viewarea" aria-label="Call calendar">
@@ -449,7 +464,7 @@ h1,.panel h2,.tool-head h2,.tool-head h2{text-wrap:balance}
         </div>
       </section>
     </main>
-    <aside class="panel" id="panel" aria-live="polite"></aside>
+    <aside class="panel" id="panel" aria-live="polite"><h2>Workload Distribution by Class</h2><div class="sub">Each bar represents a resident's weighted on-call workload (total calls · mean inconvenience). A more uniform set of bars within a class indicates a more even distribution of workload.</div><div class="ov-h">Interns — R1</div><div class="eq-row"><span class="lab">Hard</span><span class="eq-bar"><i style="width:94%;background:var(--r1)"></i></span><span class="val">59 · 2.29</span></div><div class="eq-row"><span class="lab">Oehm</span><span class="eq-bar"><i style="width:94%;background:var(--r1)"></i></span><span class="val">59 · 2.29</span></div><div class="eq-row"><span class="lab">Schutt</span><span class="eq-bar"><i style="width:94%;background:var(--r1)"></i></span><span class="val">59 · 2.29</span></div><div class="eq-row"><span class="lab">Stanek</span><span class="eq-bar"><i style="width:94%;background:var(--r1)"></i></span><span class="val">59 · 2.29</span></div><div class="eq-row"><span class="lab">Strand</span><span class="eq-bar"><i style="width:94%;background:var(--r1)"></i></span><span class="val">59 · 2.29</span></div><div class="eq-row"><span class="lab">Wohlgemuth</span><span class="eq-bar"><i style="width:94%;background:var(--r1)"></i></span><span class="val">59 · 2.27</span></div><div class="ov-h">Seniors — R2</div><div class="eq-row"><span class="lab">Beutel</span><span class="eq-bar"><i style="width:85%;background:var(--r2)"></i></span><span class="val">33 · 2.27</span></div><div class="eq-row"><span class="lab">Bottke</span><span class="eq-bar"><i style="width:85%;background:var(--r2)"></i></span><span class="val">32 · 2.34</span></div><div class="eq-row"><span class="lab">Bower</span><span class="eq-bar"><i style="width:85%;background:var(--r2)"></i></span><span class="val">32 · 2.34</span></div><div class="eq-row"><span class="lab">Gaspar</span><span class="eq-bar"><i style="width:85%;background:var(--r2)"></i></span><span class="val">32 · 2.34</span></div><div class="eq-row"><span class="lab">Kendrick</span><span class="eq-bar"><i style="width:85%;background:var(--r2)"></i></span><span class="val">32 · 2.34</span></div><div class="eq-row"><span class="lab">Sublette</span><span class="eq-bar"><i style="width:85%;background:var(--r2)"></i></span><span class="val">33 · 2.27</span></div><div class="eq-row"><span class="lab">Patel</span><span class="eq-bar"><i style="width:94%;background:var(--r2)"></i></span><span class="val">36 · 2.31</span></div><div class="ov-h">Seniors — R3</div><div class="eq-row"><span class="lab">Johnson</span><span class="eq-bar"><i style="width:94%;background:var(--r3)"></i></span><span class="val">34 · 2.21</span></div><div class="eq-row"><span class="lab">Lux</span><span class="eq-bar"><i style="width:94%;background:var(--r3)"></i></span><span class="val">34 · 2.21</span></div><div class="eq-row"><span class="lab">Mautino</span><span class="eq-bar"><i style="width:94%;background:var(--r3)"></i></span><span class="val">34 · 2.21</span></div><div class="eq-row"><span class="lab">Mudondo</span><span class="eq-bar"><i style="width:94%;background:var(--r3)"></i></span><span class="val">34 · 2.21</span></div><p class="note" style="margin-top:14px">Each call day is staffed by <b>one intern and one senior resident</b>. Interns cover night float (weeknights during the first half of the year) and weekend and holiday 24-hour call; seniors cover daily 24-hour call with a post-call day. R3 residents are not assigned Sunday senior call (with a single exception); R2 residents carry seven to eight Sundays each.</p></aside>
   </div>
 
   <section class="tool" id="switchtool" aria-label="Switch and coverage planner">
@@ -959,15 +974,24 @@ function idleResult(){return `<div class="verdict idle">Awaiting your selection<
   (toolMode==='cover'?'Choose who needs coverage and which shift — every eligible colleague in the same class is listed, ranked by who is least loaded.'
    :toolMode==='give'?'Choose the shift to give away and a colleague to receive it; the tool checks the handoff against every rule.'
    :'Pick two residents and one shift each; the tool checks the trade against every program rule.')+'</p>';}
+function shareControls(copyLabel){
+  return `<div class="prop-actions"><button class="copybtn" id="copyp">${copyLabel}</button>`+
+    (navigator.share?`<button class="sharebtn" id="sharep">${ICO.share} Share</button>`:'')+`</div>`;
+}
+function wireShare(text,copyLabel){
+  const cp=document.getElementById('copyp');
+  if(cp)cp.onclick=()=>{try{navigator.clipboard.writeText(text).catch(()=>{});}catch(e){}cp.textContent='Copied ✓';setTimeout(()=>cp.textContent=copyLabel,1400);};
+  const sp=document.getElementById('sharep');
+  if(sp)sp.onclick=async()=>{try{await navigator.share({title:'On-call coverage',text});}catch(e){}};
+}
 function renderChecks(C,proposal){
   const v=verdict(C),vt={ok:'Clear to propose',warn:'Allowed — with cautions',bad:'Rule conflict — not allowed'}[v],vi={ok:'✓',warn:'!',bad:'✕'}[v];
   TR.innerHTML=`<div class="verdict ${v}">${vi} ${vt}</div>`+
     `<ul class="checks">${C.map(c=>`<li class="${c[0]}"><span class="ic">${c[0]==='ok'?'✓':c[0]==='warn'?'!':'✕'}</span>`+
       `<span><b>${c[1]}</b>${c[2]?` <span class="ct">— ${c[2]}</span>`:''}</span></li>`).join('')}</ul>`+
     (proposal?`<div class="proposal"><div class="fp-title">Proposal to send</div><textarea readonly>${proposal}</textarea>`+
-      `<button class="copybtn" id="copyp">Copy proposal</button></div>`:'');
-  const cp=document.getElementById('copyp');
-  if(cp)cp.onclick=()=>{try{navigator.clipboard.writeText(proposal).catch(()=>{});}catch(e){}cp.textContent='Copied ✓';setTimeout(()=>cp.textContent='Copy proposal',1400);};
+      shareControls('Copy proposal')+`</div>`:'');
+  wireShare(proposal,'Copy proposal');
 }
 function renderCover(A,dA){
   const cands=runCover(A,dA),r=byDate[dA];
@@ -976,11 +1000,10 @@ function renderCover(A,dA){
   const list=cands.length?`<div class="cand">${cands.map(c=>`<div class="c ${c.soft?'soft':''}">`+
       `<span class="dp-tag" style="background:${tagColor(c.n)}">${PGY[c.n]}</span><span class="nmn">${fullname[c.n]||c.n}</span>`+
       `<span class="ct">${c.tot} calls · load ${c.wl}${c.soft?' · soft-blocked':''}</span></div>`).join('')}</div>`+
-      `<div class="proposal"><textarea readonly>${proposalCover(A,dA,cands)}</textarea><button class="copybtn" id="copyp">Copy request</button></div>`
+      `<div class="proposal"><textarea readonly>${proposalCover(A,dA,cands)}</textarea>`+shareControls('Copy request')+`</div>`
     :`<p class="note">No colleague in the same class is eligible — every candidate is on an incompatible rotation, on leave, already on call, post-call, or blocked by a Sunday/holiday rule. Try another date or escalate to the chief.</p>`;
   TR.innerHTML=head+list;
-  const cp=document.getElementById('copyp');
-  if(cp)cp.onclick=()=>{try{navigator.clipboard.writeText(proposalCover(A,dA,cands)).catch(()=>{});}catch(e){}cp.textContent='Copied ✓';setTimeout(()=>cp.textContent='Copy request',1400);};
+  wireShare(proposalCover(A,dA,cands),'Copy request');
 }
 function runTool(){
   const A=val('s-a'),dA=val('s-ad');
@@ -994,20 +1017,20 @@ function runTool(){
   const C=runSwap(A,dA,B,dB),v=verdict(C);renderChecks(C,v!=='bad'?proposalSwap(A,dA,B,dB,v):null);
 }
 function renderToolForm(){
-  const fld=(id,lab,inner)=>`<div class="fld"><label for="${id}">${lab}</label>${inner}</div>`;
+  const fld=(id,lab,inner,step)=>`<div class="fld"><label for="${id}"><span class="stepn">${step}</span>${lab}</label>${inner}</div>`;
   let h;
   if(toolMode==='cover')
-    h=fld('s-a','Resident who needs coverage',`<select id="s-a">${optsRes(null,'')}</select>`)
-     +fld('s-ad','Shift to cover',`<select id="s-ad">${optsShift('')}</select>`);
+    h=fld('s-a','Resident who needs coverage',`<select id="s-a">${optsRes(null,'')}</select>`,1)
+     +fld('s-ad','Shift to cover',`<select id="s-ad">${optsShift('')}</select>`,2);
   else if(toolMode==='give')
-    h=fld('s-a','Resident giving the shift',`<select id="s-a">${optsRes(null,'')}</select>`)
-     +fld('s-ad','Shift to give away',`<select id="s-ad">${optsShift('')}</select>`)
-     +fld('s-b','Colleague taking it (same class)',`<select id="s-b"><option value="">— choose a resident first —</option></select>`);
+    h=fld('s-a','Resident giving the shift',`<select id="s-a">${optsRes(null,'')}</select>`,1)
+     +fld('s-ad','Shift to give away',`<select id="s-ad">${optsShift('')}</select>`,2)
+     +fld('s-b','Colleague taking it (same class)',`<select id="s-b"><option value="">— choose a resident first —</option></select>`,3);
   else
-    h=fld('s-a','Resident A',`<select id="s-a">${optsRes(null,'')}</select>`)
-     +fld('s-ad','A’s shift',`<select id="s-ad">${optsShift('')}</select>`)
-     +fld('s-b','Resident B (same class)',`<select id="s-b"><option value="">— choose A first —</option></select>`)
-     +fld('s-bd','B’s shift',`<select id="s-bd">${optsShift('')}</select>`);
+    h=fld('s-a','Resident A',`<select id="s-a">${optsRes(null,'')}</select>`,1)
+     +fld('s-ad','A’s shift',`<select id="s-ad">${optsShift('')}</select>`,2)
+     +fld('s-b','Resident B (same class)',`<select id="s-b"><option value="">— choose A first —</option></select>`,3)
+     +fld('s-bd','B’s shift',`<select id="s-bd">${optsShift('')}</select>`,4);
   TF.innerHTML=h;
   const A=document.getElementById('s-a');
   A.onchange=()=>{
@@ -1033,7 +1056,8 @@ const ICO={
   chevL:'<svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3.5 5.5 8 10 12.5"/></svg>',
   chevR:'<svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5"/></svg>',
   x:'<svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8"/></svg>',
-  search:'<svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="4.2"/><path d="M10.6 10.6 14 14"/></svg>'
+  search:'<svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="4.2"/><path d="M10.6 10.6 14 14"/></svg>',
+  share:'<svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 10.5V2.6M8 2.6 5.4 5.2M8 2.6 10.6 5.2"/><path d="M4 8v5.4h8V8"/></svg>'
 };
 document.getElementById('mv-prev').innerHTML=ICO.chevL;
 document.getElementById('mv-next').innerHTML=ICO.chevR;

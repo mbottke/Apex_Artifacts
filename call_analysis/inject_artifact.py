@@ -43,12 +43,34 @@ def month_html(y,m):
             f'<div class="dow-head">{head}</div><div class="days">{cells}</div></section>')
 months_html=''.join(month_html(y,m) for y,m in MONTHS)
 
+# ---- server-side render of the workload-by-class panel (mirror of the template's overviewHTML) ----
+ROLEC={'R1':'var(--r1)','R2':'var(--r2)','R3':'var(--r3)'}
+STATS=D['stats']; INT=D['INT']; R2L=D['R2']; R3L=D['R3']
+def panel_block(label,names,pgyk):
+    wls=[STATS[n]['wload'] for n in names]; mx=(max(wls)*1.06) if wls else 1
+    rows=''.join(
+      f'<div class="eq-row"><span class="lab">{esc(n)}</span>'
+      f'<span class="eq-bar"><i style="width:{round(STATS[n]["wload"]/mx*100)}%;background:{ROLEC[pgyk]}"></i></span>'
+      f'<span class="val">{STATS[n]["total"]} · {STATS[n]["avg"]}</span></div>' for n in names)
+    return f'<div class="ov-h">{esc(label)}</div>{rows}'
+panel_html=('<h2>Workload Distribution by Class</h2>'
+  "<div class=\"sub\">Each bar represents a resident's weighted on-call workload (total calls · mean inconvenience). "
+  'A more uniform set of bars within a class indicates a more even distribution of workload.</div>'
+  + panel_block('Interns — R1',INT,'R1')+panel_block('Seniors — R2',R2L,'R2')+panel_block('Seniors — R3',R3L,'R3')
+  + '<p class="note" style="margin-top:14px">Each call day is staffed by <b>one intern and one senior resident</b>. '
+    'Interns cover night float (weeknights during the first half of the year) and weekend and holiday 24-hour call; '
+    'seniors cover daily 24-hour call with a post-call day. R3 residents are not assigned Sunday senior call (with a '
+    'single exception); R2 residents carry seven to eight Sundays each.</p>')
+
 # bake the day count + the server-rendered grid into the static HTML
 assert '<b id="ndays">—</b>' in tpl, "ndays placeholder missing"
 tpl=tpl.replace('<b id="ndays">—</b>', f'<b id="ndays">{len(D["days"])}</b>')
 marker='<div class="months" id="months" aria-label="Year overview"></div>'
 assert marker in tpl, "months container missing"
 tpl=tpl.replace(marker, marker.replace('></div>', f'>{months_html}</div>'))
+pmark='id="panel" aria-live="polite"></aside>'
+assert pmark in tpl, "panel container missing"
+tpl=tpl.replace(pmark, f'id="panel" aria-live="polite">{panel_html}</aside>')
 
 # embed the data payload for the interactive layer
 data=raw.replace('</','<\\/')   # guard against </script> breaking the inline JSON block

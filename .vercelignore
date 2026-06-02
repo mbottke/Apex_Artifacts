@@ -1,8 +1,12 @@
-# Publish ONLY the landing page + the two interactive calendars.
-# Everything else (raw model data, scripts, reports, workbooks, PDFs) stays private.
+# Publish ONLY the landing page, the two interactive calendars, and the
+# PWA icon set + manifest. Everything else (raw model data, scripts,
+# reports, workbooks, PDFs) stays private.
 *
 !index.html
 !vercel.json
+!manifest.webmanifest
+!assets
+!assets/**
 !deliverables
 deliverables/*
 !deliverables/26-27_Call_Calendar_apex_v2_rebuild.html
