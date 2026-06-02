@@ -308,6 +308,24 @@ h1,.panel h2,.tool-head h2,.tool-head h2{text-wrap:balance}
 .monthpick-grid button[aria-current="true"]{border-color:var(--accent);background:var(--r1-soft);color:var(--accent)}
 .monthpick-grid button[aria-current="true"] .yy{color:var(--accent)}
 .monthpick-grid button:active{transform:scale(.96)}
+/* day-detail sheet (mobile) */
+.ds-people{display:flex;flex-direction:column;gap:8px}
+.ds-person{display:flex;align-items:center;gap:10px}
+.ds-name{flex:1;min-width:0;display:flex;flex-direction:column;gap:1px;text-align:left;background:none;border:0;
+  font:inherit;cursor:pointer;padding:8px 6px;border-radius:10px;min-height:44px;justify-content:center}
+.ds-name:active{background:var(--n-50)}
+.ds-name .dp-name{font-weight:600;color:var(--n-800)}
+.ds-name .dp-rot{font-size:.78rem;color:var(--n-500)}
+.ds-cover{flex:none;font:inherit;font-size:.8rem;font-weight:560;color:var(--accent);background:var(--r1-soft);
+  border:0;border-radius:999px;padding:9px 13px;min-height:44px;cursor:pointer;display:inline-flex;
+  align-items:center;gap:3px;white-space:nowrap}
+.ds-cover .ico{width:13px;height:13px}
+.ds-cover:active{transform:scale(.96)}
+/* month-view swipe transition */
+.days.big.slin{animation:mslideR .32s var(--ease)}
+.days.big.slir{animation:mslideL .32s var(--ease)}
+@keyframes mslideR{from{opacity:.35;transform:translateX(26px)}to{opacity:1;transform:none}}
+@keyframes mslideL{from{opacity:.35;transform:translateX(-26px)}to{opacity:1;transform:none}}
 /* ===== mobile layout ===== */
 @media (max-width:680px){
   .wrap{padding:14px 14px 28px}
@@ -493,7 +511,7 @@ const RING={R1:'var(--r1)',R2:'var(--r2)',R3:'var(--r3)'};
 const DOW=['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
 const DOWW={Mon:2,Tue:2,Wed:1,Thu:1,Fri:3,Sun:3,Sat:4};
 const byDate=Object.fromEntries(days.map(x=>[x.d,x]));
-let sel=null, pgyFilter='all';
+let sel=null, pgyFilter='all', lastSwipe=0;
 
 document.getElementById('ndays').textContent=days.length;
 
@@ -569,6 +587,7 @@ function select(nm){
 }
 const viewarea=document.querySelector('.viewarea');
 viewarea.addEventListener('click',e=>{
+  if(Date.now()-lastSwipe<400)return;
   const t=e.target.closest('.nm');if(t)select(sel===t.dataset.nm?null:t.dataset.nm);
 });
 viewarea.addEventListener('keydown',e=>{
@@ -759,7 +778,9 @@ function longDate(ds){return new Date(ds+'T00:00').toLocaleDateString('en-US',{w
 function openDay(ds,ev){
   const rec=byDate[ds];if(!rec)return;
   const we=[0,6].includes(new Date(ds+'T00:00').getDay());
-  const rows=[...(rec.interns||[]),...(rec.seniors||[])].map(n=>{
+  const people=[...(rec.interns||[]),...(rec.seniors||[])];
+  if(innerWidth<=680){openDaySheet(ds,rec,we,people);return;}
+  const rows=people.map(n=>{
     const rot=rotOn(n,ds)||'Open block — available';
     return `<div class="dp-row"><span class="dp-tag" style="background:${tagColor(n)}">${PGY[n]}</span>`+
       `<span><span class="dp-name">${fullname[n]||n}</span><br><span class="dp-rot">${rot}</span></span></div>`;}).join('');
@@ -780,8 +801,33 @@ function openDay(ds,ev){
   caret.style.left=(cx-6)+'px';caret.style[below?'top':'bottom']='-6px';daypop.appendChild(caret);
   daypop.querySelector('.dp-x').onclick=closeDay;
 }
+function openDaySheet(ds,rec,we,people){
+  const rows=people.map(n=>{
+    const rot=rotOn(n,ds)||'Open block — available';
+    return `<div class="ds-person"><span class="dp-tag" style="background:${tagColor(n)}">${PGY[n]}</span>`+
+      `<button class="ds-name" data-nm="${n}"><span class="dp-name">${fullname[n]||n}</span><span class="dp-rot">${rot}</span></button>`+
+      `<button class="ds-cover" data-nm="${n}" data-d="${ds}">Find coverage ${ICO.chevR}</button></div>`;}).join('');
+  const holLine=rec.hol?`<div class="dp-hol" style="margin:-4px 0 10px">★ ${rec.hol}${rec.major?' · major holiday':''}</div>`
+      :we?`<div class="dp-hol" style="color:var(--n-500);margin:-4px 0 10px">Weekend</div>`:'';
+  openSheet(`<div class="sheet-title">${longDate(ds)}</div>`+holLine+
+    `<div class="ds-people">${rows}</div>`+
+    `<p class="note" style="margin-top:12px">Tap a name to highlight that resident's year · “Find coverage” opens the planner for that shift.</p>`, longDate(ds));
+  const body=document.getElementById('sheet-body');
+  body.querySelectorAll('.ds-name').forEach(b=>b.onclick=()=>{select(b.dataset.nm);closeSheet();});
+  body.querySelectorAll('.ds-cover').forEach(b=>b.onclick=()=>seedCoverage(b.dataset.nm,b.dataset.d));
+}
+function seedCoverage(nm,ds){
+  toolMode='cover';
+  document.querySelectorAll('.tool-modes button').forEach(x=>x.setAttribute('aria-selected',x.dataset.mode==='cover'));
+  renderToolForm();requestAnimationFrame(segModes);
+  const a=document.getElementById('s-a');if(a){a.value=nm;a.onchange();}
+  const ad=document.getElementById('s-ad');if(ad){ad.value=ds;runTool();}
+  lastSwipe=Date.now();closeSheet();
+  const st=document.getElementById('switchtool');if(st)st.scrollIntoView({behavior:'smooth',block:'start'});
+}
 function closeDay(){daypop.hidden=true;}
 viewarea.addEventListener('click',e=>{
+  if(Date.now()-lastSwipe<400)return;
   if(e.target.closest('.nm'))return;
   const cell=e.target.closest('.cell');if(!cell||cell.classList.contains('empty'))return;
   if(cell.dataset.d)openDay(cell.dataset.d,e);
@@ -789,6 +835,34 @@ viewarea.addEventListener('click',e=>{
 document.addEventListener('click',e=>{if(!daypop.hidden&&!e.target.closest('#daypop')&&!e.target.closest('.cell'))closeDay();});
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeDay();});
 window.addEventListener('scroll',()=>{if(!daypop.hidden)closeDay();},{passive:true});
+// ---------- month-view swipe + long-press to plan (touch) ----------
+function stepMonth(dir){
+  if((dir>0&&monthIdx>=11)||(dir<0&&monthIdx<=0))return;
+  gotoMonth(monthIdx+dir);
+  const g=document.getElementById('monthgrid');
+  if(g){g.classList.remove('slin','slir');void g.offsetWidth;g.classList.add(dir>0?'slin':'slir');}
+}
+(function(){
+  const area=document.getElementById('monthview');if(!area)return;
+  let x0=null,y0=null,t0=0;
+  area.addEventListener('touchstart',e=>{if(e.touches.length!==1){x0=null;return;}x0=e.touches[0].clientX;y0=e.touches[0].clientY;t0=Date.now();},{passive:true});
+  area.addEventListener('touchend',e=>{
+    if(x0==null)return;const sx=x0,sy=y0;x0=null;const t=e.changedTouches[0];if(!t)return;
+    const dx=t.clientX-sx,dy=t.clientY-sy;
+    if(Math.abs(dx)>48&&Math.abs(dx)>Math.abs(dy)*1.6&&Date.now()-t0<600){lastSwipe=Date.now();stepMonth(dx<0?1:-1);}
+  },{passive:true});
+})();
+(function(){
+  let lpTimer=null,lp=null;
+  viewarea.addEventListener('touchstart',e=>{
+    const nm=e.target.closest('.nm');if(!nm)return;
+    const cell=nm.closest('.cell'),ds=cell&&cell.dataset.d;if(!ds)return;
+    lp={x:e.touches[0].clientX,y:e.touches[0].clientY};
+    lpTimer=setTimeout(()=>{lpTimer=null;if(navigator.vibrate)navigator.vibrate(8);seedCoverage(nm.dataset.nm,ds);},500);
+  },{passive:true});
+  viewarea.addEventListener('touchmove',e=>{if(lpTimer&&lp&&e.touches[0]){const t=e.touches[0];if(Math.abs(t.clientX-lp.x)>10||Math.abs(t.clientY-lp.y)>10){clearTimeout(lpTimer);lpTimer=null;}}},{passive:true});
+  viewarea.addEventListener('touchend',()=>{if(lpTimer){clearTimeout(lpTimer);lpTimer=null;}},{passive:true});
+})();
 
 // ---------- switch & coverage planner (validated against the optimizer's own rule model) ----------
 const ELIG=DATA.elig,ELIGS=DATA.eligSoft,SPECIAL=new Set(DATA.special),WINTER=new Set(DATA.winterMaj);
