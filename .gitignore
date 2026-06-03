@@ -8,3 +8,6 @@ qa_*.py
 
 # Vercel CLI local project link (machine-local, not for the repo)
 .vercel
+
+# Claude Code local settings — may hold secrets (e.g. tokens); never commit
+.claude/settings.local.json
