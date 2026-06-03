@@ -5,3 +5,6 @@ call_analysis/artifact_data_*.json
 qa_*.py
 /*.png
 /*.pdf
+
+# Vercel CLI local project link (machine-local, not for the repo)
+.vercel
