@@ -1,0 +1,6875 @@
+{
+ "rotations": {
+  "Johnson": [
+   [
+    "2026-07-05",
+    "2026-08-01",
+    "OB"
+   ],
+   [
+    "2026-08-02",
+    "2026-08-15",
+    "Behavioral Health"
+   ],
+   [
+    "2026-08-16",
+    "2026-08-29",
+    "Urology"
+   ],
+   [
+    "2026-08-30",
+    "2026-09-12",
+    "Staffing/Fac Shadowing"
+   ],
+   [
+    "2026-09-13",
+    "2026-09-26",
+    "Bariatrics"
+   ],
+   [
+    "2026-09-27",
+    "2026-10-10",
+    "Orthopaedics"
+   ],
+   [
+    "2026-10-11",
+    "2026-10-24",
+    "ENT"
+   ],
+   [
+    "2026-10-25",
+    "2026-11-21",
+    "Family Med Inpatient"
+   ],
+   [
+    "2026-11-22",
+    "2026-12-05",
+    "Neurology"
+   ],
+   [
+    "2026-12-06",
+    "2026-12-19",
+    "Geriatrics"
+   ],
+   [
+    "2027-01-03",
+    "2027-01-30",
+    "OB"
+   ],
+   [
+    "2027-01-31",
+    "2027-02-27",
+    "Away"
+   ],
+   [
+    "2027-02-28",
+    "2027-03-27",
+    "Family Med Inpatient"
+   ],
+   [
+    "2027-03-28",
+    "2027-04-10",
+    "Dermatology"
+   ],
+   [
+    "2027-04-11",
+    "2027-04-24",
+    "Casting"
+   ],
+   [
+    "2027-04-25",
+    "2027-05-08",
+    "Nephrology"
+   ],
+   [
+    "2027-05-09",
+    "2027-05-22",
+    "OB"
+   ],
+   [
+    "2027-05-23",
+    "2027-06-19",
+    "Community Based Practice"
+   ],
+   [
+    "2027-06-20",
+    "2027-07-03",
+    "Break-In"
+   ]
+  ],
+  "Lux": [
+   [
+    "2026-07-05",
+    "2026-07-18",
+    "Orthopaedics"
+   ],
+   [
+    "2026-07-19",
+    "2026-08-01",
+    "DMOS Urgent Care"
+   ],
+   [
+    "2026-08-02",
+    "2026-08-29",
+    "Community Based Practice"
+   ],
+   [
+    "2026-08-30",
+    "2026-09-12",
+    "Nephrology"
+   ],
+   [
+    "2026-09-13",
+    "2026-09-26",
+    "Urology"
+   ],
+   [
+    "2026-09-27",
+    "2026-10-24",
+    "Family Med Inpatient"
+   ],
+   [
+    "2026-10-25",
+    "2026-11-07",
+    "Behavioral Health"
+   ],
+   [
+    "2026-11-08",
+    "2026-11-21",
+    "Neurology"
+   ],
+   [
+    "2026-11-22",
+    "2026-12-19",
+    "OB"
+   ],
+   [
+    "2027-01-03",
+    "2027-01-30",
+    "Away"
+   ],
+   [
+    "2027-01-31",
+    "2027-02-27",
+    "Family Med Inpatient"
+   ],
+   [
+    "2027-02-28",
+    "2027-03-13",
+    "Dermatology"
+   ],
+   [
+    "2027-03-14",
+    "2027-03-27",
+    "Sports Med - Fisher"
+   ],
+   [
+    "2027-03-28",
+    "2027-04-24",
+    "OB"
+   ],
+   [
+    "2027-04-25",
+    "2027-05-08",
+    "ENT"
+   ],
+   [
+    "2027-05-09",
+    "2027-05-22",
+    "Geriatrics"
+   ],
+   [
+    "2027-05-23",
+    "2027-06-05",
+    "PM&R"
+   ],
+   [
+    "2027-06-06",
+    "2027-06-19",
+    "Urgent Care"
+   ]
+  ],
+  "Mautino": [
+   [
+    "2026-07-05",
+    "2026-07-18",
+    "Nephrology"
+   ],
+   [
+    "2026-07-19",
+    "2026-08-01",
+    "Urology"
+   ],
+   [
+    "2026-08-02",
+    "2026-08-29",
+    "Family Med Inpatient"
+   ],
+   [
+    "2026-08-30",
+    "2026-09-12",
+    "ENT"
+   ],
+   [
+    "2026-09-13",
+    "2026-09-26",
+    "Behavioral Health"
+   ],
+   [
+    "2026-09-27",
+    "2026-10-24",
+    "OB"
+   ],
+   [
+    "2026-10-25",
+    "2026-11-21",
+    "Away"
+   ],
+   [
+    "2026-11-22",
+    "2026-12-19",
+    "Family Med Inpatient"
+   ],
+   [
+    "2027-01-03",
+    "2027-01-16",
+    "Neurology"
+   ],
+   [
+    "2027-01-17",
+    "2027-01-30",
+    "Geriatrics"
+   ],
+   [
+    "2027-01-31",
+    "2027-02-27",
+    "OB"
+   ],
+   [
+    "2027-02-28",
+    "2027-03-27",
+    "Community Based Practice"
+   ],
+   [
+    "2027-03-28",
+    "2027-04-10",
+    "Palliative Care"
+   ],
+   [
+    "2027-04-11",
+    "2027-04-24",
+    "Dermatology"
+   ],
+   [
+    "2027-04-25",
+    "2027-05-22",
+    "Family Med Inpatient"
+   ],
+   [
+    "2027-05-23",
+    "2027-06-05",
+    "Healthcare Admin"
+   ],
+   [
+    "2027-06-06",
+    "2027-06-19",
+    "Orthopaedics"
+   ]
+  ],
+  "Mudondo": [
+   [
+    "2026-07-05",
+    "2026-08-01",
+    "Family Med Inpatient"
+   ],
+   [
+    "2026-08-02",
+    "2026-08-15",
+    "Pharmacy"
+   ],
+   [
+    "2026-08-16",
+    "2026-08-29",
+    "ENT"
+   ],
+   [
+    "2026-08-30",
+    "2026-09-26",
+    "OB"
+   ],
+   [
+    "2026-09-27",
+    "2026-10-10",
+    "Nephrology"
+   ],
+   [
+    "2026-10-11",
+    "2026-10-24",
+    "Behavioral Health"
+   ],
+   [
+    "2026-10-25",
+    "2026-11-21",
+    "Community Based Practice"
+   ],
+   [
+    "2026-11-22",
+    "2026-12-05",
+    "Orthopaedics"
+   ],
+   [
+    "2026-12-06",
+    "2026-12-19",
+    "Neurology"
+   ],
+   [
+    "2027-01-03",
+    "2027-01-30",
+    "Family Med Inpatient"
+   ],
+   [
+    "2027-01-31",
+    "2027-02-13",
+    "Infectious Disease"
+   ],
+   [
+    "2027-02-14",
+    "2027-02-27",
+    "Dermatology"
+   ],
+   [
+    "2027-02-28",
+    "2027-03-27",
+    "OB"
+   ],
+   [
+    "2027-03-28",
+    "2027-04-10",
+    "Geriatrics"
+   ],
+   [
+    "2027-04-11",
+    "2027-04-24",
+    "Office Cardiology"
+   ],
+   [
+    "2027-04-25",
+    "2027-05-22",
+    "Away"
+   ],
+   [
+    "2027-05-23",
+    "2027-06-05",
+    "Urology"
+   ],
+   [
+    "2027-06-06",
+    "2027-06-19",
+    "Pain Management"
+   ]
+  ],
+  "Beutel": [
+   [
+    "2026-07-05",
+    "2026-07-18",
+    "GI"
+   ],
+   [
+    "2026-07-19",
+    "2026-08-01",
+    "NICU"
+   ],
+   [
+    "2026-08-02",
+    "2026-08-29",
+    "Pediatrics"
+   ],
+   [
+    "2026-08-30",
+    "2026-09-26",
+    "Away"
+   ],
+   [
+    "2026-09-27",
+    "2026-10-24",
+    "Gynecology"
+   ],
+   [
+    "2026-10-25",
+    "2026-11-07",
+    "Ultrasound"
+   ],
+   [
+    "2026-11-08",
+    "2026-11-21",
+    "Sports Med - Fisher"
+   ],
+   [
+    "2026-11-22",
+    "2026-12-05",
+    "Peds ID"
+   ],
+   [
+    "2026-12-06",
+    "2026-12-19",
+    "Orthopaedics"
+   ],
+   [
+    "2027-01-03",
+    "2027-01-30",
+    "Cardiology"
+   ],
+   [
+    "2027-01-31",
+    "2027-02-13",
+    "Behavioral Health"
+   ],
+   [
+    "2027-02-14",
+    "2027-02-27",
+    "Peds Pulm"
+   ],
+   [
+    "2027-02-28",
+    "2027-03-13",
+    "Psychiatry"
+   ],
+   [
+    "2027-03-14",
+    "2027-03-27",
+    "Pulmonology"
+   ],
+   [
+    "2027-03-28",
+    "2027-04-24",
+    "Community Medicine"
+   ],
+   [
+    "2027-04-25",
+    "2027-05-08",
+    "Palliative Care"
+   ],
+   [
+    "2027-05-09",
+    "2027-05-22",
+    "Healthcare Admin"
+   ],
+   [
+    "2027-05-23",
+    "2027-06-19",
+    "Family Med Inpatient"
+   ],
+   [
+    "2027-06-20",
+    "2027-07-03",
+    "Break-In"
+   ]
+  ],
+  "Bottke": [
+   [
+    "2026-07-05",
+    "2026-07-18",
+    "DMOS Urgent Care"
+   ],
+   [
+    "2026-07-19",
+    "2026-08-01",
+    "Orthopaedics"
+   ],
+   [
+    "2026-08-02",
+    "2026-08-29",
+    "Cardiology"
+   ],
+   [
+    "2026-08-30",
+    "2026-09-26",
+    "Pediatrics"
+   ],
+   [
+    "2026-09-27",
+    "2026-10-24",
+    "Away"
+   ],
+   [
+    "2026-10-25",
+    "2026-11-21",
+    "Gynecology"
+   ],
+   [
+    "2026-11-22",
+    "2026-12-05",
+    "Sports Med - Fisher"
+   ],
+   [
+    "2026-12-06",
+    "2026-12-19",
+    "NICU"
+   ],
+   [
+    "2027-01-03",
+    "2027-01-16",
+    "Sports Med - McFarland"
+   ],
+   [
+    "2027-01-17",
+    "2027-01-30",
+    "Psychiatry"
+   ],
+   [
+    "2027-01-31",
+    "2027-02-27",
+    "Community Medicine"
+   ],
+   [
+    "2027-02-28",
+    "2027-03-13",
+    "Behavioral Health"
+   ],
+   [
+    "2027-03-14",
+    "2027-03-27",
+    "Ultrasound"
+   ],
+   [
+    "2027-03-28",
+    "2027-04-10",
+    "Pulmonology"
+   ],
+   [
+    "2027-04-11",
+    "2027-04-24",
+    "GI"
+   ],
+   [
+    "2027-04-25",
+    "2027-05-08",
+    "OB"
+   ],
+   [
+    "2027-05-09",
+    "2027-05-22",
+    "Peds ER"
+   ],
+   [
+    "2027-05-23",
+    "2027-06-05",
+    "Peds Ortho"
+   ],
+   [
+    "2027-06-06",
+    "2027-06-19",
+    "PM&R"
+   ]
+  ],
+  "Bower": [
+   [
+    "2026-07-05",
+    "2026-07-18",
+    "NICU"
+   ],
+   [
+    "2026-07-19",
+    "2026-08-01",
+    "Ultrasound"
+   ],
+   [
+    "2026-08-02",
+    "2026-08-15",
+    "Radiology"
+   ],
+   [
+    "2026-08-16",
+    "2026-08-29",
+    "Away"
+   ],
+   [
+    "2026-08-30",
+    "2026-09-12",
+    "Away"
+   ],
+   [
+    "2026-09-13",
+    "2026-09-26",
+    "Leave"
+   ],
+   [
+    "2026-09-27",
+    "2026-10-24",
+    "Cardiology"
+   ],
+   [
+    "2026-10-25",
+    "2026-11-07",
+    "Behavioral Health"
+   ],
+   [
+    "2026-11-08",
+    "2026-11-21",
+    "OB"
+   ],
+   [
+    "2026-11-22",
+    "2026-12-05",
+    "Pulmonology"
+   ],
+   [
+    "2026-12-06",
+    "2026-12-19",
+    "Peds GI"
+   ],
+   [
+    "2027-01-03",
+    "2027-01-30",
+    "Community Medicine"
+   ],
+   [
+    "2027-01-31",
+    "2027-02-13",
+    "Sports Med - Fisher"
+   ],
+   [
+    "2027-02-14",
+    "2027-02-27",
+    "Orthopaedics"
+   ],
+   [
+    "2027-02-28",
+    "2027-03-13",
+    "Peds Neuro"
+   ],
+   [
+    "2027-03-14",
+    "2027-03-27",
+    "Infectious Disease"
+   ],
+   [
+    "2027-03-28",
+    "2027-04-24",
+    "Pediatrics"
+   ],
+   [
+    "2027-04-25",
+    "2027-05-08",
+    "Psychiatry"
+   ],
+   [
+    "2027-05-09",
+    "2027-05-22",
+    "GI"
+   ],
+   [
+    "2027-05-23",
+    "2027-06-19",
+    "Gynecology"
+   ]
+  ],
+  "Gaspar": [
+   [
+    "2026-07-05",
+    "2026-08-01",
+    "Gynecology"
+   ],
+   [
+    "2026-08-02",
+    "2026-08-29",
+    "OB"
+   ],
+   [
+    "2026-08-30",
+    "2026-09-12",
+    "NICU"
+   ],
+   [
+    "2026-09-13",
+    "2026-09-26",
+    "GI"
+   ],
+   [
+    "2026-09-27",
+    "2026-10-10",
+    "Orthopaedics"
+   ],
+   [
+    "2026-10-11",
+    "2026-10-24",
+    "Peds Transport"
+   ],
+   [
+    "2026-10-25",
+    "2026-11-21",
+    "Pediatrics"
+   ],
+   [
+    "2026-11-22",
+    "2026-12-05",
+    "Peds Palliative"
+   ],
+   [
+    "2026-12-06",
+    "2026-12-19",
+    "Behavioral Health"
+   ],
+   [
+    "2027-01-03",
+    "2027-01-16",
+    "Psychiatry"
+   ],
+   [
+    "2027-01-17",
+    "2027-01-30",
+    "Pulmonology"
+   ],
+   [
+    "2027-01-31",
+    "2027-02-27",
+    "Labor & Delivery"
+   ],
+   [
+    "2027-02-28",
+    "2027-03-27",
+    "Cardiology"
+   ],
+   [
+    "2027-03-28",
+    "2027-04-24",
+    "Away"
+   ],
+   [
+    "2027-04-25",
+    "2027-05-22",
+    "Community Medicine"
+   ],
+   [
+    "2027-05-23",
+    "2027-06-05",
+    "Sports Med - Fisher"
+   ],
+   [
+    "2027-06-06",
+    "2027-06-19",
+    "Ultrasound"
+   ]
+  ],
+  "Kendrick": [
+   [
+    "2026-07-05",
+    "2026-07-18",
+    "Orthopaedics"
+   ],
+   [
+    "2026-07-19",
+    "2026-08-01",
+    "Pulmonology"
+   ],
+   [
+    "2026-08-02",
+    "2026-08-29",
+    "Gynecology"
+   ],
+   [
+    "2026-08-30",
+    "2026-09-26",
+    "Family Med Inpatient"
+   ],
+   [
+    "2026-09-27",
+    "2026-10-10",
+    "Peds Pulm"
+   ],
+   [
+    "2026-10-11",
+    "2026-10-24",
+    "NICU"
+   ],
+   [
+    "2026-10-25",
+    "2026-11-21",
+    "Cardiology"
+   ],
+   [
+    "2026-11-22",
+    "2026-12-19",
+    "Away"
+   ],
+   [
+    "2027-01-03",
+    "2027-01-16",
+    "DMOS Urgent Care"
+   ],
+   [
+    "2027-01-17",
+    "2027-01-30",
+    "Peds Endo"
+   ],
+   [
+    "2027-01-31",
+    "2027-02-27",
+    "Pediatrics"
+   ],
+   [
+    "2027-02-28",
+    "2027-03-27",
+    "Community Medicine"
+   ],
+   [
+    "2027-03-28",
+    "2027-04-10",
+    "Sports Med - Fisher"
+   ],
+   [
+    "2027-04-11",
+    "2027-04-24",
+    "Ultrasound"
+   ],
+   [
+    "2027-04-25",
+    "2027-05-08",
+    "Behavioral Health"
+   ],
+   [
+    "2027-05-09",
+    "2027-05-22",
+    "Bariatrics"
+   ],
+   [
+    "2027-05-23",
+    "2027-06-05",
+    "GI"
+   ],
+   [
+    "2027-06-06",
+    "2027-06-19",
+    "Psychiatry"
+   ]
+  ],
+  "Sublette": [
+   [
+    "2026-07-05",
+    "2026-08-01",
+    "Cardiology"
+   ],
+   [
+    "2026-08-02",
+    "2026-08-15",
+    "NICU"
+   ],
+   [
+    "2026-08-16",
+    "2026-08-29",
+    "Peds Transport"
+   ],
+   [
+    "2026-08-30",
+    "2026-09-26",
+    "Community Medicine"
+   ],
+   [
+    "2026-09-27",
+    "2026-10-10",
+    "Pulmonology"
+   ],
+   [
+    "2026-10-11",
+    "2026-10-24",
+    "Orthopaedics"
+   ],
+   [
+    "2026-10-25",
+    "2026-11-07",
+    "OB"
+   ],
+   [
+    "2026-11-08",
+    "2026-11-21",
+    "Ultrasound"
+   ],
+   [
+    "2026-11-22",
+    "2026-12-19",
+    "Gynecology"
+   ],
+   [
+    "2027-01-03",
+    "2027-01-16",
+    "Urgent Care"
+   ],
+   [
+    "2027-01-17",
+    "2027-01-30",
+    "Behavioral Health"
+   ],
+   [
+    "2027-01-31",
+    "2027-02-27",
+    "Dermatology"
+   ],
+   [
+    "2027-02-28",
+    "2027-03-27",
+    "Away"
+   ],
+   [
+    "2027-03-28",
+    "2027-04-10",
+    "GI"
+   ],
+   [
+    "2027-04-11",
+    "2027-04-24",
+    "Peds ER"
+   ],
+   [
+    "2027-04-25",
+    "2027-05-22",
+    "Pediatrics"
+   ],
+   [
+    "2027-05-23",
+    "2027-06-05",
+    "Psychiatry"
+   ],
+   [
+    "2027-06-06",
+    "2027-06-19",
+    "Sports Med - Fisher"
+   ]
+  ],
+  "Patel": [
+   [
+    "2026-07-05",
+    "2026-08-01",
+    "Family Med Ambulatory"
+   ],
+   [
+    "2026-08-02",
+    "2026-08-29",
+    "Family Med Inpatient"
+   ],
+   [
+    "2026-08-30",
+    "2026-09-26",
+    "ICU"
+   ],
+   [
+    "2026-09-27",
+    "2026-10-24",
+    "Community Medicine"
+   ],
+   [
+    "2026-10-25",
+    "2026-11-21",
+    "Emergency Medicine"
+   ],
+   [
+    "2026-11-22",
+    "2026-12-05",
+    "NICU"
+   ],
+   [
+    "2026-12-06",
+    "2026-12-19",
+    "Sports Medicine - Fisher"
+   ],
+   [
+    "2027-01-03",
+    "2027-01-30",
+    "Peds Inpatient"
+   ],
+   [
+    "2027-01-31",
+    "2027-02-13",
+    "Psychiatry"
+   ],
+   [
+    "2027-02-14",
+    "2027-02-27",
+    "Pulmonology"
+   ],
+   [
+    "2027-02-28",
+    "2027-03-27",
+    "Cardiology"
+   ],
+   [
+    "2027-03-28",
+    "2027-04-24",
+    "Family Med Inpatient"
+   ],
+   [
+    "2027-04-25",
+    "2027-05-08",
+    "GI"
+   ],
+   [
+    "2027-05-09",
+    "2027-05-22",
+    "Surgery"
+   ],
+   [
+    "2027-05-23",
+    "2027-06-19",
+    "OB"
+   ]
+  ],
+  "Wohlgemuth": [
+   [
+    "2026-07-05",
+    "2026-07-18",
+    "Night Float"
+   ],
+   [
+    "2026-07-19",
+    "2026-08-01",
+    "OB"
+   ],
+   [
+    "2026-08-02",
+    "2026-08-29",
+    "Family Med Inpatient"
+   ],
+   [
+    "2026-08-30",
+    "2026-09-26",
+    "Surgery"
+   ],
+   [
+    "2026-09-27",
+    "2026-10-10",
+    "OB"
+   ],
+   [
+    "2026-10-11",
+    "2026-10-24",
+    "Night Float"
+   ],
+   [
+    "2026-10-25",
+    "2026-11-21",
+    "Peds Inpatient"
+   ],
+   [
+    "2026-11-22",
+    "2026-12-19",
+    "Family Med Ambulatory"
+   ],
+   [
+    "2027-01-03",
+    "2027-01-30",
+    "ICU"
+   ],
+   [
+    "2027-01-31",
+    "2027-02-27",
+    "Family Med Inpatient"
+   ],
+   [
+    "2027-02-28",
+    "2027-03-27",
+    "Emergency Medicine"
+   ],
+   [
+    "2027-03-28",
+    "2027-04-24",
+    "Peds ER"
+   ],
+   [
+    "2027-04-25",
+    "2027-05-22",
+    "Family Med Ambulatory"
+   ],
+   [
+    "2027-05-23",
+    "2027-06-19",
+    "OB"
+   ],
+   [
+    "2027-06-20",
+    "2027-07-03",
+    "Break-In"
+   ]
+  ],
+  "Schutt": [
+   [
+    "2026-07-05",
+    "2026-07-18",
+    "OB"
+   ],
+   [
+    "2026-07-19",
+    "2026-08-01",
+    "Night Float"
+   ],
+   [
+    "2026-08-02",
+    "2026-08-29",
+    "Peds Inpatient"
+   ],
+   [
+    "2026-08-30",
+    "2026-09-26",
+    "Family Med Ambulatory"
+   ],
+   [
+    "2026-09-27",
+    "2026-10-10",
+    "Night Float"
+   ],
+   [
+    "2026-10-11",
+    "2026-10-24",
+    "OB"
+   ],
+   [
+    "2026-10-25",
+    "2026-11-21",
+    "Family Med Inpatient"
+   ],
+   [
+    "2026-11-22",
+    "2026-12-19",
+    "Surgery"
+   ],
+   [
+    "2027-01-03",
+    "2027-01-30",
+    "Emergency Medicine"
+   ],
+   [
+    "2027-01-31",
+    "2027-02-27",
+    "OB"
+   ],
+   [
+    "2027-02-28",
+    "2027-03-27",
+    "ICU"
+   ],
+   [
+    "2027-03-28",
+    "2027-04-24",
+    "Family Med Ambulatory"
+   ],
+   [
+    "2027-04-25",
+    "2027-05-22",
+    "Family Med Inpatient"
+   ],
+   [
+    "2027-05-23",
+    "2027-06-19",
+    "Peds ER"
+   ]
+  ],
+  "Hard": [
+   [
+    "2026-07-05",
+    "2026-08-01",
+    "Surgery"
+   ],
+   [
+    "2026-08-02",
+    "2026-08-15",
+    "Night Float"
+   ],
+   [
+    "2026-08-16",
+    "2026-08-29",
+    "OB"
+   ],
+   [
+    "2026-08-30",
+    "2026-09-26",
+    "Family Med Inpatient"
+   ],
+   [
+    "2026-09-27",
+    "2026-10-24",
+    "Family Med Ambulatory"
+   ],
+   [
+    "2026-10-25",
+    "2026-11-07",
+    "OB"
+   ],
+   [
+    "2026-11-08",
+    "2026-11-21",
+    "Night Float"
+   ],
+   [
+    "2026-11-22",
+    "2026-12-19",
+    "Peds Inpatient"
+   ],
+   [
+    "2027-01-03",
+    "2027-01-30",
+    "OB"
+   ],
+   [
+    "2027-01-31",
+    "2027-02-27",
+    "Family Med Ambulatory"
+   ],
+   [
+    "2027-02-28",
+    "2027-03-27",
+    "Family Med Inpatient"
+   ],
+   [
+    "2027-03-28",
+    "2027-04-24",
+    "ICU"
+   ],
+   [
+    "2027-04-25",
+    "2027-05-22",
+    "Peds ER"
+   ],
+   [
+    "2027-05-23",
+    "2027-06-19",
+    "Emergency Medicine"
+   ]
+  ],
+  "Oehm": [
+   [
+    "2026-07-05",
+    "2026-08-01",
+    "Family Med Ambulatory"
+   ],
+   [
+    "2026-08-02",
+    "2026-08-15",
+    "OB"
+   ],
+   [
+    "2026-08-16",
+    "2026-08-29",
+    "Night Float"
+   ],
+   [
+    "2026-08-30",
+    "2026-09-26",
+    "Peds Inpatient"
+   ],
+   [
+    "2026-09-27",
+    "2026-10-24",
+    "Surgery"
+   ],
+   [
+    "2026-10-25",
+    "2026-11-07",
+    "Night Float"
+   ],
+   [
+    "2026-11-08",
+    "2026-11-21",
+    "OB"
+   ],
+   [
+    "2026-11-22",
+    "2026-12-19",
+    "Family Med Inpatient"
+   ],
+   [
+    "2027-01-03",
+    "2027-01-30",
+    "Family Med Ambulatory"
+   ],
+   [
+    "2027-01-31",
+    "2027-02-27",
+    "Peds ER"
+   ],
+   [
+    "2027-02-28",
+    "2027-03-27",
+    "OB"
+   ],
+   [
+    "2027-03-28",
+    "2027-04-24",
+    "Emergency Medicine"
+   ],
+   [
+    "2027-04-25",
+    "2027-05-22",
+    "ICU"
+   ],
+   [
+    "2027-05-23",
+    "2027-06-19",
+    "Family Med Inpatient"
+   ]
+  ],
+  "Strand": [
+   [
+    "2026-07-05",
+    "2026-08-01",
+    "Family Med Inpatient"
+   ],
+   [
+    "2026-08-02",
+    "2026-08-29",
+    "Surgery"
+   ],
+   [
+    "2026-08-30",
+    "2026-09-12",
+    "OB"
+   ],
+   [
+    "2026-09-13",
+    "2026-09-26",
+    "Night Float"
+   ],
+   [
+    "2026-09-27",
+    "2026-10-24",
+    "Peds Inpatient"
+   ],
+   [
+    "2026-10-25",
+    "2026-11-21",
+    "Family Med Ambulatory"
+   ],
+   [
+    "2026-11-22",
+    "2026-12-05",
+    "OB"
+   ],
+   [
+    "2026-12-06",
+    "2026-12-19",
+    "Night Float"
+   ],
+   [
+    "2027-01-03",
+    "2027-01-30",
+    "Family Med Inpatient"
+   ],
+   [
+    "2027-01-31",
+    "2027-02-27",
+    "ICU"
+   ],
+   [
+    "2027-02-28",
+    "2027-03-27",
+    "Peds ER"
+   ],
+   [
+    "2027-03-28",
+    "2027-04-24",
+    "OB"
+   ],
+   [
+    "2027-04-25",
+    "2027-05-22",
+    "Emergency Medicine"
+   ],
+   [
+    "2027-05-23",
+    "2027-06-19",
+    "Family Med Ambulatory"
+   ]
+  ],
+  "Stanek": [
+   [
+    "2026-07-05",
+    "2026-08-01",
+    "Peds Inpatient"
+   ],
+   [
+    "2026-08-02",
+    "2026-08-29",
+    "Family Med Ambulatory"
+   ],
+   [
+    "2026-08-30",
+    "2026-09-12",
+    "Night Float"
+   ],
+   [
+    "2026-09-13",
+    "2026-09-26",
+    "OB"
+   ],
+   [
+    "2026-09-27",
+    "2026-10-24",
+    "Family Med Inpatient"
+   ],
+   [
+    "2026-10-25",
+    "2026-11-21",
+    "Surgery"
+   ],
+   [
+    "2026-11-22",
+    "2026-12-05",
+    "Night Float"
+   ],
+   [
+    "2026-12-06",
+    "2026-12-19",
+    "OB"
+   ],
+   [
+    "2027-01-03",
+    "2027-01-30",
+    "Peds ER"
+   ],
+   [
+    "2027-01-31",
+    "2027-02-27",
+    "Emergency Medicine"
+   ],
+   [
+    "2027-02-28",
+    "2027-03-27",
+    "Family Med Ambulatory"
+   ],
+   [
+    "2027-03-28",
+    "2027-04-24",
+    "Family Med Inpatient"
+   ],
+   [
+    "2027-04-25",
+    "2027-05-22",
+    "OB"
+   ],
+   [
+    "2027-05-23",
+    "2027-06-19",
+    "ICU"
+   ]
+  ]
+ },
+ "pgy": {
+  "Hard": "R1",
+  "Oehm": "R1",
+  "Schutt": "R1",
+  "Stanek": "R1",
+  "Strand": "R1",
+  "Wohlgemuth": "R1",
+  "Beutel": "R2",
+  "Bottke": "R2",
+  "Bower": "R2",
+  "Gaspar": "R2",
+  "Kendrick": "R2",
+  "Sublette": "R2",
+  "Patel": "R2",
+  "Johnson": "R3",
+  "Lux": "R3",
+  "Mautino": "R3",
+  "Mudondo": "R3"
+ },
+ "assignments": [
+  {
+   "date": "2026-07-01",
+   "dow": "Wed",
+   "month_tab": "July",
+   "line1": "Stanek",
+   "line2": "Gaspar",
+   "interns": [
+    "Stanek"
+   ],
+   "seniors": [
+    "Gaspar"
+   ],
+   "raw": "Stanek/Gaspar",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-07-02",
+   "dow": "Thu",
+   "month_tab": "July",
+   "line1": "Strand",
+   "line2": "Bower",
+   "interns": [
+    "Strand"
+   ],
+   "seniors": [
+    "Bower"
+   ],
+   "raw": "Strand/Bower",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-07-03",
+   "dow": "Fri",
+   "month_tab": "July",
+   "line1": "Schutt",
+   "line2": "Bottke",
+   "interns": [
+    "Schutt"
+   ],
+   "seniors": [
+    "Bottke"
+   ],
+   "raw": "Schutt/Bottke",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-07-04",
+   "dow": "Sat",
+   "month_tab": "July",
+   "line1": "Oehm",
+   "line2": "Beutel",
+   "interns": [
+    "Oehm"
+   ],
+   "seniors": [
+    "Beutel"
+   ],
+   "raw": "Oehm/Beutel ",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-07-05",
+   "dow": "Sun",
+   "month_tab": "July",
+   "line1": "Hard",
+   "line2": "Sublette",
+   "interns": [
+    "Hard"
+   ],
+   "seniors": [
+    "Sublette"
+   ],
+   "raw": "Hard/Sublette",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-07-06",
+   "dow": "Mon",
+   "month_tab": "July",
+   "line1": "Wohlgemuth",
+   "line2": "Kendrick",
+   "interns": [
+    "Wohlgemuth"
+   ],
+   "seniors": [
+    "Kendrick"
+   ],
+   "raw": "Wohlgemuth/Kendrick",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-07-07",
+   "dow": "Tue",
+   "month_tab": "July",
+   "line1": "Wohlgemuth",
+   "line2": "Johnson",
+   "interns": [
+    "Wohlgemuth"
+   ],
+   "seniors": [
+    "Johnson"
+   ],
+   "raw": "Wohlgemuth/Johnson",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-07-08",
+   "dow": "Wed",
+   "month_tab": "July",
+   "line1": "Wohlgemuth",
+   "line2": "Mautino",
+   "interns": [
+    "Wohlgemuth"
+   ],
+   "seniors": [
+    "Mautino"
+   ],
+   "raw": "Wohlgemuth/Mautino",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-07-09",
+   "dow": "Thu",
+   "month_tab": "July",
+   "line1": "Wohlgemuth",
+   "line2": "Gaspar",
+   "interns": [
+    "Wohlgemuth"
+   ],
+   "seniors": [
+    "Gaspar"
+   ],
+   "raw": "Wohlgemuth/Gaspar",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-07-10",
+   "dow": "Fri",
+   "month_tab": "July",
+   "line1": "Wohlgemuth",
+   "line2": "Johnson",
+   "interns": [
+    "Wohlgemuth"
+   ],
+   "seniors": [
+    "Johnson"
+   ],
+   "raw": "Wohlgemuth/Johnson",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-07-11",
+   "dow": "Sat",
+   "month_tab": "July",
+   "line1": "Strand",
+   "line2": "Mudondo",
+   "interns": [
+    "Strand"
+   ],
+   "seniors": [
+    "Mudondo"
+   ],
+   "raw": "Strand/Mudondo",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-07-12",
+   "dow": "Sun",
+   "month_tab": "July",
+   "line1": "Hard",
+   "line2": "Beutel",
+   "interns": [
+    "Hard"
+   ],
+   "seniors": [
+    "Beutel"
+   ],
+   "raw": "Hard/Beutel",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-07-13",
+   "dow": "Mon",
+   "month_tab": "July",
+   "line1": "Wohlgemuth",
+   "line2": "Lux",
+   "interns": [
+    "Wohlgemuth"
+   ],
+   "seniors": [
+    "Lux"
+   ],
+   "raw": "Wohlgemuth/Lux",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-07-14",
+   "dow": "Tue",
+   "month_tab": "July",
+   "line1": "Wohlgemuth",
+   "line2": "Bottke",
+   "interns": [
+    "Wohlgemuth"
+   ],
+   "seniors": [
+    "Bottke"
+   ],
+   "raw": "Wohlgemuth/Bottke",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-07-15",
+   "dow": "Wed",
+   "month_tab": "July",
+   "line1": "Wohlgemuth/Patel",
+   "line2": "Kendrick",
+   "interns": [
+    "Wohlgemuth"
+   ],
+   "seniors": [
+    "Patel",
+    "Kendrick"
+   ],
+   "raw": "Wohlgemuth/Patel/Kendrick",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-07-16",
+   "dow": "Thu",
+   "month_tab": "July",
+   "line1": "Wohlgemuth",
+   "line2": "Lux",
+   "interns": [
+    "Wohlgemuth"
+   ],
+   "seniors": [
+    "Lux"
+   ],
+   "raw": "Wohlgemuth/Lux",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-07-17",
+   "dow": "Fri",
+   "month_tab": "July",
+   "line1": "Wohlgemuth",
+   "line2": "Bower",
+   "interns": [
+    "Wohlgemuth"
+   ],
+   "seniors": [
+    "Bower"
+   ],
+   "raw": "Wohlgemuth/Bower",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-07-18",
+   "dow": "Sat",
+   "month_tab": "July",
+   "line1": "Oehm",
+   "line2": "Gaspar",
+   "interns": [
+    "Oehm"
+   ],
+   "seniors": [
+    "Gaspar"
+   ],
+   "raw": "Oehm/Gaspar",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-07-19",
+   "dow": "Sun",
+   "month_tab": "July",
+   "line1": "Hard",
+   "line2": "Bottke",
+   "interns": [
+    "Hard"
+   ],
+   "seniors": [
+    "Bottke"
+   ],
+   "raw": "Hard/Bottke",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-07-20",
+   "dow": "Mon",
+   "month_tab": "July",
+   "line1": "Schutt",
+   "line2": "Sublette",
+   "interns": [
+    "Schutt"
+   ],
+   "seniors": [
+    "Sublette"
+   ],
+   "raw": "Schutt/Sublette",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-07-21",
+   "dow": "Tue",
+   "month_tab": "July",
+   "line1": "Schutt",
+   "line2": "Johnson",
+   "interns": [
+    "Schutt"
+   ],
+   "seniors": [
+    "Johnson"
+   ],
+   "raw": "Schutt/Johnson",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-07-22",
+   "dow": "Wed",
+   "month_tab": "July",
+   "line1": "Schutt",
+   "line2": "Kendrick",
+   "interns": [
+    "Schutt"
+   ],
+   "seniors": [
+    "Kendrick"
+   ],
+   "raw": "Schutt/Kendrick",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-07-23",
+   "dow": "Thu",
+   "month_tab": "July",
+   "line1": "Schutt",
+   "line2": "Gaspar",
+   "interns": [
+    "Schutt"
+   ],
+   "seniors": [
+    "Gaspar"
+   ],
+   "raw": "Schutt/Gaspar",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-07-24",
+   "dow": "Fri",
+   "month_tab": "July",
+   "line1": "Schutt/Patel",
+   "line2": "Johnson",
+   "interns": [
+    "Schutt"
+   ],
+   "seniors": [
+    "Patel",
+    "Johnson"
+   ],
+   "raw": "Schutt/Patel/Johnson",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-07-25",
+   "dow": "Sat",
+   "month_tab": "July",
+   "line1": "Strand",
+   "line2": "Mudondo",
+   "interns": [
+    "Strand"
+   ],
+   "seniors": [
+    "Mudondo"
+   ],
+   "raw": "Strand/Mudondo",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-07-26",
+   "dow": "Sun",
+   "month_tab": "July",
+   "line1": "Hard",
+   "line2": "Kendrick",
+   "interns": [
+    "Hard"
+   ],
+   "seniors": [
+    "Kendrick"
+   ],
+   "raw": "Hard/Kendrick",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-07-27",
+   "dow": "Mon",
+   "month_tab": "July",
+   "line1": "Schutt",
+   "line2": "Bower",
+   "interns": [
+    "Schutt"
+   ],
+   "seniors": [
+    "Bower"
+   ],
+   "raw": "Schutt/Bower",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-07-28",
+   "dow": "Tue",
+   "month_tab": "July",
+   "line1": "Schutt/Patel",
+   "line2": "Mautino",
+   "interns": [
+    "Schutt"
+   ],
+   "seniors": [
+    "Patel",
+    "Mautino"
+   ],
+   "raw": "Schutt/Patel/Mautino",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-07-29",
+   "dow": "Wed",
+   "month_tab": "July",
+   "line1": "Schutt",
+   "line2": "Sublette",
+   "interns": [
+    "Schutt"
+   ],
+   "seniors": [
+    "Sublette"
+   ],
+   "raw": "Schutt/Sublette",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-07-30",
+   "dow": "Thu",
+   "month_tab": "July",
+   "line1": "Schutt",
+   "line2": "Lux",
+   "interns": [
+    "Schutt"
+   ],
+   "seniors": [
+    "Lux"
+   ],
+   "raw": "Schutt/Lux",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-07-31",
+   "dow": "Fri",
+   "month_tab": "July",
+   "line1": "Schutt",
+   "line2": "Bower",
+   "interns": [
+    "Schutt"
+   ],
+   "seniors": [
+    "Bower"
+   ],
+   "raw": "Schutt/Bower",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-08-01",
+   "dow": "Sat",
+   "month_tab": "August",
+   "line1": "Oehm",
+   "line2": "Gaspar",
+   "interns": [
+    "Oehm"
+   ],
+   "seniors": [
+    "Gaspar"
+   ],
+   "raw": "Oehm/Gaspar",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-08-02",
+   "dow": "Sun",
+   "month_tab": "August",
+   "line1": "Strand",
+   "line2": "Beutel",
+   "interns": [
+    "Strand"
+   ],
+   "seniors": [
+    "Beutel"
+   ],
+   "raw": "Strand/Beutel",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-08-03",
+   "dow": "Mon",
+   "month_tab": "August",
+   "line1": "Hard",
+   "line2": "Mudondo",
+   "interns": [
+    "Hard"
+   ],
+   "seniors": [
+    "Mudondo"
+   ],
+   "raw": "Hard/Mudondo",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-08-04",
+   "dow": "Tue",
+   "month_tab": "August",
+   "line1": "Hard",
+   "line2": "Gaspar",
+   "interns": [
+    "Hard"
+   ],
+   "seniors": [
+    "Gaspar"
+   ],
+   "raw": "Hard/Gaspar",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-08-05",
+   "dow": "Wed",
+   "month_tab": "August",
+   "line1": "Hard/Patel",
+   "line2": "Johnson",
+   "interns": [
+    "Hard"
+   ],
+   "seniors": [
+    "Patel",
+    "Johnson"
+   ],
+   "raw": "Hard/Patel/Johnson",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-08-06",
+   "dow": "Thu",
+   "month_tab": "August",
+   "line1": "Hard",
+   "line2": "Kendrick",
+   "interns": [
+    "Hard"
+   ],
+   "seniors": [
+    "Kendrick"
+   ],
+   "raw": "Hard/Kendrick",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-08-07",
+   "dow": "Fri",
+   "month_tab": "August",
+   "line1": "Hard",
+   "line2": "Gaspar",
+   "interns": [
+    "Hard"
+   ],
+   "seniors": [
+    "Gaspar"
+   ],
+   "raw": "Hard/Gaspar",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-08-08",
+   "dow": "Sat",
+   "month_tab": "August",
+   "line1": "Wohlgemuth",
+   "line2": "Mautino",
+   "interns": [
+    "Wohlgemuth"
+   ],
+   "seniors": [
+    "Mautino"
+   ],
+   "raw": "Wohlgemuth/Mautino",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-08-09",
+   "dow": "Sun",
+   "month_tab": "August",
+   "line1": "Strand",
+   "line2": "Bower",
+   "interns": [
+    "Strand"
+   ],
+   "seniors": [
+    "Bower"
+   ],
+   "raw": "Strand/Bower",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-08-10",
+   "dow": "Mon",
+   "month_tab": "August",
+   "line1": "Hard",
+   "line2": "Bottke",
+   "interns": [
+    "Hard"
+   ],
+   "seniors": [
+    "Bottke"
+   ],
+   "raw": "Hard/Bottke",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-08-11",
+   "dow": "Tue",
+   "month_tab": "August",
+   "line1": "Hard",
+   "line2": "Bower",
+   "interns": [
+    "Hard"
+   ],
+   "seniors": [
+    "Bower"
+   ],
+   "raw": "Hard/Bower",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-08-12",
+   "dow": "Wed",
+   "month_tab": "August",
+   "line1": "Hard",
+   "line2": "Lux",
+   "interns": [
+    "Hard"
+   ],
+   "seniors": [
+    "Lux"
+   ],
+   "raw": "Hard/Lux",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-08-13",
+   "dow": "Thu",
+   "month_tab": "August",
+   "line1": "Hard",
+   "line2": "Mudondo",
+   "interns": [
+    "Hard"
+   ],
+   "seniors": [
+    "Mudondo"
+   ],
+   "raw": "Hard/Mudondo",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-08-14",
+   "dow": "Fri",
+   "month_tab": "August",
+   "line1": "Hard",
+   "line2": "Gaspar",
+   "interns": [
+    "Hard"
+   ],
+   "seniors": [
+    "Gaspar"
+   ],
+   "raw": "Hard/Gaspar",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-08-15",
+   "dow": "Sat",
+   "month_tab": "August",
+   "line1": "Stanek/Patel",
+   "line2": "Kendrick",
+   "interns": [
+    "Stanek"
+   ],
+   "seniors": [
+    "Patel",
+    "Kendrick"
+   ],
+   "raw": "Stanek/Patel/Kendrick",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-08-16",
+   "dow": "Sun",
+   "month_tab": "August",
+   "line1": "Strand",
+   "line2": "Beutel",
+   "interns": [
+    "Strand"
+   ],
+   "seniors": [
+    "Beutel"
+   ],
+   "raw": "Strand/Beutel",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-08-17",
+   "dow": "Mon",
+   "month_tab": "August",
+   "line1": "Oehm",
+   "line2": "Sublette",
+   "interns": [
+    "Oehm"
+   ],
+   "seniors": [
+    "Sublette"
+   ],
+   "raw": "Oehm/Sublette",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-08-18",
+   "dow": "Tue",
+   "month_tab": "August",
+   "line1": "Oehm",
+   "line2": "Gaspar",
+   "interns": [
+    "Oehm"
+   ],
+   "seniors": [
+    "Gaspar"
+   ],
+   "raw": "Oehm/Gaspar",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-08-19",
+   "dow": "Wed",
+   "month_tab": "August",
+   "line1": "Oehm",
+   "line2": "Beutel",
+   "interns": [
+    "Oehm"
+   ],
+   "seniors": [
+    "Beutel"
+   ],
+   "raw": "Oehm/Beutel",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-08-20",
+   "dow": "Thu",
+   "month_tab": "August",
+   "line1": "Mudondo",
+   "line2": "Kendrick",
+   "interns": [],
+   "seniors": [
+    "Mudondo",
+    "Kendrick"
+   ],
+   "raw": "Mudondo/Kendrick",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-08-21",
+   "dow": "Fri",
+   "month_tab": "August",
+   "line1": "Oehm",
+   "line2": "Gaspar",
+   "interns": [
+    "Oehm"
+   ],
+   "seniors": [
+    "Gaspar"
+   ],
+   "raw": "Oehm/Gaspar",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-08-22",
+   "dow": "Sat",
+   "month_tab": "August",
+   "line1": "Wohlgemuth",
+   "line2": "Mautino",
+   "interns": [
+    "Wohlgemuth"
+   ],
+   "seniors": [
+    "Mautino"
+   ],
+   "raw": "Wohlgemuth/Mautino",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-08-23",
+   "dow": "Sun",
+   "month_tab": "August",
+   "line1": "Strand",
+   "line2": "Sublette",
+   "interns": [
+    "Strand"
+   ],
+   "seniors": [
+    "Sublette"
+   ],
+   "raw": "Strand/Sublette",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-08-24",
+   "dow": "Mon",
+   "month_tab": "August",
+   "line1": "Oehm/Patel",
+   "line2": "Lux",
+   "interns": [
+    "Oehm"
+   ],
+   "seniors": [
+    "Patel",
+    "Lux"
+   ],
+   "raw": "Oehm/Patel/Lux",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-08-25",
+   "dow": "Tue",
+   "month_tab": "August",
+   "line1": "Oehm",
+   "line2": "Bottke",
+   "interns": [
+    "Oehm"
+   ],
+   "seniors": [
+    "Bottke"
+   ],
+   "raw": "Oehm/Bottke",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-08-26",
+   "dow": "Wed",
+   "month_tab": "August",
+   "line1": "Oehm",
+   "line2": "Mudondo",
+   "interns": [
+    "Oehm"
+   ],
+   "seniors": [
+    "Mudondo"
+   ],
+   "raw": "Oehm/Mudondo",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-08-27",
+   "dow": "Thu",
+   "month_tab": "August",
+   "line1": "Oehm",
+   "line2": "Johnson",
+   "interns": [
+    "Oehm"
+   ],
+   "seniors": [
+    "Johnson"
+   ],
+   "raw": "Oehm/Johnson",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-08-28",
+   "dow": "Fri",
+   "month_tab": "August",
+   "line1": "Oehm",
+   "line2": "Gaspar",
+   "interns": [
+    "Oehm"
+   ],
+   "seniors": [
+    "Gaspar"
+   ],
+   "raw": "Oehm/Gaspar",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-08-29",
+   "dow": "Sat",
+   "month_tab": "August",
+   "line1": "Stanek/Patel",
+   "line2": "Kendrick",
+   "interns": [
+    "Stanek"
+   ],
+   "seniors": [
+    "Patel",
+    "Kendrick"
+   ],
+   "raw": "Stanek/Patel/Kendrick",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-08-30",
+   "dow": "Sun",
+   "month_tab": "August",
+   "line1": "Wohlgemuth",
+   "line2": "Bottke",
+   "interns": [
+    "Wohlgemuth"
+   ],
+   "seniors": [
+    "Bottke"
+   ],
+   "raw": "Wohlgemuth/Bottke",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-08-31",
+   "dow": "Mon",
+   "month_tab": "August",
+   "line1": "Stanek",
+   "line2": "Mautino",
+   "interns": [
+    "Stanek"
+   ],
+   "seniors": [
+    "Mautino"
+   ],
+   "raw": "Stanek/Mautino",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-09-01",
+   "dow": "Tue",
+   "month_tab": "September",
+   "line1": "Stanek/Patel",
+   "line2": "Mudondo",
+   "interns": [
+    "Stanek"
+   ],
+   "seniors": [
+    "Patel",
+    "Mudondo"
+   ],
+   "raw": "Stanek/Patel/Mudondo",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-09-02",
+   "dow": "Wed",
+   "month_tab": "September",
+   "line1": "Stanek",
+   "line2": "Johnson",
+   "interns": [
+    "Stanek"
+   ],
+   "seniors": [
+    "Johnson"
+   ],
+   "raw": "Stanek/Johnson",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-09-03",
+   "dow": "Thu",
+   "month_tab": "September",
+   "line1": "Stanek",
+   "line2": "Sublette",
+   "interns": [
+    "Stanek"
+   ],
+   "seniors": [
+    "Sublette"
+   ],
+   "raw": "Stanek/Sublette",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-09-04",
+   "dow": "Fri",
+   "month_tab": "September",
+   "line1": "Stanek",
+   "line2": "Mudondo",
+   "interns": [
+    "Stanek"
+   ],
+   "seniors": [
+    "Mudondo"
+   ],
+   "raw": "Stanek/Mudondo",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-09-05",
+   "dow": "Sat",
+   "month_tab": "September",
+   "line1": "Schutt",
+   "line2": "Kendrick",
+   "interns": [
+    "Schutt"
+   ],
+   "seniors": [
+    "Kendrick"
+   ],
+   "raw": "Schutt/Kendrick",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-09-06",
+   "dow": "Sun",
+   "month_tab": "September",
+   "line1": "Wohlgemuth",
+   "line2": "Sublette",
+   "interns": [
+    "Wohlgemuth"
+   ],
+   "seniors": [
+    "Sublette"
+   ],
+   "raw": "Wohlgemuth/Sublette",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-09-07",
+   "dow": "Mon",
+   "month_tab": "September",
+   "line1": "Stanek",
+   "line2": "Mautino",
+   "interns": [
+    "Stanek"
+   ],
+   "seniors": [
+    "Mautino"
+   ],
+   "raw": "Stanek/Mautino",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-09-08",
+   "dow": "Tue",
+   "month_tab": "September",
+   "line1": "Stanek",
+   "line2": "Johnson",
+   "interns": [
+    "Stanek"
+   ],
+   "seniors": [
+    "Johnson"
+   ],
+   "raw": "Stanek/Johnson",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-09-09",
+   "dow": "Wed",
+   "month_tab": "September",
+   "line1": "Stanek",
+   "line2": "Bottke",
+   "interns": [
+    "Stanek"
+   ],
+   "seniors": [
+    "Bottke"
+   ],
+   "raw": "Stanek/Bottke",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-09-10",
+   "dow": "Thu",
+   "month_tab": "September",
+   "line1": "Stanek/Patel",
+   "line2": "Lux",
+   "interns": [
+    "Stanek"
+   ],
+   "seniors": [
+    "Patel",
+    "Lux"
+   ],
+   "raw": "Stanek/Patel/Lux",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-09-11",
+   "dow": "Fri",
+   "month_tab": "September",
+   "line1": "Stanek",
+   "line2": "Mudondo",
+   "interns": [
+    "Stanek"
+   ],
+   "seniors": [
+    "Mudondo"
+   ],
+   "raw": "Stanek/Mudondo",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-09-12",
+   "dow": "Sat",
+   "month_tab": "September",
+   "line1": "Hard",
+   "line2": "Sublette",
+   "interns": [
+    "Hard"
+   ],
+   "seniors": [
+    "Sublette"
+   ],
+   "raw": "Hard/Sublette",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-09-13",
+   "dow": "Sun",
+   "month_tab": "September",
+   "line1": "Wohlgemuth",
+   "line2": "Bottke",
+   "interns": [
+    "Wohlgemuth"
+   ],
+   "seniors": [
+    "Bottke"
+   ],
+   "raw": "Wohlgemuth/Bottke",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-09-14",
+   "dow": "Mon",
+   "month_tab": "September",
+   "line1": "Strand",
+   "line2": "Mautino",
+   "interns": [
+    "Strand"
+   ],
+   "seniors": [
+    "Mautino"
+   ],
+   "raw": "Strand/Mautino",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-09-15",
+   "dow": "Tue",
+   "month_tab": "September",
+   "line1": "Strand",
+   "line2": "Mudondo",
+   "interns": [
+    "Strand"
+   ],
+   "seniors": [
+    "Mudondo"
+   ],
+   "raw": "Strand/Mudondo",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-09-16",
+   "dow": "Wed",
+   "month_tab": "September",
+   "line1": "Strand/Patel",
+   "line2": "Lux",
+   "interns": [
+    "Strand"
+   ],
+   "seniors": [
+    "Patel",
+    "Lux"
+   ],
+   "raw": "Strand/Patel/Lux",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-09-17",
+   "dow": "Thu",
+   "month_tab": "September",
+   "line1": "Strand",
+   "line2": "Sublette",
+   "interns": [
+    "Strand"
+   ],
+   "seniors": [
+    "Sublette"
+   ],
+   "raw": "Strand/Sublette",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-09-18",
+   "dow": "Fri",
+   "month_tab": "September",
+   "line1": "Strand",
+   "line2": "Mudondo",
+   "interns": [
+    "Strand"
+   ],
+   "seniors": [
+    "Mudondo"
+   ],
+   "raw": "Strand/Mudondo",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-09-19",
+   "dow": "Sat",
+   "month_tab": "September",
+   "line1": "Hard",
+   "line2": "Kendrick",
+   "interns": [
+    "Hard"
+   ],
+   "seniors": [
+    "Kendrick"
+   ],
+   "raw": "Hard/Kendrick",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-09-20",
+   "dow": "Sun",
+   "month_tab": "September",
+   "line1": "Schutt",
+   "line2": "Gaspar",
+   "interns": [
+    "Schutt"
+   ],
+   "seniors": [
+    "Gaspar"
+   ],
+   "raw": "Schutt/Gaspar",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-09-21",
+   "dow": "Mon",
+   "month_tab": "September",
+   "line1": "Strand/Patel",
+   "line2": "Johnson",
+   "interns": [
+    "Strand"
+   ],
+   "seniors": [
+    "Patel",
+    "Johnson"
+   ],
+   "raw": "Strand/Patel/Johnson",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-09-22",
+   "dow": "Tue",
+   "month_tab": "September",
+   "line1": "Strand",
+   "line2": "Bottke",
+   "interns": [
+    "Strand"
+   ],
+   "seniors": [
+    "Bottke"
+   ],
+   "raw": "Strand/Bottke",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-09-23",
+   "dow": "Wed",
+   "month_tab": "September",
+   "line1": "Strand",
+   "line2": "Lux",
+   "interns": [
+    "Strand"
+   ],
+   "seniors": [
+    "Lux"
+   ],
+   "raw": "Strand/Lux/",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-09-24",
+   "dow": "Thu",
+   "month_tab": "September",
+   "line1": "Strand",
+   "line2": "Gaspar",
+   "interns": [
+    "Strand"
+   ],
+   "seniors": [
+    "Gaspar"
+   ],
+   "raw": "Strand /Gaspar",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-09-25",
+   "dow": "Fri",
+   "month_tab": "September",
+   "line1": "Strand",
+   "line2": "Mudondo",
+   "interns": [
+    "Strand"
+   ],
+   "seniors": [
+    "Mudondo"
+   ],
+   "raw": "Strand/Mudondo",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-09-26",
+   "dow": "Sat",
+   "month_tab": "September",
+   "line1": "Schutt",
+   "line2": "Sublette",
+   "interns": [
+    "Schutt"
+   ],
+   "seniors": [
+    "Sublette"
+   ],
+   "raw": "Schutt/Sublette",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-09-27",
+   "dow": "Sun",
+   "month_tab": "September",
+   "line1": "Oehm/Patel",
+   "line2": "Kendrick",
+   "interns": [
+    "Oehm"
+   ],
+   "seniors": [
+    "Patel",
+    "Kendrick"
+   ],
+   "raw": "Oehm/Patel/Kendrick/",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-09-28",
+   "dow": "Mon",
+   "month_tab": "September",
+   "line1": "Schutt",
+   "line2": "Bower",
+   "interns": [
+    "Schutt"
+   ],
+   "seniors": [
+    "Bower"
+   ],
+   "raw": "Schutt/Bower/",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-09-29",
+   "dow": "Tue",
+   "month_tab": "September",
+   "line1": "Schutt",
+   "line2": "Mautino",
+   "interns": [
+    "Schutt"
+   ],
+   "seniors": [
+    "Mautino"
+   ],
+   "raw": "Schutt/Mautino",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-09-30",
+   "dow": "Wed",
+   "month_tab": "September",
+   "line1": "Schutt",
+   "line2": "Gaspar",
+   "interns": [
+    "Schutt"
+   ],
+   "seniors": [
+    "Gaspar"
+   ],
+   "raw": "Schutt/Gaspar",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-10-01",
+   "dow": "Thu",
+   "month_tab": "October",
+   "line1": "Schutt",
+   "line2": "Kendrick",
+   "interns": [
+    "Schutt"
+   ],
+   "seniors": [
+    "Kendrick"
+   ],
+   "raw": "Schutt/Kendrick",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-10-02",
+   "dow": "Fri",
+   "month_tab": "October",
+   "line1": "Schutt",
+   "line2": "Mautino",
+   "interns": [
+    "Schutt"
+   ],
+   "seniors": [
+    "Mautino"
+   ],
+   "raw": "Schutt/Mautino",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-10-03",
+   "dow": "Sat",
+   "month_tab": "October",
+   "line1": "Stanek",
+   "line2": "Lux",
+   "interns": [
+    "Stanek"
+   ],
+   "seniors": [
+    "Lux"
+   ],
+   "raw": "Stanek/Lux",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-10-04",
+   "dow": "Sun",
+   "month_tab": "October",
+   "line1": "Oehm",
+   "line2": "Bower",
+   "interns": [
+    "Oehm"
+   ],
+   "seniors": [
+    "Bower"
+   ],
+   "raw": "Oehm/Bower",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-10-05",
+   "dow": "Mon",
+   "month_tab": "October",
+   "line1": "Schutt",
+   "line2": "Sublette",
+   "interns": [
+    "Schutt"
+   ],
+   "seniors": [
+    "Sublette"
+   ],
+   "raw": "Schutt/Sublette",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-10-06",
+   "dow": "Tue",
+   "month_tab": "October",
+   "line1": "Schutt",
+   "line2": "Kendrick",
+   "interns": [
+    "Schutt"
+   ],
+   "seniors": [
+    "Kendrick"
+   ],
+   "raw": "Schutt/Kendrick/",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-10-07",
+   "dow": "Wed",
+   "month_tab": "October",
+   "line1": "Schutt",
+   "line2": "Johnson",
+   "interns": [
+    "Schutt"
+   ],
+   "seniors": [
+    "Johnson"
+   ],
+   "raw": "Schutt/Johnson",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-10-08",
+   "dow": "Thu",
+   "month_tab": "October",
+   "line1": "Schutt",
+   "line2": "Mudondo",
+   "interns": [
+    "Schutt"
+   ],
+   "seniors": [
+    "Mudondo"
+   ],
+   "raw": "Schutt/Mudondo",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-10-09",
+   "dow": "Fri",
+   "month_tab": "October",
+   "line1": "Schutt",
+   "line2": "Mautino",
+   "interns": [
+    "Schutt"
+   ],
+   "seniors": [
+    "Mautino"
+   ],
+   "raw": "Schutt/Mautino",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-10-10",
+   "dow": "Sat",
+   "month_tab": "October",
+   "line1": "Hard",
+   "line2": "Beutel",
+   "interns": [
+    "Hard"
+   ],
+   "seniors": [
+    "Beutel"
+   ],
+   "raw": "Hard/Beutel",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-10-11",
+   "dow": "Sun",
+   "month_tab": "October",
+   "line1": "Oehm",
+   "line2": "Gaspar",
+   "interns": [
+    "Oehm"
+   ],
+   "seniors": [
+    "Gaspar"
+   ],
+   "raw": "Oehm/Gaspar",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-10-12",
+   "dow": "Mon",
+   "month_tab": "October",
+   "line1": "Wohlgemuth",
+   "line2": "Mautino",
+   "interns": [
+    "Wohlgemuth"
+   ],
+   "seniors": [
+    "Mautino"
+   ],
+   "raw": "Wohlgemuth/Mautino",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-10-13",
+   "dow": "Tue",
+   "month_tab": "October",
+   "line1": "Wohlgemuth",
+   "line2": "Mautino",
+   "interns": [
+    "Wohlgemuth"
+   ],
+   "seniors": [
+    "Mautino"
+   ],
+   "raw": "Wohlgemuth/Mautino",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-10-14",
+   "dow": "Wed",
+   "month_tab": "October",
+   "line1": "Wohlgemuth",
+   "line2": "Bower",
+   "interns": [
+    "Wohlgemuth"
+   ],
+   "seniors": [
+    "Bower"
+   ],
+   "raw": "Wohlgemuth/Bower",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-10-15",
+   "dow": "Thu",
+   "month_tab": "October",
+   "line1": "Wohlgemuth",
+   "line2": "Beutel",
+   "interns": [
+    "Wohlgemuth"
+   ],
+   "seniors": [
+    "Beutel"
+   ],
+   "raw": "Wohlgemuth/Beutel",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-10-16",
+   "dow": "Fri",
+   "month_tab": "October",
+   "line1": "Wohlgemuth",
+   "line2": "Mautino",
+   "interns": [
+    "Wohlgemuth"
+   ],
+   "seniors": [
+    "Mautino"
+   ],
+   "raw": "Wohlgemuth/Mautino",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-10-17",
+   "dow": "Sat",
+   "month_tab": "October",
+   "line1": "Stanek",
+   "line2": "Lux",
+   "interns": [
+    "Stanek"
+   ],
+   "seniors": [
+    "Lux"
+   ],
+   "raw": "Stanek/Lux",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-10-18",
+   "dow": "Sun",
+   "month_tab": "October",
+   "line1": "Oehm",
+   "line2": "Sublette",
+   "interns": [
+    "Oehm"
+   ],
+   "seniors": [
+    "Sublette"
+   ],
+   "raw": "Oehm/Sublette",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-10-19",
+   "dow": "Mon",
+   "month_tab": "October",
+   "line1": "Wohlgemuth",
+   "line2": "Johnson",
+   "interns": [
+    "Wohlgemuth"
+   ],
+   "seniors": [
+    "Johnson"
+   ],
+   "raw": "Wohlgemuth/Johnson",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-10-20",
+   "dow": "Tue",
+   "month_tab": "October",
+   "line1": "Wohlgemuth",
+   "line2": "Mudondo",
+   "interns": [
+    "Wohlgemuth"
+   ],
+   "seniors": [
+    "Mudondo"
+   ],
+   "raw": "Wohlgemuth/Mudondo",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-10-21",
+   "dow": "Wed",
+   "month_tab": "October",
+   "line1": "Wohlgemuth",
+   "line2": "Bower",
+   "interns": [
+    "Wohlgemuth"
+   ],
+   "seniors": [
+    "Bower"
+   ],
+   "raw": "Wohlgemuth/Bower",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-10-22",
+   "dow": "Thu",
+   "month_tab": "October",
+   "line1": "Wohlgemuth",
+   "line2": "Gaspar",
+   "interns": [
+    "Wohlgemuth"
+   ],
+   "seniors": [
+    "Gaspar"
+   ],
+   "raw": "Wohlgemuth/Gaspar",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-10-23",
+   "dow": "Fri",
+   "month_tab": "October",
+   "line1": "Wohlgemuth",
+   "line2": "Sublette",
+   "interns": [
+    "Wohlgemuth"
+   ],
+   "seniors": [
+    "Sublette"
+   ],
+   "raw": "Wohlgemuth/Sublette",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-10-24",
+   "dow": "Sat",
+   "month_tab": "October",
+   "line1": "Hard",
+   "line2": "Beutel",
+   "interns": [
+    "Hard"
+   ],
+   "seniors": [
+    "Beutel"
+   ],
+   "raw": "Hard/Beutel",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-10-25",
+   "dow": "Sun",
+   "month_tab": "October",
+   "line1": "Stanek",
+   "line2": "Kendrick",
+   "interns": [
+    "Stanek"
+   ],
+   "seniors": [
+    "Kendrick"
+   ],
+   "raw": "Stanek/Kendrick",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-10-26",
+   "dow": "Mon",
+   "month_tab": "October",
+   "line1": "Oehm",
+   "line2": "Beutel",
+   "interns": [
+    "Oehm"
+   ],
+   "seniors": [
+    "Beutel"
+   ],
+   "raw": "Oehm/Beutel",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-10-27",
+   "dow": "Tue",
+   "month_tab": "October",
+   "line1": "Oehm",
+   "line2": "Sublette",
+   "interns": [
+    "Oehm"
+   ],
+   "seniors": [
+    "Sublette"
+   ],
+   "raw": "Oehm/Sublette",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-10-28",
+   "dow": "Wed",
+   "month_tab": "October",
+   "line1": "Oehm",
+   "line2": "Lux",
+   "interns": [
+    "Oehm"
+   ],
+   "seniors": [
+    "Lux"
+   ],
+   "raw": "Oehm/Lux",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-10-29",
+   "dow": "Thu",
+   "month_tab": "October",
+   "line1": "Oehm",
+   "line2": "Bottke",
+   "interns": [
+    "Oehm"
+   ],
+   "seniors": [
+    "Bottke"
+   ],
+   "raw": "Oehm/Bottke",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-10-30",
+   "dow": "Fri",
+   "month_tab": "October",
+   "line1": "Oehm",
+   "line2": "Mautino",
+   "interns": [
+    "Oehm"
+   ],
+   "seniors": [
+    "Mautino"
+   ],
+   "raw": "Oehm/Mautino",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-10-31",
+   "dow": "Sat",
+   "month_tab": "October",
+   "line1": "Schutt",
+   "line2": "Johnson",
+   "interns": [
+    "Schutt"
+   ],
+   "seniors": [
+    "Johnson"
+   ],
+   "raw": "Schutt/Johnson",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-11-01",
+   "dow": "Sun",
+   "month_tab": "November",
+   "line1": "Stanek",
+   "line2": "Patel",
+   "interns": [
+    "Stanek"
+   ],
+   "seniors": [
+    "Patel"
+   ],
+   "raw": "Stanek/Patel",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-11-02",
+   "dow": "Mon",
+   "month_tab": "November",
+   "line1": "Oehm",
+   "line2": "Kendrick",
+   "interns": [
+    "Oehm"
+   ],
+   "seniors": [
+    "Kendrick"
+   ],
+   "raw": "Oehm/Kendrick",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-11-03",
+   "dow": "Tue",
+   "month_tab": "November",
+   "line1": "Oehm",
+   "line2": "Lux",
+   "interns": [
+    "Oehm"
+   ],
+   "seniors": [
+    "Lux"
+   ],
+   "raw": "Oehm/Lux",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-11-04",
+   "dow": "Wed",
+   "month_tab": "November",
+   "line1": "Oehm",
+   "line2": "Beutel",
+   "interns": [
+    "Oehm"
+   ],
+   "seniors": [
+    "Beutel"
+   ],
+   "raw": "Oehm/Beutel",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-11-05",
+   "dow": "Thu",
+   "month_tab": "November",
+   "line1": "Oehm",
+   "line2": "Mudondo",
+   "interns": [
+    "Oehm"
+   ],
+   "seniors": [
+    "Mudondo"
+   ],
+   "raw": "Oehm/Mudondo",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-11-06",
+   "dow": "Fri",
+   "month_tab": "November",
+   "line1": "Oehm",
+   "line2": "Sublette",
+   "interns": [
+    "Oehm"
+   ],
+   "seniors": [
+    "Sublette"
+   ],
+   "raw": "Oehm/Sublette",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-11-07",
+   "dow": "Sat",
+   "month_tab": "November",
+   "line1": "Strand",
+   "line2": "Bottke",
+   "interns": [
+    "Strand"
+   ],
+   "seniors": [
+    "Bottke"
+   ],
+   "raw": "Strand/Bottke",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-11-08",
+   "dow": "Sun",
+   "month_tab": "November",
+   "line1": "Stanek",
+   "line2": "Gaspar",
+   "interns": [
+    "Stanek"
+   ],
+   "seniors": [
+    "Gaspar"
+   ],
+   "raw": "Stanek/Gaspar",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-11-09",
+   "dow": "Mon",
+   "month_tab": "November",
+   "line1": "Hard",
+   "line2": "Patel",
+   "interns": [
+    "Hard"
+   ],
+   "seniors": [
+    "Patel"
+   ],
+   "raw": "Hard/Patel",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-11-10",
+   "dow": "Tue",
+   "month_tab": "November",
+   "line1": "Hard",
+   "line2": "Bower",
+   "interns": [
+    "Hard"
+   ],
+   "seniors": [
+    "Bower"
+   ],
+   "raw": "Hard/Bower",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-11-11",
+   "dow": "Wed",
+   "month_tab": "November",
+   "line1": "Hard",
+   "line2": "Sublette",
+   "interns": [
+    "Hard"
+   ],
+   "seniors": [
+    "Sublette"
+   ],
+   "raw": "Hard/Sublette",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-11-12",
+   "dow": "Thu",
+   "month_tab": "November",
+   "line1": "Hard",
+   "line2": "Bottke",
+   "interns": [
+    "Hard"
+   ],
+   "seniors": [
+    "Bottke"
+   ],
+   "raw": "Hard/Bottke",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-11-13",
+   "dow": "Fri",
+   "month_tab": "November",
+   "line1": "Hard",
+   "line2": "Mautino",
+   "interns": [
+    "Hard"
+   ],
+   "seniors": [
+    "Mautino"
+   ],
+   "raw": "Hard/Mautino",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-11-14",
+   "dow": "Sat",
+   "month_tab": "November",
+   "line1": "Schutt",
+   "line2": "Johnson",
+   "interns": [
+    "Schutt"
+   ],
+   "seniors": [
+    "Johnson"
+   ],
+   "raw": "Schutt/Johnson",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-11-15",
+   "dow": "Sun",
+   "month_tab": "November",
+   "line1": "Stanek",
+   "line2": "Patel",
+   "interns": [
+    "Stanek"
+   ],
+   "seniors": [
+    "Patel"
+   ],
+   "raw": "Stanek/Patel",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-11-16",
+   "dow": "Mon",
+   "month_tab": "November",
+   "line1": "Hard",
+   "line2": "Sublette",
+   "interns": [
+    "Hard"
+   ],
+   "seniors": [
+    "Sublette"
+   ],
+   "raw": "Hard/Sublette",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-11-17",
+   "dow": "Tue",
+   "month_tab": "November",
+   "line1": "Hard",
+   "line2": "Beutel",
+   "interns": [
+    "Hard"
+   ],
+   "seniors": [
+    "Beutel"
+   ],
+   "raw": "Hard/Beutel",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-11-18",
+   "dow": "Wed",
+   "month_tab": "November",
+   "line1": "Hard",
+   "line2": "Mudondo",
+   "interns": [
+    "Hard"
+   ],
+   "seniors": [
+    "Mudondo"
+   ],
+   "raw": "Hard/Mudondo",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-11-19",
+   "dow": "Thu",
+   "month_tab": "November",
+   "line1": "Hard",
+   "line2": "Lux",
+   "interns": [
+    "Hard"
+   ],
+   "seniors": [
+    "Lux"
+   ],
+   "raw": "Hard/Lux",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-11-20",
+   "dow": "Fri",
+   "month_tab": "November",
+   "line1": "Hard",
+   "line2": "Johnson",
+   "interns": [
+    "Hard"
+   ],
+   "seniors": [
+    "Johnson"
+   ],
+   "raw": "Hard/Johnson",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-11-21",
+   "dow": "Sat",
+   "month_tab": "November",
+   "line1": "Strand",
+   "line2": "Bottke",
+   "interns": [
+    "Strand"
+   ],
+   "seniors": [
+    "Bottke"
+   ],
+   "raw": "Strand/Bottke",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-11-22",
+   "dow": "Sun",
+   "month_tab": "November",
+   "line1": "Schutt",
+   "line2": "Bower",
+   "interns": [
+    "Schutt"
+   ],
+   "seniors": [
+    "Bower"
+   ],
+   "raw": "Schutt/Bower",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-11-23",
+   "dow": "Mon",
+   "month_tab": "November",
+   "line1": "Stanek",
+   "line2": "Beutel",
+   "interns": [
+    "Stanek"
+   ],
+   "seniors": [
+    "Beutel"
+   ],
+   "raw": "Stanek/Beutel/",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-11-24",
+   "dow": "Tue",
+   "month_tab": "November",
+   "line1": "Stanek",
+   "line2": "Johnson",
+   "interns": [
+    "Stanek"
+   ],
+   "seniors": [
+    "Johnson"
+   ],
+   "raw": "Stanek/Johnson",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-11-25",
+   "dow": "Wed",
+   "month_tab": "November",
+   "line1": "Stanek",
+   "line2": "Gaspar",
+   "interns": [
+    "Stanek"
+   ],
+   "seniors": [
+    "Gaspar"
+   ],
+   "raw": "Stanek/Gaspar",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-11-26",
+   "dow": "Thu",
+   "month_tab": "November",
+   "line1": "Stanek",
+   "line2": "Lux",
+   "interns": [
+    "Stanek"
+   ],
+   "seniors": [
+    "Lux"
+   ],
+   "raw": "Stanek/Lux",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-11-27",
+   "dow": "Fri",
+   "month_tab": "November",
+   "line1": "Stanek",
+   "line2": "Sublette",
+   "interns": [
+    "Stanek"
+   ],
+   "seniors": [
+    "Sublette"
+   ],
+   "raw": "Stanek/Sublette",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-11-28",
+   "dow": "Sat",
+   "month_tab": "November",
+   "line1": "Wohlgemuth",
+   "line2": "Mautino",
+   "interns": [
+    "Wohlgemuth"
+   ],
+   "seniors": [
+    "Mautino"
+   ],
+   "raw": "Wohlgemuth/Mautino",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-11-29",
+   "dow": "Sun",
+   "month_tab": "November",
+   "line1": "Schutt",
+   "line2": "Beutel",
+   "interns": [
+    "Schutt"
+   ],
+   "seniors": [
+    "Beutel"
+   ],
+   "raw": "Schutt/Beutel",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-11-30",
+   "dow": "Mon",
+   "month_tab": "November",
+   "line1": "Stanek",
+   "line2": "Bottke",
+   "interns": [
+    "Stanek"
+   ],
+   "seniors": [
+    "Bottke"
+   ],
+   "raw": "Stanek/Bottke",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-12-01",
+   "dow": "Tue",
+   "month_tab": "December",
+   "line1": "Stanek",
+   "line2": "Bower",
+   "interns": [
+    "Stanek"
+   ],
+   "seniors": [
+    "Bower"
+   ],
+   "raw": "Stanek/Bower",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-12-02",
+   "dow": "Wed",
+   "month_tab": "December",
+   "line1": "Stanek",
+   "line2": "Bottke",
+   "interns": [
+    "Stanek"
+   ],
+   "seniors": [
+    "Bottke"
+   ],
+   "raw": "Stanek/Bottke",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-12-03",
+   "dow": "Thu",
+   "month_tab": "December",
+   "line1": "Stanek",
+   "line2": "Gaspar",
+   "interns": [
+    "Stanek"
+   ],
+   "seniors": [
+    "Gaspar"
+   ],
+   "raw": "Stanek/Gaspar",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-12-04",
+   "dow": "Fri",
+   "month_tab": "December",
+   "line1": "Stanek",
+   "line2": "Lux",
+   "interns": [
+    "Stanek"
+   ],
+   "seniors": [
+    "Lux"
+   ],
+   "raw": "Stanek/Lux",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-12-05",
+   "dow": "Sat",
+   "month_tab": "December",
+   "line1": "Oehm",
+   "line2": "Sublette",
+   "interns": [
+    "Oehm"
+   ],
+   "seniors": [
+    "Sublette"
+   ],
+   "raw": "Oehm/Sublette",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-12-06",
+   "dow": "Sun",
+   "month_tab": "December",
+   "line1": "Schutt",
+   "line2": "Bower",
+   "interns": [
+    "Schutt"
+   ],
+   "seniors": [
+    "Bower"
+   ],
+   "raw": "Schutt/Bower",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-12-07",
+   "dow": "Mon",
+   "month_tab": "December",
+   "line1": "Strand",
+   "line2": "Mudondo",
+   "interns": [
+    "Strand"
+   ],
+   "seniors": [
+    "Mudondo"
+   ],
+   "raw": "Strand/Mudondo",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-12-08",
+   "dow": "Tue",
+   "month_tab": "December",
+   "line1": "Strand",
+   "line2": "Lux",
+   "interns": [
+    "Strand"
+   ],
+   "seniors": [
+    "Lux"
+   ],
+   "raw": "Strand/Lux",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-12-09",
+   "dow": "Wed",
+   "month_tab": "December",
+   "line1": "Strand",
+   "line2": "Patel",
+   "interns": [
+    "Strand"
+   ],
+   "seniors": [
+    "Patel"
+   ],
+   "raw": "Strand/Patel ",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-12-10",
+   "dow": "Thu",
+   "month_tab": "December",
+   "line1": "Strand",
+   "line2": "Sublette",
+   "interns": [
+    "Strand"
+   ],
+   "seniors": [
+    "Sublette"
+   ],
+   "raw": "Strand/Sublette",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-12-11",
+   "dow": "Fri",
+   "month_tab": "December",
+   "line1": "Strand",
+   "line2": "Lux",
+   "interns": [
+    "Strand"
+   ],
+   "seniors": [
+    "Lux"
+   ],
+   "raw": "Strand/Lux",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-12-12",
+   "dow": "Sat",
+   "month_tab": "December",
+   "line1": "Wohlgemuth",
+   "line2": "Mautino",
+   "interns": [
+    "Wohlgemuth"
+   ],
+   "seniors": [
+    "Mautino"
+   ],
+   "raw": "Wohlgemuth/Mautino",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-12-13",
+   "dow": "Sun",
+   "month_tab": "December",
+   "line1": "Schutt",
+   "line2": "Gaspar",
+   "interns": [
+    "Schutt"
+   ],
+   "seniors": [
+    "Gaspar"
+   ],
+   "raw": "Schutt/Gaspar",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-12-14",
+   "dow": "Mon",
+   "month_tab": "December",
+   "line1": "Strand",
+   "line2": "Beutel",
+   "interns": [
+    "Strand"
+   ],
+   "seniors": [
+    "Beutel"
+   ],
+   "raw": "Strand/Beutel ",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-12-15",
+   "dow": "Tue",
+   "month_tab": "December",
+   "line1": "Strand",
+   "line2": "Lux",
+   "interns": [
+    "Strand"
+   ],
+   "seniors": [
+    "Lux"
+   ],
+   "raw": "Strand/Lux",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-12-16",
+   "dow": "Wed",
+   "month_tab": "December",
+   "line1": "Strand",
+   "line2": "Bower",
+   "interns": [
+    "Strand"
+   ],
+   "seniors": [
+    "Bower"
+   ],
+   "raw": "Strand/Bower",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-12-17",
+   "dow": "Thu",
+   "month_tab": "December",
+   "line1": "Strand",
+   "line2": "Johnson",
+   "interns": [
+    "Strand"
+   ],
+   "seniors": [
+    "Johnson"
+   ],
+   "raw": "Strand/Johnson",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-12-18",
+   "dow": "Fri",
+   "month_tab": "December",
+   "line1": "Strand",
+   "line2": "Lux",
+   "interns": [
+    "Strand"
+   ],
+   "seniors": [
+    "Lux"
+   ],
+   "raw": "Strand/Lux",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-12-19",
+   "dow": "Sat",
+   "month_tab": "December",
+   "line1": "Oehm",
+   "line2": "Sublette",
+   "interns": [
+    "Oehm"
+   ],
+   "seniors": [
+    "Sublette"
+   ],
+   "raw": "Oehm/Sublette",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-12-20",
+   "dow": "Sun",
+   "month_tab": "December",
+   "line1": "Gaspar",
+   "line2": "",
+   "interns": [],
+   "seniors": [
+    "Gaspar"
+   ],
+   "raw": "Gaspar",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-12-21",
+   "dow": "Mon",
+   "month_tab": "December",
+   "line1": "Sublette",
+   "line2": "",
+   "interns": [],
+   "seniors": [
+    "Sublette"
+   ],
+   "raw": "Sublette",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-12-22",
+   "dow": "Tue",
+   "month_tab": "December",
+   "line1": "Bottke",
+   "line2": "",
+   "interns": [],
+   "seniors": [
+    "Bottke"
+   ],
+   "raw": "Bottke",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-12-23",
+   "dow": "Wed",
+   "month_tab": "December",
+   "line1": "Beutel",
+   "line2": "",
+   "interns": [],
+   "seniors": [
+    "Beutel"
+   ],
+   "raw": "Beutel",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-12-24",
+   "dow": "Thu",
+   "month_tab": "December",
+   "line1": "Patel",
+   "line2": "",
+   "interns": [],
+   "seniors": [
+    "Patel"
+   ],
+   "raw": "Patel",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-12-25",
+   "dow": "Fri",
+   "month_tab": "December",
+   "line1": "Gaspar",
+   "line2": "",
+   "interns": [],
+   "seniors": [
+    "Gaspar"
+   ],
+   "raw": "Gaspar",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-12-26",
+   "dow": "Sat",
+   "month_tab": "December",
+   "line1": "Mudondo",
+   "line2": "",
+   "interns": [],
+   "seniors": [
+    "Mudondo"
+   ],
+   "raw": "Mudondo",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-12-27",
+   "dow": "Sun",
+   "month_tab": "December",
+   "line1": "Lux",
+   "line2": "",
+   "interns": [],
+   "seniors": [
+    "Lux"
+   ],
+   "raw": "Lux",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-12-28",
+   "dow": "Mon",
+   "month_tab": "December",
+   "line1": "Mautino",
+   "line2": "",
+   "interns": [],
+   "seniors": [
+    "Mautino"
+   ],
+   "raw": "Mautino",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-12-29",
+   "dow": "Tue",
+   "month_tab": "December",
+   "line1": "Bower",
+   "line2": "",
+   "interns": [],
+   "seniors": [
+    "Bower"
+   ],
+   "raw": "Bower",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-12-30",
+   "dow": "Wed",
+   "month_tab": "December",
+   "line1": "Bottke",
+   "line2": "",
+   "interns": [],
+   "seniors": [
+    "Bottke"
+   ],
+   "raw": "Bottke",
+   "in_tab_month": true
+  },
+  {
+   "date": "2026-12-31",
+   "dow": "Thu",
+   "month_tab": "December",
+   "line1": "Johnson",
+   "line2": "",
+   "interns": [],
+   "seniors": [
+    "Johnson"
+   ],
+   "raw": "Johnson",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-01-01",
+   "dow": "Fri",
+   "month_tab": "January",
+   "line1": "Kendrick",
+   "line2": "",
+   "interns": [],
+   "seniors": [
+    "Kendrick"
+   ],
+   "raw": "Kendrick",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-01-02",
+   "dow": "Sat",
+   "month_tab": "January",
+   "line1": "Bower",
+   "line2": "",
+   "interns": [],
+   "seniors": [
+    "Bower"
+   ],
+   "raw": "Bower",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-01-03",
+   "dow": "Sun",
+   "month_tab": "January",
+   "line1": "Schutt",
+   "line2": "Beutel",
+   "interns": [
+    "Schutt"
+   ],
+   "seniors": [
+    "Beutel"
+   ],
+   "raw": "Schutt/Beutel",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-01-04",
+   "dow": "Mon",
+   "month_tab": "January",
+   "line1": "Wohlgemuth",
+   "line2": "Gaspar",
+   "interns": [
+    "Wohlgemuth"
+   ],
+   "seniors": [
+    "Gaspar"
+   ],
+   "raw": "Wohlgemuth/Gaspar",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-01-05",
+   "dow": "Tue",
+   "month_tab": "January",
+   "line1": "Oehm",
+   "line2": "Johnson",
+   "interns": [
+    "Oehm"
+   ],
+   "seniors": [
+    "Johnson"
+   ],
+   "raw": "Oehm/Johnson",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-01-06",
+   "dow": "Wed",
+   "month_tab": "January",
+   "line1": "Strand",
+   "line2": "Kendrick",
+   "interns": [
+    "Strand"
+   ],
+   "seniors": [
+    "Kendrick"
+   ],
+   "raw": "Strand/Kendrick",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-01-07",
+   "dow": "Thu",
+   "month_tab": "January",
+   "line1": "Schutt",
+   "line2": "Bower",
+   "interns": [
+    "Schutt"
+   ],
+   "seniors": [
+    "Bower"
+   ],
+   "raw": "Schutt/Bower",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-01-08",
+   "dow": "Fri",
+   "month_tab": "January",
+   "line1": "Hard",
+   "line2": "Johnson",
+   "interns": [
+    "Hard"
+   ],
+   "seniors": [
+    "Johnson"
+   ],
+   "raw": "Hard/Johnson",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-01-09",
+   "dow": "Sat",
+   "month_tab": "January",
+   "line1": "Mudondo",
+   "line2": "Oehm",
+   "interns": [
+    "Oehm"
+   ],
+   "seniors": [
+    "Mudondo"
+   ],
+   "raw": "Mudondo/Oehm",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-01-10",
+   "dow": "Sun",
+   "month_tab": "January",
+   "line1": "Schutt",
+   "line2": "Bottke",
+   "interns": [
+    "Schutt"
+   ],
+   "seniors": [
+    "Bottke"
+   ],
+   "raw": "Schutt/Bottke",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-01-11",
+   "dow": "Mon",
+   "month_tab": "January",
+   "line1": "Hard",
+   "line2": "Sublette",
+   "interns": [
+    "Hard"
+   ],
+   "seniors": [
+    "Sublette"
+   ],
+   "raw": "Hard/Sublette",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-01-12",
+   "dow": "Tue",
+   "month_tab": "January",
+   "line1": "Oehm",
+   "line2": "Beutel",
+   "interns": [
+    "Oehm"
+   ],
+   "seniors": [
+    "Beutel"
+   ],
+   "raw": "Oehm/Beutel",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-01-13",
+   "dow": "Wed",
+   "month_tab": "January",
+   "line1": "Strand",
+   "line2": "Gaspar",
+   "interns": [
+    "Strand"
+   ],
+   "seniors": [
+    "Gaspar"
+   ],
+   "raw": "Strand/Gaspar",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-01-14",
+   "dow": "Thu",
+   "month_tab": "January",
+   "line1": "Wohlgemuth",
+   "line2": "Mautino",
+   "interns": [
+    "Wohlgemuth"
+   ],
+   "seniors": [
+    "Mautino"
+   ],
+   "raw": "Wohlgemuth/Mautino",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-01-15",
+   "dow": "Fri",
+   "month_tab": "January",
+   "line1": "Hard",
+   "line2": "Johnson",
+   "interns": [
+    "Hard"
+   ],
+   "seniors": [
+    "Johnson"
+   ],
+   "raw": "Hard/Johnson",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-01-16",
+   "dow": "Sat",
+   "month_tab": "January",
+   "line1": "Strand",
+   "line2": "Bower",
+   "interns": [
+    "Strand"
+   ],
+   "seniors": [
+    "Bower"
+   ],
+   "raw": "Strand/Bower",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-01-17",
+   "dow": "Sun",
+   "month_tab": "January",
+   "line1": "Wohlgemuth",
+   "line2": "Gaspar",
+   "interns": [
+    "Wohlgemuth"
+   ],
+   "seniors": [
+    "Gaspar"
+   ],
+   "raw": "Wohlgemuth/Gaspar",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-01-18",
+   "dow": "Mon",
+   "month_tab": "January",
+   "line1": "Schutt",
+   "line2": "Kendrick",
+   "interns": [
+    "Schutt"
+   ],
+   "seniors": [
+    "Kendrick"
+   ],
+   "raw": "Schutt/Kendrick",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-01-19",
+   "dow": "Tue",
+   "month_tab": "January",
+   "line1": "Oehm",
+   "line2": "Johnson",
+   "interns": [
+    "Oehm"
+   ],
+   "seniors": [
+    "Johnson"
+   ],
+   "raw": "Oehm/Johnson",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-01-20",
+   "dow": "Wed",
+   "month_tab": "January",
+   "line1": "Strand",
+   "line2": "Mautino",
+   "interns": [
+    "Strand"
+   ],
+   "seniors": [
+    "Mautino"
+   ],
+   "raw": "Strand/Mautino",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-01-21",
+   "dow": "Thu",
+   "month_tab": "January",
+   "line1": "Schutt",
+   "line2": "Gaspar",
+   "interns": [
+    "Schutt"
+   ],
+   "seniors": [
+    "Gaspar"
+   ],
+   "raw": "Schutt/Gaspar",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-01-22",
+   "dow": "Fri",
+   "month_tab": "January",
+   "line1": "Hard",
+   "line2": "Johnson",
+   "interns": [
+    "Hard"
+   ],
+   "seniors": [
+    "Johnson"
+   ],
+   "raw": "Hard/Johnson",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-01-23",
+   "dow": "Sat",
+   "month_tab": "January",
+   "line1": "Mudondo",
+   "line2": "Oehm",
+   "interns": [
+    "Oehm"
+   ],
+   "seniors": [
+    "Mudondo"
+   ],
+   "raw": "Mudondo/Oehm",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-01-24",
+   "dow": "Sun",
+   "month_tab": "January",
+   "line1": "Wohlgemuth",
+   "line2": "Kendrick",
+   "interns": [
+    "Wohlgemuth"
+   ],
+   "seniors": [
+    "Kendrick"
+   ],
+   "raw": "Wohlgemuth/Kendrick",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-01-25",
+   "dow": "Mon",
+   "month_tab": "January",
+   "line1": "Hard",
+   "line2": "Bottke",
+   "interns": [
+    "Hard"
+   ],
+   "seniors": [
+    "Bottke"
+   ],
+   "raw": "Hard /Bottke",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-01-26",
+   "dow": "Tue",
+   "month_tab": "January",
+   "line1": "Oehm",
+   "line2": "Sublette",
+   "interns": [
+    "Oehm"
+   ],
+   "seniors": [
+    "Sublette"
+   ],
+   "raw": "Oehm/Sublette",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-01-27",
+   "dow": "Wed",
+   "month_tab": "January",
+   "line1": "Strand",
+   "line2": "Mautino",
+   "interns": [
+    "Strand"
+   ],
+   "seniors": [
+    "Mautino"
+   ],
+   "raw": "Strand/Mautino",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-01-28",
+   "dow": "Thu",
+   "month_tab": "January",
+   "line1": "Wohlgemuth",
+   "line2": "Beutel",
+   "interns": [
+    "Wohlgemuth"
+   ],
+   "seniors": [
+    "Beutel"
+   ],
+   "raw": "Wohlgemuth/Beutel",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-01-29",
+   "dow": "Fri",
+   "month_tab": "January",
+   "line1": "Hard",
+   "line2": "Johnson",
+   "interns": [
+    "Hard"
+   ],
+   "seniors": [
+    "Johnson"
+   ],
+   "raw": "Hard/Johnson",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-01-30",
+   "dow": "Sat",
+   "month_tab": "January",
+   "line1": "Strand",
+   "line2": "Bower",
+   "interns": [
+    "Strand"
+   ],
+   "seniors": [
+    "Bower"
+   ],
+   "raw": "Strand/Bower",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-01-31",
+   "dow": "Sun",
+   "month_tab": "January",
+   "line1": "Stanek",
+   "line2": "Sublette",
+   "interns": [
+    "Stanek"
+   ],
+   "seniors": [
+    "Sublette"
+   ],
+   "raw": "Stanek/Sublette",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-02-01",
+   "dow": "Mon",
+   "month_tab": "February",
+   "line1": "Strand",
+   "line2": "Beutel",
+   "interns": [
+    "Strand"
+   ],
+   "seniors": [
+    "Beutel"
+   ],
+   "raw": "Strand/Beutel",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-02-02",
+   "dow": "Tue",
+   "month_tab": "February",
+   "line1": "Hard",
+   "line2": "Patel",
+   "interns": [
+    "Hard"
+   ],
+   "seniors": [
+    "Patel"
+   ],
+   "raw": "Hard/Patel",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-02-03",
+   "dow": "Wed",
+   "month_tab": "February",
+   "line1": "Wohlgemuth",
+   "line2": "Patel",
+   "interns": [
+    "Wohlgemuth"
+   ],
+   "seniors": [
+    "Patel"
+   ],
+   "raw": "Wohlgemuth/Patel",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-02-04",
+   "dow": "Thu",
+   "month_tab": "February",
+   "line1": "Stanek",
+   "line2": "Bottke",
+   "interns": [
+    "Stanek"
+   ],
+   "seniors": [
+    "Bottke"
+   ],
+   "raw": "Stanek/Bottke",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-02-05",
+   "dow": "Fri",
+   "month_tab": "February",
+   "line1": "Schutt",
+   "line2": "Mautino",
+   "interns": [
+    "Schutt"
+   ],
+   "seniors": [
+    "Mautino"
+   ],
+   "raw": "Schutt/Mautino",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-02-06",
+   "dow": "Sat",
+   "month_tab": "February",
+   "line1": "Hard",
+   "line2": "Lux",
+   "interns": [
+    "Hard"
+   ],
+   "seniors": [
+    "Lux"
+   ],
+   "raw": "Hard/Lux",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-02-07",
+   "dow": "Sun",
+   "month_tab": "February",
+   "line1": "Strand",
+   "line2": "Patel",
+   "interns": [
+    "Strand"
+   ],
+   "seniors": [
+    "Patel"
+   ],
+   "raw": "Strand/Patel",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-02-08",
+   "dow": "Mon",
+   "month_tab": "February",
+   "line1": "Schutt",
+   "line2": "Bower",
+   "interns": [
+    "Schutt"
+   ],
+   "seniors": [
+    "Bower"
+   ],
+   "raw": "Schutt/Bower",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-02-09",
+   "dow": "Tue",
+   "month_tab": "February",
+   "line1": "Hard",
+   "line2": "Sublette",
+   "interns": [
+    "Hard"
+   ],
+   "seniors": [
+    "Sublette"
+   ],
+   "raw": "Hard/Sublette",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-02-10",
+   "dow": "Wed",
+   "month_tab": "February",
+   "line1": "Wohlgemuth",
+   "line2": "Kendrick",
+   "interns": [
+    "Wohlgemuth"
+   ],
+   "seniors": [
+    "Kendrick"
+   ],
+   "raw": "Wohlgemuth/Kendrick",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-02-11",
+   "dow": "Thu",
+   "month_tab": "February",
+   "line1": "Strand",
+   "line2": "Mudondo",
+   "interns": [
+    "Strand"
+   ],
+   "seniors": [
+    "Mudondo"
+   ],
+   "raw": "Strand/Mudondo",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-02-12",
+   "dow": "Fri",
+   "month_tab": "February",
+   "line1": "Schutt",
+   "line2": "Mautino",
+   "interns": [
+    "Schutt"
+   ],
+   "seniors": [
+    "Mautino"
+   ],
+   "raw": "Schutt/Mautino",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-02-13",
+   "dow": "Sat",
+   "month_tab": "February",
+   "line1": "Wohlgemuth",
+   "line2": "Bottke",
+   "interns": [
+    "Wohlgemuth"
+   ],
+   "seniors": [
+    "Bottke"
+   ],
+   "raw": "Wohlgemuth/Bottke",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-02-14",
+   "dow": "Sun",
+   "month_tab": "February",
+   "line1": "Stanek",
+   "line2": "Sublette",
+   "interns": [
+    "Stanek"
+   ],
+   "seniors": [
+    "Sublette"
+   ],
+   "raw": "Stanek/Sublette",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-02-15",
+   "dow": "Mon",
+   "month_tab": "February",
+   "line1": "Stanek",
+   "line2": "Beutel",
+   "interns": [
+    "Stanek"
+   ],
+   "seniors": [
+    "Beutel"
+   ],
+   "raw": "Stanek/Beutel",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-02-16",
+   "dow": "Tue",
+   "month_tab": "February",
+   "line1": "Hard",
+   "line2": "Mautino",
+   "interns": [
+    "Hard"
+   ],
+   "seniors": [
+    "Mautino"
+   ],
+   "raw": "Hard/Mautino",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-02-17",
+   "dow": "Wed",
+   "month_tab": "February",
+   "line1": "Wohlgemuth",
+   "line2": "Patel",
+   "interns": [
+    "Wohlgemuth"
+   ],
+   "seniors": [
+    "Patel"
+   ],
+   "raw": "Wohlgemuth/Patel",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-02-18",
+   "dow": "Thu",
+   "month_tab": "February",
+   "line1": "Stanek",
+   "line2": "Bottke",
+   "interns": [
+    "Stanek"
+   ],
+   "seniors": [
+    "Bottke"
+   ],
+   "raw": "Stanek/Bottke",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-02-19",
+   "dow": "Fri",
+   "month_tab": "February",
+   "line1": "Schutt",
+   "line2": "Mautino",
+   "interns": [
+    "Schutt"
+   ],
+   "seniors": [
+    "Mautino"
+   ],
+   "raw": "Schutt/Mautino",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-02-20",
+   "dow": "Sat",
+   "month_tab": "February",
+   "line1": "Hard",
+   "line2": "Lux",
+   "interns": [
+    "Hard"
+   ],
+   "seniors": [
+    "Lux"
+   ],
+   "raw": "Hard/Lux",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-02-21",
+   "dow": "Sun",
+   "month_tab": "February",
+   "line1": "Strand",
+   "line2": "Bower",
+   "interns": [
+    "Strand"
+   ],
+   "seniors": [
+    "Bower"
+   ],
+   "raw": "Strand/Bower",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-02-22",
+   "dow": "Mon",
+   "month_tab": "February",
+   "line1": "Schutt",
+   "line2": "Mudondo",
+   "interns": [
+    "Schutt"
+   ],
+   "seniors": [
+    "Mudondo"
+   ],
+   "raw": "Schutt/Mudondo",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-02-23",
+   "dow": "Tue",
+   "month_tab": "February",
+   "line1": "Hard",
+   "line2": "Beutel",
+   "interns": [
+    "Hard"
+   ],
+   "seniors": [
+    "Beutel"
+   ],
+   "raw": "Hard/Beutel",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-02-24",
+   "dow": "Wed",
+   "month_tab": "February",
+   "line1": "Wohlgemuth",
+   "line2": "Patel",
+   "interns": [
+    "Wohlgemuth"
+   ],
+   "seniors": [
+    "Patel"
+   ],
+   "raw": "Wohlgemuth/Patel",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-02-25",
+   "dow": "Thu",
+   "month_tab": "February",
+   "line1": "Strand",
+   "line2": "Bower",
+   "interns": [
+    "Strand"
+   ],
+   "seniors": [
+    "Bower"
+   ],
+   "raw": "Strand/Bower",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-02-26",
+   "dow": "Fri",
+   "month_tab": "February",
+   "line1": "Schutt",
+   "line2": "Mautino",
+   "interns": [
+    "Schutt"
+   ],
+   "seniors": [
+    "Mautino"
+   ],
+   "raw": "Schutt/Mautino",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-02-27",
+   "dow": "Sat",
+   "month_tab": "February",
+   "line1": "Wohlgemuth",
+   "line2": "Bottke",
+   "interns": [
+    "Wohlgemuth"
+   ],
+   "seniors": [
+    "Bottke"
+   ],
+   "raw": "Wohlgemuth/Bottke",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-02-28",
+   "dow": "Sun",
+   "month_tab": "February",
+   "line1": "Schutt",
+   "line2": "Kendrick",
+   "interns": [
+    "Schutt"
+   ],
+   "seniors": [
+    "Kendrick"
+   ],
+   "raw": "Schutt/Kendrick",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-03-01",
+   "dow": "Mon",
+   "month_tab": "March",
+   "line1": "Wohlgemuth",
+   "line2": "Gaspar",
+   "interns": [
+    "Wohlgemuth"
+   ],
+   "seniors": [
+    "Gaspar"
+   ],
+   "raw": "Wohlgemuth/Gaspar",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-03-02",
+   "dow": "Tue",
+   "month_tab": "March",
+   "line1": "Stanek",
+   "line2": "Mudondo",
+   "interns": [
+    "Stanek"
+   ],
+   "seniors": [
+    "Mudondo"
+   ],
+   "raw": "Stanek/Mudondo",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-03-03",
+   "dow": "Wed",
+   "month_tab": "March",
+   "line1": "Hard",
+   "line2": "Bower",
+   "interns": [
+    "Hard"
+   ],
+   "seniors": [
+    "Bower"
+   ],
+   "raw": "Hard/Bower",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-03-04",
+   "dow": "Thu",
+   "month_tab": "March",
+   "line1": "Schutt",
+   "line2": "Kendrick",
+   "interns": [
+    "Schutt"
+   ],
+   "seniors": [
+    "Kendrick"
+   ],
+   "raw": "Schutt/Kendrick",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-03-05",
+   "dow": "Fri",
+   "month_tab": "March",
+   "line1": "Oehm",
+   "line2": "Mudondo",
+   "interns": [
+    "Oehm"
+   ],
+   "seniors": [
+    "Mudondo"
+   ],
+   "raw": "Oehm/Mudondo",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-03-06",
+   "dow": "Sat",
+   "month_tab": "March",
+   "line1": "Hard",
+   "line2": "Johnson",
+   "interns": [
+    "Hard"
+   ],
+   "seniors": [
+    "Johnson"
+   ],
+   "raw": "Hard/Johnson",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-03-07",
+   "dow": "Sun",
+   "month_tab": "March",
+   "line1": "Wohlgemuth",
+   "line2": "Patel",
+   "interns": [
+    "Wohlgemuth"
+   ],
+   "seniors": [
+    "Patel"
+   ],
+   "raw": "Wohlgemuth/Patel",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-03-08",
+   "dow": "Mon",
+   "month_tab": "March",
+   "line1": "Oehm",
+   "line2": "Lux",
+   "interns": [
+    "Oehm"
+   ],
+   "seniors": [
+    "Lux"
+   ],
+   "raw": "Oehm/Lux/",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-03-09",
+   "dow": "Tue",
+   "month_tab": "March",
+   "line1": "Stanek",
+   "line2": "Gaspar",
+   "interns": [
+    "Stanek"
+   ],
+   "seniors": [
+    "Gaspar"
+   ],
+   "raw": "Stanek/Gaspar",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-03-10",
+   "dow": "Wed",
+   "month_tab": "March",
+   "line1": "Hard",
+   "line2": "Beutel",
+   "interns": [
+    "Hard"
+   ],
+   "seniors": [
+    "Beutel"
+   ],
+   "raw": "Hard/Beutel",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-03-11",
+   "dow": "Thu",
+   "month_tab": "March",
+   "line1": "Wohlgemuth",
+   "line2": "Mautino",
+   "interns": [
+    "Wohlgemuth"
+   ],
+   "seniors": [
+    "Mautino"
+   ],
+   "raw": "Wohlgemuth/Mautino",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-03-12",
+   "dow": "Fri",
+   "month_tab": "March",
+   "line1": "Oehm",
+   "line2": "Mudondo",
+   "interns": [
+    "Oehm"
+   ],
+   "seniors": [
+    "Mudondo"
+   ],
+   "raw": "Oehm/Mudondo",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-03-13",
+   "dow": "Sat",
+   "month_tab": "March",
+   "line1": "Stanek",
+   "line2": "Kendrick",
+   "interns": [
+    "Stanek"
+   ],
+   "seniors": [
+    "Kendrick"
+   ],
+   "raw": "Stanek/Kendrick",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-03-14",
+   "dow": "Sun",
+   "month_tab": "March",
+   "line1": "Wohlgemuth",
+   "line2": "Beutel",
+   "interns": [
+    "Wohlgemuth"
+   ],
+   "seniors": [
+    "Beutel"
+   ],
+   "raw": "/Wohlgemuth/Beutel",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-03-15",
+   "dow": "Mon",
+   "month_tab": "March",
+   "line1": "Schutt",
+   "line2": "Patel",
+   "interns": [
+    "Schutt"
+   ],
+   "seniors": [
+    "Patel"
+   ],
+   "raw": "Schutt/Patel",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-03-16",
+   "dow": "Tue",
+   "month_tab": "March",
+   "line1": "Stanek",
+   "line2": "Mudondo",
+   "interns": [
+    "Stanek"
+   ],
+   "seniors": [
+    "Mudondo"
+   ],
+   "raw": "Stanek/Mudondo",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-03-17",
+   "dow": "Wed",
+   "month_tab": "March",
+   "line1": "Hard",
+   "line2": "Kendrick",
+   "interns": [
+    "Hard"
+   ],
+   "seniors": [
+    "Kendrick"
+   ],
+   "raw": "Hard/Kendrick",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-03-18",
+   "dow": "Thu",
+   "month_tab": "March",
+   "line1": "Wohlgemuth",
+   "line2": "Bottke",
+   "interns": [
+    "Wohlgemuth"
+   ],
+   "seniors": [
+    "Bottke"
+   ],
+   "raw": "Wohlgemuth/Bottke",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-03-19",
+   "dow": "Fri",
+   "month_tab": "March",
+   "line1": "Oehm",
+   "line2": "Mudondo",
+   "interns": [
+    "Oehm"
+   ],
+   "seniors": [
+    "Mudondo"
+   ],
+   "raw": "Oehm/Mudondo",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-03-20",
+   "dow": "Sat",
+   "month_tab": "March",
+   "line1": "Hard",
+   "line2": "Johnson",
+   "interns": [
+    "Hard"
+   ],
+   "seniors": [
+    "Johnson"
+   ],
+   "raw": "Hard/Johnson",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-03-21",
+   "dow": "Sun",
+   "month_tab": "March",
+   "line1": "Wohlgemuth",
+   "line2": "Bower",
+   "interns": [
+    "Wohlgemuth"
+   ],
+   "seniors": [
+    "Bower"
+   ],
+   "raw": "//Wohlgemuth/Bower/",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-03-22",
+   "dow": "Mon",
+   "month_tab": "March",
+   "line1": "Oehm",
+   "line2": "Beutel",
+   "interns": [
+    "Oehm"
+   ],
+   "seniors": [
+    "Beutel"
+   ],
+   "raw": "Oehm/Beutel",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-03-23",
+   "dow": "Tue",
+   "month_tab": "March",
+   "line1": "Stanek",
+   "line2": "Mautino",
+   "interns": [
+    "Stanek"
+   ],
+   "seniors": [
+    "Mautino"
+   ],
+   "raw": "Stanek/Mautino",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-03-24",
+   "dow": "Wed",
+   "month_tab": "March",
+   "line1": "Hard",
+   "line2": "Lux",
+   "interns": [
+    "Hard"
+   ],
+   "seniors": [
+    "Lux"
+   ],
+   "raw": "Hard/Lux",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-03-25",
+   "dow": "Thu",
+   "month_tab": "March",
+   "line1": "Wohlgemuth",
+   "line2": "Johnson",
+   "interns": [
+    "Wohlgemuth"
+   ],
+   "seniors": [
+    "Johnson"
+   ],
+   "raw": "Wohlgemuth/Johnson",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-03-26",
+   "dow": "Fri",
+   "month_tab": "March",
+   "line1": "Oehm",
+   "line2": "Mudondo",
+   "interns": [
+    "Oehm"
+   ],
+   "seniors": [
+    "Mudondo"
+   ],
+   "raw": "Oehm/Mudondo",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-03-27",
+   "dow": "Sat",
+   "month_tab": "March",
+   "line1": "Stanek",
+   "line2": "Kendrick",
+   "interns": [
+    "Stanek"
+   ],
+   "seniors": [
+    "Kendrick"
+   ],
+   "raw": "Stanek/Kendrick",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-03-28",
+   "dow": "Sun",
+   "month_tab": "March",
+   "line1": "Oehm",
+   "line2": "Bottke",
+   "interns": [
+    "Oehm"
+   ],
+   "seniors": [
+    "Bottke"
+   ],
+   "raw": "Oehm/Bottke",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-03-29",
+   "dow": "Mon",
+   "month_tab": "March",
+   "line1": "Hard",
+   "line2": "Sublette",
+   "interns": [
+    "Hard"
+   ],
+   "seniors": [
+    "Sublette"
+   ],
+   "raw": "Hard/Sublette",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-03-30",
+   "dow": "Tue",
+   "month_tab": "March",
+   "line1": "Schutt",
+   "line2": "Lux",
+   "interns": [
+    "Schutt"
+   ],
+   "seniors": [
+    "Lux"
+   ],
+   "raw": "Schutt/Lux",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-03-31",
+   "dow": "Wed",
+   "month_tab": "March",
+   "line1": "Stanek",
+   "line2": "Mautino",
+   "interns": [
+    "Stanek"
+   ],
+   "seniors": [
+    "Mautino"
+   ],
+   "raw": "Stanek/Mautino",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-04-01",
+   "dow": "Thu",
+   "month_tab": "April",
+   "line1": "Oehm",
+   "line2": "Beutel",
+   "interns": [
+    "Oehm"
+   ],
+   "seniors": [
+    "Beutel"
+   ],
+   "raw": "Oehm/Beutel",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-04-02",
+   "dow": "Fri",
+   "month_tab": "April",
+   "line1": "Strand",
+   "line2": "Lux",
+   "interns": [
+    "Strand"
+   ],
+   "seniors": [
+    "Lux"
+   ],
+   "raw": "Strand/Lux",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-04-03",
+   "dow": "Sat",
+   "month_tab": "April",
+   "line1": "Schutt",
+   "line2": "Patel",
+   "interns": [
+    "Schutt"
+   ],
+   "seniors": [
+    "Patel"
+   ],
+   "raw": "Schutt/Patel",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-04-04",
+   "dow": "Sun",
+   "month_tab": "April",
+   "line1": "Hard",
+   "line2": "Sublette",
+   "interns": [
+    "Hard"
+   ],
+   "seniors": [
+    "Sublette"
+   ],
+   "raw": "Hard/Sublette",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-04-05",
+   "dow": "Mon",
+   "month_tab": "April",
+   "line1": "Strand",
+   "line2": "Mudondo",
+   "interns": [
+    "Strand"
+   ],
+   "seniors": [
+    "Mudondo"
+   ],
+   "raw": "Strand/Mudondo",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-04-06",
+   "dow": "Tue",
+   "month_tab": "April",
+   "line1": "Schutt",
+   "line2": "Mautino",
+   "interns": [
+    "Schutt"
+   ],
+   "seniors": [
+    "Mautino"
+   ],
+   "raw": "Schutt/Mautino",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-04-07",
+   "dow": "Wed",
+   "month_tab": "April",
+   "line1": "Stanek",
+   "line2": "Bower",
+   "interns": [
+    "Stanek"
+   ],
+   "seniors": [
+    "Bower"
+   ],
+   "raw": "Stanek/Bower",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-04-08",
+   "dow": "Thu",
+   "month_tab": "April",
+   "line1": "Hard",
+   "line2": "Johnson",
+   "interns": [
+    "Hard"
+   ],
+   "seniors": [
+    "Johnson"
+   ],
+   "raw": "Hard/Johnson",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-04-09",
+   "dow": "Fri",
+   "month_tab": "April",
+   "line1": "Strand",
+   "line2": "Lux",
+   "interns": [
+    "Strand"
+   ],
+   "seniors": [
+    "Lux"
+   ],
+   "raw": "Strand/Lux",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-04-10",
+   "dow": "Sat",
+   "month_tab": "April",
+   "line1": "Stanek",
+   "line2": "Beutel",
+   "interns": [
+    "Stanek"
+   ],
+   "seniors": [
+    "Beutel"
+   ],
+   "raw": "Stanek/Beutel",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-04-11",
+   "dow": "Sun",
+   "month_tab": "April",
+   "line1": "Oehm",
+   "line2": "Bottke",
+   "interns": [
+    "Oehm"
+   ],
+   "seniors": [
+    "Bottke"
+   ],
+   "raw": "Oehm/Bottke",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-04-12",
+   "dow": "Mon",
+   "month_tab": "April",
+   "line1": "Hard",
+   "line2": "Kendrick",
+   "interns": [
+    "Hard"
+   ],
+   "seniors": [
+    "Kendrick"
+   ],
+   "raw": "Hard/Kendrick",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-04-13",
+   "dow": "Tue",
+   "month_tab": "April",
+   "line1": "Schutt",
+   "line2": "Lux",
+   "interns": [
+    "Schutt"
+   ],
+   "seniors": [
+    "Lux"
+   ],
+   "raw": "Schutt/Lux",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-04-14",
+   "dow": "Wed",
+   "month_tab": "April",
+   "line1": "Stanek",
+   "line2": "Sublette",
+   "interns": [
+    "Stanek"
+   ],
+   "seniors": [
+    "Sublette"
+   ],
+   "raw": "Stanek/Sublette",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-04-15",
+   "dow": "Thu",
+   "month_tab": "April",
+   "line1": "Beutel",
+   "line2": "Oehm",
+   "interns": [
+    "Oehm"
+   ],
+   "seniors": [
+    "Beutel"
+   ],
+   "raw": "Beutel/Oehm",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-04-16",
+   "dow": "Fri",
+   "month_tab": "April",
+   "line1": "Strand",
+   "line2": "Lux",
+   "interns": [
+    "Strand"
+   ],
+   "seniors": [
+    "Lux"
+   ],
+   "raw": "Strand/Lux",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-04-17",
+   "dow": "Sat",
+   "month_tab": "April",
+   "line1": "Schutt",
+   "line2": "Patel",
+   "interns": [
+    "Schutt"
+   ],
+   "seniors": [
+    "Patel"
+   ],
+   "raw": "Schutt/Patel",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-04-18",
+   "dow": "Sun",
+   "month_tab": "April",
+   "line1": "Hard",
+   "line2": "Kendrick",
+   "interns": [
+    "Hard"
+   ],
+   "seniors": [
+    "Kendrick"
+   ],
+   "raw": "Hard/Kendrick",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-04-19",
+   "dow": "Mon",
+   "month_tab": "April",
+   "line1": "Strand",
+   "line2": "Johnson",
+   "interns": [
+    "Strand"
+   ],
+   "seniors": [
+    "Johnson"
+   ],
+   "raw": "Strand/Johnson",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-04-20",
+   "dow": "Tue",
+   "month_tab": "April",
+   "line1": "Schutt",
+   "line2": "Bower",
+   "interns": [
+    "Schutt"
+   ],
+   "seniors": [
+    "Bower"
+   ],
+   "raw": "Schutt/Bower",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-04-21",
+   "dow": "Wed",
+   "month_tab": "April",
+   "line1": "Stanek",
+   "line2": "Mudondo",
+   "interns": [
+    "Stanek"
+   ],
+   "seniors": [
+    "Mudondo"
+   ],
+   "raw": "Stanek/Mudondo",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-04-22",
+   "dow": "Thu",
+   "month_tab": "April",
+   "line1": "Oehm",
+   "line2": "Mautino",
+   "interns": [
+    "Oehm"
+   ],
+   "seniors": [
+    "Mautino"
+   ],
+   "raw": "Oehm/Mautino",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-04-23",
+   "dow": "Fri",
+   "month_tab": "April",
+   "line1": "Strand",
+   "line2": "Lux",
+   "interns": [
+    "Strand"
+   ],
+   "seniors": [
+    "Lux"
+   ],
+   "raw": "Strand/Lux",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-04-24",
+   "dow": "Sat",
+   "month_tab": "April",
+   "line1": "Stanek",
+   "line2": "Beutel",
+   "interns": [
+    "Stanek"
+   ],
+   "seniors": [
+    "Beutel"
+   ],
+   "raw": "Stanek/Beutel",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-04-25",
+   "dow": "Sun",
+   "month_tab": "April",
+   "line1": "Strand",
+   "line2": "Bower",
+   "interns": [
+    "Strand"
+   ],
+   "seniors": [
+    "Bower"
+   ],
+   "raw": "Strand/Bower",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-04-26",
+   "dow": "Mon",
+   "month_tab": "April",
+   "line1": "Oehm",
+   "line2": "Beutel",
+   "interns": [
+    "Oehm"
+   ],
+   "seniors": [
+    "Beutel"
+   ],
+   "raw": "Oehm/Beutel",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-04-27",
+   "dow": "Tue",
+   "month_tab": "April",
+   "line1": "Wohlgemuth",
+   "line2": "Bottke",
+   "interns": [
+    "Wohlgemuth"
+   ],
+   "seniors": [
+    "Bottke"
+   ],
+   "raw": "Wohlgemuth/Bottke",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-04-28",
+   "dow": "Wed",
+   "month_tab": "April",
+   "line1": "Schutt",
+   "line2": "Patel",
+   "interns": [
+    "Schutt"
+   ],
+   "seniors": [
+    "Patel"
+   ],
+   "raw": "Schutt/Patel/",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-04-29",
+   "dow": "Thu",
+   "month_tab": "April",
+   "line1": "Gaspar",
+   "line2": "Strand",
+   "interns": [
+    "Strand"
+   ],
+   "seniors": [
+    "Gaspar"
+   ],
+   "raw": "Gaspar/Strand",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-04-30",
+   "dow": "Fri",
+   "month_tab": "April",
+   "line1": "Stanek",
+   "line2": "Bottke",
+   "interns": [
+    "Stanek"
+   ],
+   "seniors": [
+    "Bottke"
+   ],
+   "raw": "Stanek/Bottke",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-05-01",
+   "dow": "Sat",
+   "month_tab": "May",
+   "line1": "Wohlgemuth",
+   "line2": "Mautino",
+   "interns": [
+    "Wohlgemuth"
+   ],
+   "seniors": [
+    "Mautino"
+   ],
+   "raw": "Wohlgemuth/Mautino",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-05-02",
+   "dow": "Sun",
+   "month_tab": "May",
+   "line1": "Oehm",
+   "line2": "Patel",
+   "interns": [
+    "Oehm"
+   ],
+   "seniors": [
+    "Patel"
+   ],
+   "raw": "Oehm/Patel",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-05-03",
+   "dow": "Mon",
+   "month_tab": "May",
+   "line1": "Stanek",
+   "line2": "Bower",
+   "interns": [
+    "Stanek"
+   ],
+   "seniors": [
+    "Bower"
+   ],
+   "raw": "Stanek/Bower",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-05-04",
+   "dow": "Tue",
+   "month_tab": "May",
+   "line1": "Wohlgemuth",
+   "line2": "Lux",
+   "interns": [
+    "Wohlgemuth"
+   ],
+   "seniors": [
+    "Lux"
+   ],
+   "raw": "Wohlgemuth/Lux",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-05-05",
+   "dow": "Wed",
+   "month_tab": "May",
+   "line1": "Schutt",
+   "line2": "Kendrick",
+   "interns": [
+    "Schutt"
+   ],
+   "seniors": [
+    "Kendrick"
+   ],
+   "raw": "Schutt/Kendrick",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-05-06",
+   "dow": "Thu",
+   "month_tab": "May",
+   "line1": "Strand",
+   "line2": "Beutel",
+   "interns": [
+    "Strand"
+   ],
+   "seniors": [
+    "Beutel"
+   ],
+   "raw": "Strand/Beutel",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-05-07",
+   "dow": "Fri",
+   "month_tab": "May",
+   "line1": "Stanek",
+   "line2": "Bottke",
+   "interns": [
+    "Stanek"
+   ],
+   "seniors": [
+    "Bottke"
+   ],
+   "raw": "Stanek/Bottke",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-05-08",
+   "dow": "Sat",
+   "month_tab": "May",
+   "line1": "Schutt",
+   "line2": "Gaspar",
+   "interns": [
+    "Schutt"
+   ],
+   "seniors": [
+    "Gaspar"
+   ],
+   "raw": "Schutt/Gaspar",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-05-09",
+   "dow": "Sun",
+   "month_tab": "May",
+   "line1": "Oehm",
+   "line2": "Beutel",
+   "interns": [
+    "Oehm"
+   ],
+   "seniors": [
+    "Beutel"
+   ],
+   "raw": "Oehm/Beutel",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-05-10",
+   "dow": "Mon",
+   "month_tab": "May",
+   "line1": "Oehm",
+   "line2": "Lux",
+   "interns": [
+    "Oehm"
+   ],
+   "seniors": [
+    "Lux"
+   ],
+   "raw": "Oehm/Lux",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-05-11",
+   "dow": "Tue",
+   "month_tab": "May",
+   "line1": "Wohlgemuth",
+   "line2": "Johnson",
+   "interns": [
+    "Wohlgemuth"
+   ],
+   "seniors": [
+    "Johnson"
+   ],
+   "raw": "Wohlgemuth/Johnson",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-05-12",
+   "dow": "Wed",
+   "month_tab": "May",
+   "line1": "Schutt",
+   "line2": "Sublette",
+   "interns": [
+    "Schutt"
+   ],
+   "seniors": [
+    "Sublette"
+   ],
+   "raw": "Schutt/Sublette",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-05-13",
+   "dow": "Thu",
+   "month_tab": "May",
+   "line1": "Strand",
+   "line2": "Gaspar",
+   "interns": [
+    "Strand"
+   ],
+   "seniors": [
+    "Gaspar"
+   ],
+   "raw": "Strand/Gaspar",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-05-14",
+   "dow": "Fri",
+   "month_tab": "May",
+   "line1": "Stanek",
+   "line2": "Johnson",
+   "interns": [
+    "Stanek"
+   ],
+   "seniors": [
+    "Johnson"
+   ],
+   "raw": "Stanek/Johnson",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-05-15",
+   "dow": "Sat",
+   "month_tab": "May",
+   "line1": "Wohlgemuth",
+   "line2": "Mautino",
+   "interns": [
+    "Wohlgemuth"
+   ],
+   "seniors": [
+    "Mautino"
+   ],
+   "raw": "Wohlgemuth/Mautino",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-05-16",
+   "dow": "Sun",
+   "month_tab": "May",
+   "line1": "Strand",
+   "line2": "Patel",
+   "interns": [
+    "Strand"
+   ],
+   "seniors": [
+    "Patel"
+   ],
+   "raw": "Strand/Patel",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-05-17",
+   "dow": "Mon",
+   "month_tab": "May",
+   "line1": "Stanek",
+   "line2": "Bottke",
+   "interns": [
+    "Stanek"
+   ],
+   "seniors": [
+    "Bottke"
+   ],
+   "raw": "Stanek/Bottke",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-05-18",
+   "dow": "Tue",
+   "month_tab": "May",
+   "line1": "Wohlgemuth**",
+   "line2": "Kendrick",
+   "interns": [
+    "Wohlgemuth"
+   ],
+   "seniors": [
+    "Kendrick"
+   ],
+   "raw": "Wohlgemuth**/Kendrick",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-05-19",
+   "dow": "Wed",
+   "month_tab": "May",
+   "line1": "Schutt",
+   "line2": "Lux",
+   "interns": [
+    "Schutt"
+   ],
+   "seniors": [
+    "Lux"
+   ],
+   "raw": "Schutt/Lux",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-05-20",
+   "dow": "Thu",
+   "month_tab": "May",
+   "line1": "Strand",
+   "line2": "Kendrick",
+   "interns": [
+    "Strand"
+   ],
+   "seniors": [
+    "Kendrick"
+   ],
+   "raw": "Strand/Kendrick",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-05-21",
+   "dow": "Fri",
+   "month_tab": "May",
+   "line1": "Stanek",
+   "line2": "Johnson",
+   "interns": [
+    "Stanek"
+   ],
+   "seniors": [
+    "Johnson"
+   ],
+   "raw": "Stanek/Johnson",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-05-22",
+   "dow": "Sat",
+   "month_tab": "May",
+   "line1": "Schutt",
+   "line2": "Gaspar",
+   "interns": [
+    "Schutt"
+   ],
+   "seniors": [
+    "Gaspar"
+   ],
+   "raw": "Schutt/Gaspar",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-05-23",
+   "dow": "Sun",
+   "month_tab": "May",
+   "line1": "Stanek",
+   "line2": "Kendrick",
+   "interns": [
+    "Stanek"
+   ],
+   "seniors": [
+    "Kendrick"
+   ],
+   "raw": "Stanek/Kendrick",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-05-24",
+   "dow": "Mon",
+   "month_tab": "May",
+   "line1": "Hard",
+   "line2": "Beutel",
+   "interns": [
+    "Hard"
+   ],
+   "seniors": [
+    "Beutel"
+   ],
+   "raw": "Hard/Beutel",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-05-25",
+   "dow": "Tue",
+   "month_tab": "May",
+   "line1": "Strand",
+   "line2": "Patel",
+   "interns": [
+    "Strand"
+   ],
+   "seniors": [
+    "Patel"
+   ],
+   "raw": "Strand/Patel",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-05-26",
+   "dow": "Wed",
+   "month_tab": "May",
+   "line1": "Oehm",
+   "line2": "Mudondo",
+   "interns": [
+    "Oehm"
+   ],
+   "seniors": [
+    "Mudondo"
+   ],
+   "raw": "Oehm/Mudondo",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-05-27",
+   "dow": "Thu",
+   "month_tab": "May",
+   "line1": "Stanek",
+   "line2": "Bower",
+   "interns": [
+    "Stanek"
+   ],
+   "seniors": [
+    "Bower"
+   ],
+   "raw": "Stanek/Bower",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-05-28",
+   "dow": "Fri",
+   "month_tab": "May",
+   "line1": "Wohlgemuth",
+   "line2": "Patel",
+   "interns": [
+    "Wohlgemuth"
+   ],
+   "seniors": [
+    "Patel"
+   ],
+   "raw": "Wohlgemuth/Patel",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-05-29",
+   "dow": "Sat",
+   "month_tab": "May",
+   "line1": "Strand",
+   "line2": "Beutel",
+   "interns": [
+    "Strand"
+   ],
+   "seniors": [
+    "Beutel"
+   ],
+   "raw": "Strand/Beutel",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-05-30",
+   "dow": "Sun",
+   "month_tab": "May",
+   "line1": "Hard",
+   "line2": "Bower",
+   "interns": [
+    "Hard"
+   ],
+   "seniors": [
+    "Bower"
+   ],
+   "raw": "Hard/Bower",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-05-31",
+   "dow": "Mon",
+   "month_tab": "May",
+   "line1": "Wohlgemuth",
+   "line2": "Mudondo",
+   "interns": [
+    "Wohlgemuth"
+   ],
+   "seniors": [
+    "Mudondo"
+   ],
+   "raw": "Wohlgemuth/Mudondo",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-06-01",
+   "dow": "Tue",
+   "month_tab": "June",
+   "line1": "Strand",
+   "line2": "Bottke",
+   "interns": [
+    "Strand"
+   ],
+   "seniors": [
+    "Bottke"
+   ],
+   "raw": "Strand/Bottke",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-06-02",
+   "dow": "Wed",
+   "month_tab": "June",
+   "line1": "Oehm",
+   "line2": "Kendrick",
+   "interns": [
+    "Oehm"
+   ],
+   "seniors": [
+    "Kendrick"
+   ],
+   "raw": "Oehm/Kendrick",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-06-03",
+   "dow": "Thu",
+   "month_tab": "June",
+   "line1": "Hard",
+   "line2": "Johnson",
+   "interns": [
+    "Hard"
+   ],
+   "seniors": [
+    "Johnson"
+   ],
+   "raw": "Hard/Johnson",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-06-04",
+   "dow": "Fri",
+   "month_tab": "June",
+   "line1": "Wohlgemuth",
+   "line2": "Patel",
+   "interns": [
+    "Wohlgemuth"
+   ],
+   "seniors": [
+    "Patel"
+   ],
+   "raw": "Wohlgemuth/Patel",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-06-05",
+   "dow": "Sat",
+   "month_tab": "June",
+   "line1": "Oehm",
+   "line2": "Bower",
+   "interns": [
+    "Oehm"
+   ],
+   "seniors": [
+    "Bower"
+   ],
+   "raw": "Oehm/Bower",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-06-06",
+   "dow": "Sun",
+   "month_tab": "June",
+   "line1": "Stanek",
+   "line2": "Gaspar",
+   "interns": [
+    "Stanek"
+   ],
+   "seniors": [
+    "Gaspar"
+   ],
+   "raw": "Stanek/Gaspar",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-06-07",
+   "dow": "Mon",
+   "month_tab": "June",
+   "line1": "Hard",
+   "line2": "Sublette",
+   "interns": [
+    "Hard"
+   ],
+   "seniors": [
+    "Sublette"
+   ],
+   "raw": "Hard/Sublette",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-06-08",
+   "dow": "Tue",
+   "month_tab": "June",
+   "line1": "Strand",
+   "line2": "Patel",
+   "interns": [
+    "Strand"
+   ],
+   "seniors": [
+    "Patel"
+   ],
+   "raw": "Strand/Patel",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-06-09",
+   "dow": "Wed",
+   "month_tab": "June",
+   "line1": "Oehm",
+   "line2": "Mudondo",
+   "interns": [
+    "Oehm"
+   ],
+   "seniors": [
+    "Mudondo"
+   ],
+   "raw": "Oehm/Mudondo",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-06-10",
+   "dow": "Thu",
+   "month_tab": "June",
+   "line1": "Stanek",
+   "line2": "Bower",
+   "interns": [
+    "Stanek"
+   ],
+   "seniors": [
+    "Bower"
+   ],
+   "raw": "/Stanek/Bower",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-06-11",
+   "dow": "Fri",
+   "month_tab": "June",
+   "line1": "Wohlgemuth",
+   "line2": "Patel",
+   "interns": [
+    "Wohlgemuth"
+   ],
+   "seniors": [
+    "Patel"
+   ],
+   "raw": "Wohlgemuth/Patel",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-06-12",
+   "dow": "Sat",
+   "month_tab": "June",
+   "line1": "Strand",
+   "line2": "Beutel",
+   "interns": [
+    "Strand"
+   ],
+   "seniors": [
+    "Beutel"
+   ],
+   "raw": "Strand/Beutel",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-06-13",
+   "dow": "Sun",
+   "month_tab": "June",
+   "line1": "Hard",
+   "line2": "Bottke",
+   "interns": [
+    "Hard"
+   ],
+   "seniors": [
+    "Bottke"
+   ],
+   "raw": "Hard/Bottke",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-06-14",
+   "dow": "Mon",
+   "month_tab": "June",
+   "line1": "Wohlgemuth",
+   "line2": "Kendrick",
+   "interns": [
+    "Wohlgemuth"
+   ],
+   "seniors": [
+    "Kendrick"
+   ],
+   "raw": "Wohlgemuth/Kendrick",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-06-15",
+   "dow": "Tue",
+   "month_tab": "June",
+   "line1": "Strand",
+   "line2": "Sublette",
+   "interns": [
+    "Strand"
+   ],
+   "seniors": [
+    "Sublette"
+   ],
+   "raw": "Strand/Sublette",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-06-16",
+   "dow": "Wed",
+   "month_tab": "June",
+   "line1": "Oehm",
+   "line2": "Bottke",
+   "interns": [
+    "Oehm"
+   ],
+   "seniors": [
+    "Bottke"
+   ],
+   "raw": "Oehm/Bottke",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-06-17",
+   "dow": "Thu",
+   "month_tab": "June",
+   "line1": "Stanek",
+   "line2": "Johnson",
+   "interns": [
+    "Stanek"
+   ],
+   "seniors": [
+    "Johnson"
+   ],
+   "raw": "Stanek/Johnson",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-06-18",
+   "dow": "Fri",
+   "month_tab": "June",
+   "line1": "Wohlgemuth",
+   "line2": "Patel",
+   "interns": [
+    "Wohlgemuth"
+   ],
+   "seniors": [
+    "Patel"
+   ],
+   "raw": "Wohlgemuth/Patel",
+   "in_tab_month": true
+  },
+  {
+   "date": "2027-06-19",
+   "dow": "Sat",
+   "month_tab": "June",
+   "line1": "Oehm",
+   "line2": "Bower",
+   "interns": [
+    "Oehm"
+   ],
+   "seniors": [
+    "Bower"
+   ],
+   "raw": "Oehm/Bower",
+   "in_tab_month": true
+  }
+ ],
+ "blocks_top": {
+  "2": [
+   "2026-07-05",
+   "2026-07-18"
+  ],
+  "3": [
+   "2026-08-02",
+   "2026-08-15"
+  ],
+  "4": [
+   "2026-08-30",
+   "2026-09-12"
+  ],
+  "5": [
+   "2026-09-27",
+   "2026-10-10"
+  ],
+  "6": [
+   "2026-10-25",
+   "2026-11-07"
+  ],
+  "7": [
+   "2026-11-22",
+   "2026-12-05"
+  ],
+  "8": [
+   "2026-12-20",
+   "2027-01-02"
+  ],
+  "10": [
+   "2027-01-03",
+   "2027-01-16"
+  ],
+  "11": [
+   "2027-01-31",
+   "2027-02-13"
+  ],
+  "12": [
+   "2027-02-28",
+   "2027-03-13"
+  ],
+  "13": [
+   "2027-03-28",
+   "2027-04-10"
+  ],
+  "14": [
+   "2027-04-25",
+   "2027-05-08"
+  ],
+  "15": [
+   "2027-05-23",
+   "2027-06-05"
+  ],
+  "16": [
+   "2027-06-20",
+   "2027-07-03"
+  ]
+ },
+ "blocks_bot": {
+  "2": [
+   "2026-07-19",
+   "2026-08-01"
+  ],
+  "3": [
+   "2026-08-16",
+   "2026-08-29"
+  ],
+  "4": [
+   "2026-09-13",
+   "2026-09-26"
+  ],
+  "5": [
+   "2026-10-11",
+   "2026-10-24"
+  ],
+  "6": [
+   "2026-11-08",
+   "2026-11-21"
+  ],
+  "7": [
+   "2026-12-06",
+   "2026-12-19"
+  ],
+  "10": [
+   "2027-01-17",
+   "2027-01-30"
+  ],
+  "11": [
+   "2027-02-14",
+   "2027-02-27"
+  ],
+  "12": [
+   "2027-03-14",
+   "2027-03-27"
+  ],
+  "13": [
+   "2027-04-11",
+   "2027-04-24"
+  ],
+  "14": [
+   "2027-05-09",
+   "2027-05-22"
+  ],
+  "15": [
+   "2027-06-06",
+   "2027-06-19"
+  ]
+ }
+}

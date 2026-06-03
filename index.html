@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Resident On-Call Schedule — Academic Year 2026–2027</title>
+<meta name="description" content="Interactive resident on-call schedule for the 2026–2027 academic year (full rebuild and minimal-repair versions).">
+<meta name="theme-color" content="#ffffff">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="On-Call">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/icon-192.png">
+<link rel="manifest" href="/manifest.webmanifest">
+<style>
+:root{
+  --font:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --display:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Roboto,Helvetica,sans-serif;
+  --bg:#ffffff;--bg2:#f5f5f7;--ink:#1d1d1f;--soft:#6e6e73;--faint:#86868b;--hair:#e3e3e8;
+  --accent:#0071e3;--r1:#0a6cff;--r2:#1c8a4e;--r3:#c2410c;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);line-height:1.47;
+  font-family:var(--font);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+.wrap{max-width:980px;margin:0 auto;padding:clamp(28px,5vw,64px) 22px 56px}
+.eyebrow{font-size:.82rem;font-weight:600;letter-spacing:-.01em;color:var(--accent);margin:0 0 12px}
+h1{font-family:var(--display);font-size:clamp(2.4rem,6vw,4rem);line-height:1.03;letter-spacing:-.028em;
+  margin:0;font-weight:700}
+.lede{font-size:clamp(1.1rem,2.4vw,1.32rem);color:var(--soft);max-width:30em;margin:18px 0 0;letter-spacing:-.01em}
+.cards{display:grid;grid-template-columns:1fr;gap:18px;margin:40px 0 0}
+@media(min-width:720px){.cards{grid-template-columns:1fr 1fr}}
+.card{display:flex;flex-direction:column;border:1px solid var(--hair);border-radius:22px;overflow:hidden;
+  background:var(--bg);text-decoration:none;color:inherit;box-shadow:0 1px 3px rgb(0 0 0/.04);
+  transition:transform .22s cubic-bezier(.2,.7,.2,1),box-shadow .22s}
+.card:hover{transform:translateY(-4px);box-shadow:0 18px 48px rgb(0 0 0/.10),0 4px 12px rgb(0 0 0/.06)}
+.card:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.card .top{padding:9px 22px;font-weight:600;font-size:.72rem;letter-spacing:.01em;color:#fff}
+.card.opt .top{background:var(--accent)} .card.min .top{background:var(--r2)}
+.card .body{padding:22px 24px 26px;flex:1;display:flex;flex-direction:column}
+.card h2{font-family:var(--display);font-size:1.65rem;margin:0 0 8px;letter-spacing:-.02em;font-weight:680}
+.card p{margin:0;color:var(--soft);font-size:.98rem;flex:1}
+.card ul{margin:14px 0 0;padding-left:18px;color:var(--soft);font-size:.9rem}
+.card ul li{margin:4px 0}
+.card .go{margin-top:20px;font-weight:590;font-size:.96rem;color:var(--accent)}
+.card.min .go{color:var(--r2)}
+.legend{margin:34px 0 0;padding:20px 22px;background:var(--bg2);border-radius:18px;font-size:.95rem;color:var(--soft)}
+.legend b{color:var(--ink);font-weight:600}
+.keys{display:flex;gap:18px;flex-wrap:wrap;margin-top:12px;font-size:.85rem}
+.keys .k{display:inline-flex;align-items:center;gap:7px}
+.sw{width:14px;height:14px;border-radius:4px;border:1px solid rgb(0 0 0/.1)}
+footer{margin-top:36px;padding-top:18px;border-top:1px solid var(--hair);color:var(--faint);font-size:.82rem;line-height:1.6}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="eyebrow">Family Medicine Residency · Academic Year 2026–2027</div>
+  <h1>Resident On-Call Schedule</h1>
+  <p class="lede">354 on-call days, one intern and one senior resident apiece. Choose a version; inside, select a
+    resident to see their assignments and individual workload.</p>
+
+  <div class="cards">
+    <a class="card opt" href="/optimized">
+      <div class="top">RECOMMENDED · VERSION 2</div>
+      <div class="body">
+        <h2>Full Rebuild</h2>
+        <p>The complete schedule re-derived for an even distribution of on-call workload within the constraints of every rule.</p>
+        <ul>
+          <li>On-call workload distributed as evenly as the rules permit</li>
+          <li>R3 residents are not assigned Sunday call; R2 residents carry 7–8 Sundays; interns cover the winter holidays</li>
+          <li>Resident Patel's additional early-year backup assignments are preserved</li>
+        </ul>
+        <span class="go">Open the optimized schedule →</span>
+      </div>
+    </a>
+    <a class="card min" href="/minimal">
+      <div class="top">VERSION 1</div>
+      <div class="body">
+        <h2>Minimal Repair</h2>
+        <p>The original draft with only the rule violations corrected; no other assignments were changed.</p>
+        <ul>
+          <li>Each correction is a same-weekday substitution</li>
+          <li>Every resident retains their exact totals and day-of-week distribution</li>
+          <li>Minimal departure from the original draft</li>
+        </ul>
+        <span class="go">Open the minimal-repair schedule →</span>
+      </div>
+    </a>
+  </div>
+
+  <div class="legend">
+    <b>Reading the calendar.</b> Each day lists the intern (top) and senior (bottom) on call. Within either calendar,
+    selecting a resident highlights their assignments and shows their distribution of shifts by day of week, their
+    holiday assignments, and their workload relative to others in their postgraduate class.
+    <div class="keys">
+      <span class="k"><span class="sw" style="background:#ebf2ff;border-color:#0a6cff"></span>Intern (R1)</span>
+      <span class="k"><span class="sw" style="background:#e7f6ed;border-color:#1c8a4e"></span>Senior R2</span>
+      <span class="k"><span class="sw" style="background:#fcebdd;border-color:#c2410c"></span>Senior R3</span>
+      <span class="k"><span class="sw" style="background:#fbf4e0"></span>★ Holiday</span>
+      <span class="k"><span class="sw" style="background:#eef1f6"></span>Weekend</span>
+    </div>
+  </div>
+
+  <footer>
+    Generated from a constraint-optimization model (Google OR-Tools CP-SAT): every rotation restriction,
+    paid-time-off request, and holiday rule is enforced, with the schedule balanced for an equitable distribution of
+    workload. Both calendars are self-contained and print-ready.
+    <br>Family Medicine Residency · Academic Year 2026–2027 · Confidential.
+  </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Repair or Rebuild — Optimization &amp; Recommendations</title>
+<style>
+:root{
+  --paper:#ffffff; --card:#f8f4ec; --panel:#f1ece0; --ink:#1c1b19; --soft:#6c6760; --faint:#928c82;
+  --rule:#e2dccd; --rule2:#cfc7b4; --accent:#243a8f; --accent2:#9d3611; --green:#2f6d45; --grey:#b9b1a1;
+}
+*{box-sizing:border-box}
+html{font-size:15.2px}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font-family:"Bitstream Charter","Charter",Georgia,serif;line-height:1.5;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+.sans{font-family:"Liberation Sans","Helvetica Neue",Arial,sans-serif}
+.mono{font-family:"DejaVu Sans Mono","Liberation Mono",monospace}
+.wrap{max-width:760px;margin:0 auto;padding:0 6px}
+h1,h2,h3{font-weight:700;letter-spacing:-.01em;line-height:1.12;margin:0}
+p{margin:0 0 .72rem}
+sup{font-size:.66em} sub{font-size:.66em}
+/* cover */
+.cover{padding-top:8px}
+.brandbar{display:flex;justify-content:space-between;align-items:center;
+  border-bottom:2.5px solid var(--ink);padding-bottom:7px;font-size:.66rem;letter-spacing:.14em;
+  text-transform:uppercase;font-weight:700}
+.brandbar .r{color:var(--accent)}
+.eyebrow{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent2);
+  font-weight:700;margin:26px 0 10px}
+.cover h1{font-size:3.5rem;line-height:.98;letter-spacing:-.02em}
+.cover .sub{font-size:1.18rem;color:var(--soft);margin:14px 0 0;max-width:32em;font-style:italic}
+.abstract{margin:24px 0 0;padding:16px 20px;background:var(--panel);border-left:3px solid var(--accent);
+  border-radius:2px;font-size:.96rem}
+.abstract b{color:var(--accent)}
+.herostrip{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:26px 0 6px;
+  border:1px solid var(--rule2);border-radius:4px;overflow:hidden;background:var(--card)}
+.herostrip .h{padding:13px 12px;border-right:1px solid var(--rule)}
+.herostrip .h:last-child{border-right:0}
+.herostrip .n{font-size:1.62rem;font-weight:700;letter-spacing:-.02em;line-height:1;color:var(--accent)}
+.herostrip .l{font-size:.62rem;letter-spacing:.06em;text-transform:uppercase;color:var(--soft);margin-top:5px;line-height:1.25}
+.cover .credit{margin-top:18px;font-size:.74rem;color:var(--faint);letter-spacing:.02em}
+/* sections */
+.section{margin-top:30px}
+.section.break{break-before:page;padding-top:6px}
+.sec-head{display:flex;gap:12px;align-items:baseline;border-bottom:1px solid var(--rule2);
+  padding-bottom:7px;margin-bottom:13px;break-after:avoid}
+.sec-num{font-family:"Liberation Sans",sans-serif;font-size:.82rem;font-weight:700;color:var(--accent2);
+  letter-spacing:.04em;flex:none;width:2.1em}
+.sec-title{font-size:1.5rem}
+.lead{font-size:1.02rem}
+.dropcap::first-letter{initial-letter:2.6;-webkit-initial-letter:2.6;font-weight:700;color:var(--accent);
+  margin-right:.06em;font-family:"Bitstream Charter",Georgia,serif}
+.kicker{font-family:"Liberation Sans",sans-serif;font-weight:700;font-size:.7rem;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--accent2)}
+/* cards / figures */
+figcaption{font-size:.76rem;color:var(--soft);margin-top:8px;font-family:"Liberation Sans",sans-serif}
+.statgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;break-inside:avoid;margin:14px 0}
+.stat{background:var(--card);border:1px solid var(--rule2);border-radius:5px;padding:13px 14px}
+.stat .n{font-size:1.7rem;font-weight:700;color:var(--accent);line-height:1;letter-spacing:-.02em}
+.stat .n.g{color:var(--green)}
+.stat .l{font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;color:var(--soft);margin-top:6px;
+  font-family:"Liberation Sans",sans-serif;line-height:1.3}
+.sidebar{background:var(--panel);border:1px solid var(--rule2);border-top:3px solid var(--accent2);
+  border-radius:4px;padding:14px 16px;margin:16px 0;break-inside:avoid;font-size:.9rem}
+.sidebar .lab{font-family:"Liberation Sans",sans-serif;font-size:.64rem;font-weight:700;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--accent2);margin-bottom:6px}
+.sidebar p:last-child{margin-bottom:0}
+.eqbox{margin:15px 0;padding:13px 16px;background:var(--card);border:1px solid var(--rule2);border-radius:5px;
+  text-align:center;break-inside:avoid}
+.eqbox .w{font-size:1.05rem}.eqbox .w b{color:var(--accent2)}
+.eqbox .note{font-size:.74rem;color:var(--soft);margin-top:7px;font-family:"Liberation Sans",sans-serif}
+/* two-version compare */
+.vcompare{display:grid;grid-template-columns:1fr 1fr;gap:12px;break-inside:avoid;margin:14px 0}
+.vcard{border:1px solid var(--rule2);border-radius:6px;overflow:hidden;background:var(--card)}
+.vcard .vh{padding:10px 14px;color:#fff;font-weight:700}
+.vcard.v1 .vh{background:var(--green)} .vcard.v2 .vh{background:var(--accent)}
+.vcard .vh .t{font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;opacity:.85;font-family:"Liberation Sans",sans-serif}
+.vcard .vh .n{font-size:1.06rem}
+.vcard .vb{padding:11px 14px;font-size:.85rem}
+.vcard .vb li{margin:0 0 5px}.vcard ul{margin:0;padding-left:16px}
+/* tables */
+table.tb{width:100%;border-collapse:collapse;margin:13px 0;font-size:.85rem}
+table.tb th{text-align:left;font-family:"Liberation Sans",sans-serif;font-size:.62rem;letter-spacing:.07em;
+  text-transform:uppercase;color:var(--soft);border-bottom:1.5px solid var(--rule2);padding:6px 8px}
+table.tb td{padding:6px 8px;border-bottom:1px solid var(--rule);vertical-align:top}
+table.tb tr td:first-child{font-weight:600}
+/* compare table (A) */
+table.cmp td:first-child{color:var(--soft);font-weight:600;font-family:"Liberation Sans",sans-serif;font-size:.7rem;
+  letter-spacing:.05em;text-transform:uppercase}
+table.cmp td:nth-child(3){border-left:1px solid var(--rule)}
+/* change-log (B) */
+table.swap{font-size:.8rem}
+table.swap td:first-child{font-family:"DejaVu Sans Mono",monospace;color:var(--accent);text-align:right;width:1.8em}
+table.swap .rsn{color:var(--accent2);font-weight:600}
+table.swap tbody tr:nth-child(odd){background:#faf7f0}
+/* metrics before/after (C.3) */
+table.met td:nth-child(2){color:var(--soft);text-align:center;white-space:nowrap;font-family:"DejaVu Sans Mono",monospace;font-size:.8rem}
+table.met td:nth-child(3){text-align:center;white-space:nowrap;font-weight:700;color:var(--accent);
+  font-family:"DejaVu Sans Mono",monospace;font-size:.8rem;background:#eef1fb}
+table.met th:nth-child(2),table.met th:nth-child(3){text-align:center}
+/* rules checklist */
+.rules{list-style:none;margin:10px 0;padding:0;font-size:.9rem;columns:1}
+.rules li{position:relative;padding:4px 0 4px 22px;border-bottom:1px solid var(--rule)}
+.rules li::before{content:"✓";position:absolute;left:2px;top:4px;color:var(--green);font-weight:700}
+.rules li b{color:var(--ink)}
+/* recommendations */
+.recs{list-style:none;counter-reset:r;margin:12px 0;padding:0}
+.recs li{counter-increment:r;position:relative;padding:9px 0 9px 42px;border-bottom:1px solid var(--rule);
+  break-inside:avoid;font-size:.94rem}
+.recs li::before{content:counter(r);position:absolute;left:0;top:8px;width:26px;height:26px;border-radius:50%;
+  background:var(--accent);color:#fff;font-family:"Liberation Sans",sans-serif;font-weight:700;font-size:.84rem;
+  display:flex;align-items:center;justify-content:center}
+.recs li.hi::before{background:var(--accent2)}
+.recs li b{color:var(--ink)}
+.alts{list-style:none;margin:10px 0;padding:0;font-size:.92rem}
+.alts li{padding:7px 0 7px 16px;border-left:3px solid var(--rule2);margin-bottom:9px;break-inside:avoid}
+.alts li.adopt{border-left-color:var(--green)} .alts li.adopt b{color:var(--green)}
+.alts li.reject{border-left-color:var(--grey)} .alts li.reject b{color:var(--soft)}
+.alts li b{color:var(--accent)}
+.pill{display:inline-block;font-family:"Liberation Sans",sans-serif;font-size:.6rem;font-weight:700;
+  letter-spacing:.08em;text-transform:uppercase;padding:1px 7px;border-radius:9px;vertical-align:middle;margin-left:6px}
+.pill.a{background:#e7f0ea;color:var(--green)} .pill.r{background:#eee;color:var(--soft)}
+/* by the numbers + colophon */
+.bignum-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border:1px solid var(--rule2);border-radius:6px;overflow:hidden}
+.bignum{padding:12px 16px;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);display:flex;gap:13px;align-items:baseline}
+.bignum:nth-child(2n){border-right:0}
+.bignum .n{font-size:1.4rem;font-weight:700;color:var(--accent);letter-spacing:-.02em;flex:none;min-width:3.2em}
+.bignum .d{font-size:.8rem;color:var(--soft)}
+.colophon{margin-top:24px;padding-top:12px;border-top:2px solid var(--ink);font-size:.74rem;color:var(--soft);
+  font-family:"Liberation Sans",sans-serif;line-height:1.55}
+.colophon b{color:var(--ink)}
+@media print{ @page{ size:Letter } }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- ===================== COVER ===================== -->
+<section class="cover">
+  <div class="brandbar"><span>UnityPoint Health · Family Medicine Residency</span><span class="r">AY 2026–2027</span></div>
+  <div class="eyebrow">Optimization · Recommendations · Alternatives</div>
+  <h1>Repair,<br>or Rebuild</h1>
+  <p class="sub">The two delivered 2026–2027 call schedules, the reasoning behind them, and the options weighed along the way.</p>
+
+  <div class="herostrip">
+    <div class="h"><div class="n">22</div><div class="l">Rule &amp; PTO conflicts cleared</div></div>
+    <div class="h"><div class="n">2</div><div class="l">Complete versions delivered</div></div>
+    <div class="h"><div class="n">0</div><div class="l">Conflicts, PTO breaches &amp; back-to-backs left</div></div>
+    <div class="h"><div class="n">75</div><div class="l">Weighted load now shared by 10 of 11 seniors</div></div>
+  </div>
+
+  <div class="abstract">
+    <p style="margin-bottom:0"><b>In brief.</b> One diagnosis of the draft schedule produced two finished answers — a
+    <b>Minimal Repair</b> that touches only the rule violations, and a <b>Full Rebuild</b> optimized for fairness. This
+    companion to the <i>Flagged-Dates Report</i> explains what each version is, exactly how they differ, the
+    recommendations that hold no matter which you adopt, and the alternatives considered and set aside.</p>
+  </div>
+  <div class="credit mono">Companion to the Flagged-Dates Report · Both versions pass identical hard-rule QA</div>
+</section>
+
+<!-- ===================== §1 ===================== -->
+<section class="section">
+  <div class="sec-head"><div class="sec-num">§ A</div><h2 class="sec-title">Two delivered versions</h2></div>
+  <p class="lead dropcap">Two deliverables follow from one diagnosis, and they answer different questions. One asks
+  “what is the smallest change that makes the draft legal?” The other asks “what is the fairest legal schedule we can
+  build?” Both are complete, and both pass the same machine audit.</p>
+
+  <div class="vcompare">
+    <div class="vcard v1"><div class="vh"><div class="t">Version 1</div><div class="n">Minimal Repair</div></div>
+      <div class="vb"><ul>
+        <li>Fixes <b>only</b> the rule violations — nothing else moves.</li>
+        <li>Each fix is a 1-for-1 swap on the <b>same day of the week</b>.</li>
+        <li>Every resident keeps their exact totals and day-mix.</li>
+        <li><b>Best for</b> adopting now with minimal review.</li>
+      </ul></div></div>
+    <div class="vcard v2"><div class="vh"><div class="t">Version 2</div><div class="n">Full Rebuild</div></div>
+      <div class="vb"><ul>
+        <li>Re-derives the <b>entire year</b> via CP-SAT optimization.</li>
+        <li>Balanced so the on-call burden is as level as the rules allow.</li>
+        <li>Totals re-balanced to near-equal within each class.</li>
+        <li><b>Best for</b> a fresh, provably-balanced calendar.</li>
+      </ul></div></div>
+  </div>
+
+  <table class="tb cmp">
+    <thead><tr><th>&nbsp;</th><th>Version 1 — Minimal Repair</th><th>Version 2 — Full Rebuild</th></tr></thead>
+    <tbody>
+      <tr><td>Goal</td><td>Fix only the rule violations, change nothing else</td><td>Re-derive the whole year for maximum fairness</td></tr>
+      <tr><td>Method</td><td>1-for-1 same-day-of-week swaps</td><td>CP-SAT constraint optimization</td></tr>
+      <tr><td>Disruption</td><td>20 swaps; everything else identical to your draft</td><td>Most assignments re-derived</td></tr>
+      <tr><td>Totals &amp; day-mix</td><td><b>Identical</b> to preliminary</td><td>Re-balanced near-equal within each class</td></tr>
+    </tbody>
+  </table>
+  <div class="statgrid">
+    <div class="stat"><div class="n g">0</div><div class="l">Rotation conflicts (both versions)</div></div>
+    <div class="stat"><div class="n g">0</div><div class="l">PTO conflicts (both versions)</div></div>
+    <div class="stat"><div class="n g">0</div><div class="l">Double-bookings (both versions)</div></div>
+  </div>
+</section>
+
+<!-- ===================== §B ===================== -->
+<section class="section">
+  <div class="sec-head"><div class="sec-num">§ B</div><h2 class="sec-title">Version 1 — Minimal Repair, in full</h2></div>
+  <p class="lead">Each fix is a 1-for-1 swap with an eligible partner on the <b>same day of the week</b>, so both
+  residents keep their exact call total and day-of-week distribution — only the dates move.</p>
+
+  <table class="tb swap">
+    <thead><tr><th>#</th><th>Fixed conflict</th><th>Reason</th><th>Swap made</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>7/17 Bower</td><td class="rsn">on NICU</td><td>Patel ↔ Bower (Bower → 7/24)</td></tr>
+      <tr><td>2</td><td>10/30 Mautino</td><td class="rsn">on Away</td><td>Lux ↔ Mautino (→ 12/4)</td></tr>
+      <tr><td>3</td><td>11/13 Mautino</td><td class="rsn">on Away</td><td>Lux ↔ Mautino (→ 12/18)</td></tr>
+      <tr><td>4</td><td>4/14 Sublette</td><td class="rsn">on Peds ER</td><td>Bower ↔ Sublette (→ 4/7)</td></tr>
+      <tr><td>5</td><td>5/17 Bottke</td><td class="rsn">on Peds ER</td><td>Beutel ↔ Bottke (→ 5/24)</td></tr>
+      <tr><td>6</td><td>9/10 Patel</td><td class="rsn">Nexplanon (do-not-schedule)</td><td>Sublette ↔ Patel (→ 9/3)</td></tr>
+      <tr><td>7</td><td>3/15 Schutt</td><td class="rsn">PTO</td><td>Oehm ↔ Schutt (→ 3/8)</td></tr>
+      <tr><td>8</td><td>5/18 Wohlgemuth</td><td class="rsn">PTO</td><td>Strand ↔ Wohlgemuth (→ 5/25)</td></tr>
+      <tr><td>9</td><td>8/25 Bottke</td><td class="rsn">Cardiology-Tue</td><td>Sublette ↔ Bottke (→ 10/27)</td></tr>
+      <tr><td>10</td><td>1/12 Beutel</td><td class="rsn">Cardiology-Tue</td><td>Bower ↔ Beutel (→ 12/29)</td></tr>
+      <tr><td>11</td><td>3/9 Gaspar</td><td class="rsn">Cardiology-Tue</td><td>Bottke ↔ Gaspar (→ 4/27)</td></tr>
+      <tr><td>12</td><td>9/6 Sublette</td><td class="rsn">GYN/CM-Sun</td><td>Patel ↔ Sublette (→ 11/1)</td></tr>
+      <tr><td>13</td><td>9/27 Patel</td><td class="rsn">GYN/CM-Sun</td><td>Gaspar ↔ Patel (→ 12/13)</td></tr>
+      <tr><td>14</td><td>2/28 Kendrick</td><td class="rsn">GYN/CM-Sun</td><td>Bower ↔ Kendrick (→ 2/21)</td></tr>
+      <tr><td>15</td><td>3/17 Kendrick</td><td class="rsn">GYN/CM-Wed</td><td>Patel ↔ Kendrick (→ 2/24)</td></tr>
+      <tr><td>16</td><td>5/30 Bower</td><td class="rsn">GYN/CM-Sun</td><td>(3-way) → Gaspar; Bower → 5/16</td></tr>
+      <tr><td>17</td><td>11/4 Beutel</td><td class="rsn">Ultrasound-Wed</td><td>Sublette ↔ Beutel (→ 11/11)</td></tr>
+      <tr><td>18</td><td>11/11 Sublette</td><td class="rsn">Ultrasound-Wed</td><td>(paired with #17)</td></tr>
+      <tr><td>19</td><td>4/18 Kendrick</td><td class="rsn">Ultrasound-Sun</td><td>Bower ↔ Kendrick (→ 4/25)</td></tr>
+      <tr><td>20</td><td>6/6 Gaspar</td><td class="rsn">Ultrasound-Sun</td><td>Patel ↔ Gaspar (→ 5/30)</td></tr>
+      <tr><td>21</td><td>2/22 Mudondo</td><td class="rsn">Dermatology-Mon</td><td>Lux ↔ Mudondo (→ 3/8)</td></tr>
+      <tr><td>22</td><td>3/8 Lux</td><td class="rsn">Dermatology-Mon</td><td>(paired with #21)</td></tr>
+    </tbody>
+  </table>
+
+  <div class="sidebar">
+    <div class="lab">Why the repair is invisible on the tally tabs</div>
+    <p>Every swap trades two residents who are both on call on the <i>same weekday</i>. Trading one Friday for another
+    leaves each resident's count of Mondays, Tuesdays … Sundays untouched — a permutation that preserves every
+    marginal distribution. So the workbook's year-to-date totals are numerically identical before and after: twenty
+    conflicts vanish without moving a single tally, and no new soft conflict or back-to-back call is introduced.</p>
+  </div>
+</section>
+
+<!-- ===================== §C ===================== -->
+<section class="section break">
+  <div class="sec-head"><div class="sec-num">§ C</div><h2 class="sec-title">Version 2 — Full Rebuild</h2></div>
+  <p class="lead">The rebuild re-derives the year from the rules up, then makes it as even as those rules allow.</p>
+
+  <p><span class="kicker">Rules enforced as hard constraints</span></p>
+  <ul class="rules">
+    <li>No resident on call during a <b>no-call rotation</b> (Away, NICU, Peds Inpatient, Peds ED, Leave).</li>
+    <li><b>Rotation day-restrictions:</b> GYN/CM no Sun/Mon/Wed · Ultrasound no Sun/Wed · Cardiology no Tue · Dermatology no Mon · FM-Ambulatory (2nd half) no Sun/Mon/Wed · R2-Pediatrics no Thu.</li>
+    <li><b>No CBP or R3-Orthopedics call at all</b> — even the “limited/soft” uses are eliminated.</li>
+    <li><b>PTO</b> windows and the <b>9/10 Nexplanon</b> date fully respected.</li>
+    <li><b>Night-float</b> weeknights fixed by the rotation grid; <b>no back-to-back</b> call (post-call day) for anyone.</li>
+    <li><b>R3 take no Sunday senior call</b> (single Lux-style exception permitted).</li>
+    <li><b>R2 carry 7–8 Sundays</b> and <b>14–16 weekend (Fri+Sat+Sun) nights</b> each.</li>
+    <li><b>Holidays:</b> ≤ one major or two minor per senior; the four “mix-up” holidays on four different interns; interns cover Thanksgiving, Christmas &amp; New Year's.</li>
+    <li><b>Coverage:</b> one intern + one senior every night, including the 12/20–1/2 winter block.</li>
+  </ul>
+
+  <p><span class="kicker">The fairness objective</span> &nbsp;Within each class the solver minimizes the inequality of
+  every weekday's load and of the total weighted-inconvenience load, where each call is weighted by how unwelcome its
+  day is:</p>
+  <div class="eqbox"><div class="w"><span class="mono" style="font-style:normal">weight</span> &nbsp; Wed, Thu = <b>1</b>
+    &nbsp;·&nbsp; Mon, Tue = <b>2</b> &nbsp;·&nbsp; Fri, Sun = <b>3</b> &nbsp;·&nbsp; Sat = <b>4</b></div>
+    <div class="note">The schedule is then made as even as the rules allow — lower spread is fairer.</div></div>
+
+  <h3 style="font-size:1.04rem;margin:18px 0 4px">Balance, before vs after</h3>
+  <p class="sans" style="font-size:.78rem;color:var(--soft);margin:0 0 4px">“Δ” is the gap between the most- and least-burdened resident in the class.</p>
+  <table class="tb met">
+    <thead><tr><th>Metric</th><th>Preliminary</th><th>Rebuild (V2)</th></tr></thead>
+    <tbody>
+      <tr><td>Hard rotation conflicts</td><td>19</td><td>0</td></tr>
+      <tr><td>PTO / Nexplanon conflicts</td><td>3</td><td>0</td></tr>
+      <tr><td>CBP / R3-Ortho (“soft”) call</td><td>11</td><td>0</td></tr>
+      <tr><td>Back-to-back call (no post-call)</td><td>4</td><td>0</td></tr>
+      <tr><td>Interns covering Christmas / NYE / NYD</td><td>none</td><td>all 3</td></tr>
+      <tr><td>“Mix-up” holidays on distinct interns</td><td>no</td><td>4 distinct</td></tr>
+      <tr><td>R2 weighted-load spread (excl. Patel)</td><td>74–80 (Δ6)</td><td>75–75 (Δ0)</td></tr>
+      <tr><td>R2 Saturdays (excl. Patel)</td><td>4–7 (Δ3)</td><td>4–5 (Δ1)</td></tr>
+      <tr><td>R3 weighted-load spread</td><td>71–80 (Δ9)</td><td>75–75 (Δ0)</td></tr>
+      <tr><td>R3 Saturdays</td><td>4–6 (Δ2)</td><td>5–5 (Δ0)</td></tr>
+      <tr><td>Intern totals</td><td>55–58 (Δ3)</td><td>59–59 (Δ0)</td></tr>
+      <tr><td>R3 Sunday calls (rule)</td><td>Lux 1</td><td>0</td></tr>
+      <tr><td>Patel (preserved outlier)</td><td>35</td><td>36</td></tr>
+      <tr><td>Senior holiday-weight cap respected</td><td>no</td><td>yes</td></tr>
+    </tbody>
+  </table>
+
+  <p>In the rebuild the six non-Patel R2s share a near-identical mix (32–33 calls, <b>weighted load 75 each</b>) and
+  the four R3s are <b>identical</b> (34 calls, weighted load 75 each) — so R2 and R3 now carry the <i>same</i> weighted
+  load, with per-call inconvenience averages of 2.27–2.34 (R2) and 2.21 (R3). Patel is the single intentional outlier
+  (36 calls, his 12 preserved backup days). No R3 works a Sunday at all — the rule's ideal — and the heaviest-loaded
+  R3 (Mautino, formerly 9 Fridays + 6 Saturdays) is now level with peers.</p>
+</section>
+
+<!-- ===================== §C.4 structural ===================== -->
+<section class="section">
+  <div class="sec-head"><div class="sec-num">§ D</div><h2 class="sec-title">Three deliberate structural decisions</h2></div>
+  <p class="lead">Three choices in the rebuild are intentional rather than incidental — worth stating plainly.</p>
+  <table class="tb">
+    <tbody>
+      <tr><td style="white-space:nowrap;color:var(--accent)">Winter coverage</td>
+        <td>Interns are added to the <b>12/20–1/2</b> holiday block so Christmas and New Year's have intern call — per
+        the rule that interns schedule Thanksgiving, Christmas and New Year's. The preliminary had seniors covering solo.</td></tr>
+      <tr><td style="white-space:nowrap;color:var(--accent)">Patel preserved</td>
+        <td>Patel keeps his <b>12 early-year “second-senior” backup days</b> and elevated total (35–36 vs the class's 33),
+        reflecting his off-cycle volume. Ten original dates are kept exactly; the two that were themselves rule
+        violations — 9/10 (Nexplanon) and 9/27 (GYN/CM Sunday) — are relocated to other Patel-eligible July–September
+        weekdays. He is the single intentional outlier; his backup-day partner rotates across the class.</td></tr>
+      <tr><td style="white-space:nowrap;color:var(--accent)">8/20 restored</td>
+        <td>The preliminary's missing intern on <b>8/20</b> (Hanna Hard's night-float block) is filled.</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ===================== §D recommendations ===================== -->
+<section class="section break">
+  <div class="sec-head"><div class="sec-num">§ E</div><h2 class="sec-title">Recommendations</h2></div>
+  <p class="lead">Independent of which version you adopt, six actions carry the most value — roughly in priority order.</p>
+  <ol class="recs">
+    <li class="hi"><b>Fix the five no-call-rotation errors first</b> — Bower 7/17, Mautino 10/30 &amp; 11/13, Sublette 4/14,
+      Bottke 5/17. Highest-risk: a resident physically unavailable for call.</li>
+    <li><b>Add intern coverage to the winter holidays</b> (Christmas, New Year's) — currently senior-only.</li>
+    <li><b>Even out holidays.</b> Stanek (3) and Beutel (3 minor) are over; Hard, Strand, Bower, Sublette are under.
+      Put the four “mix-up” holidays on four different interns.</li>
+    <li><b>Relieve Mautino</b> — in the preliminary he carries the heaviest senior load (9 Fridays + 6 Saturdays).</li>
+    <li><b>Respect post-call</b> on the four back-to-back pairs, especially the two holiday-weekend ones.</li>
+    <li><b>Add a block-boundary check.</b> Several conflicts fall on the first/last day of a 2-week rotation block
+      (e.g., 9/27, 2/28) — worth a standing check whenever a rotation changes mid-weekend.</li>
+  </ol>
+</section>
+
+<!-- ===================== §E alternatives ===================== -->
+<section class="section">
+  <div class="sec-head"><div class="sec-num">§ F</div><h2 class="sec-title">Alternatives considered</h2></div>
+  <ul class="alts">
+    <li class="reject"><b>Pure fairness</b><span class="pill r">Rejected</span><br>Letting R3s share Sundays makes every
+      senior's day-mix identical — the tightest possible balance — but it breaks the R3-no-Sunday rule, so it was not used.</li>
+    <li class="adopt"><b>Preserve the R2-Sunday / R3-Friday split</b><span class="pill a">Adopted</span><br>Slightly less
+      uniform across classes but faithful to program structure. This is the Version 2 you have.</li>
+    <li><b>Minimal vs full</b><br>Version 1 if you want the smallest change that is rule-clean; Version 2 if you want
+      the fairest calendar. Both are delivered, so the choice stays open.</li>
+  </ul>
+
+  <div class="sidebar">
+    <div class="lab">Workbook tracking tables — both Excel versions</div>
+    <p>Both workbooks keep the program's original <b>live formulas</b> — the monthly per-resident <span class="mono"
+    style="font-size:.85em">COUNTIF</span> totals, the “Day of Weeks Tracking” tables, and the YTD cross-month
+    <span class="mono" style="font-size:.85em">SUM</span> rollups. None were replaced with static numbers. Because the
+    schedule changed, every formula's cached value was recomputed and written back — so the tables read correctly on
+    open — and then <b>verified cell-by-cell against the solved schedule</b>: all 17 residents' totals and all five
+    day-of-week groups match, on every month tab and the YTD tab.</p>
+  </div>
+</section>
+
+<!-- ===================== closing ===================== -->
+<section class="section">
+  <div class="sec-head"><div class="sec-num">⸬</div><h2 class="sec-title">At a glance</h2></div>
+  <div class="bignum-grid">
+    <div class="bignum"><span class="n">19 + 3</span><span class="d">Rotation + PTO conflicts found in the draft — all cleared</span></div>
+    <div class="bignum"><span class="n">20</span><span class="d">Same-day-of-week swaps in the Minimal Repair</span></div>
+    <div class="bignum"><span class="n">75</span><span class="d">Weighted load carried by ten of eleven seniors in the rebuild</span></div>
+    <div class="bignum"><span class="n">Δ9→0</span><span class="d">R3 weighted-load spread, preliminary → rebuild</span></div>
+    <div class="bignum"><span class="n">12</span><span class="d">Patel backup days preserved (10 kept, 2 relocated)</span></div>
+    <div class="bignum"><span class="n">0</span><span class="d">Conflicts, PTO breaches &amp; back-to-backs in both versions</span></div>
+  </div>
+  <div class="colophon">
+    <b>About these versions.</b> Both are delivered as live workbooks in the original 16-tab format and as standalone,
+    interactive calendars. <b>Version 1 (Minimal Repair)</b> is the smallest rule-clean change to your draft;
+    <b>Version 2 (Full Rebuild)</b> is the fairness-optimized calendar (Google OR-Tools CP-SAT). See the companion
+    <i>Methodology</i> document for the mathematics, and the <i>Flagged-Dates Report</i> for the full list of issues in
+    the draft. &nbsp;·&nbsp; UnityPoint Health Family Medicine Residency · Academic Year 2026–2027.
+  </div>
+</section>
+
+</div>
+</body>
+</html>

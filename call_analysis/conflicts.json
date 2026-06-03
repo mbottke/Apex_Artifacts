@@ -1,0 +1,355 @@
+{
+ "hard": [
+  [
+   "2026-07-17",
+   "Fri",
+   "Bower",
+   "R2",
+   "senior",
+   "NICU",
+   "No-call rotation: NICU",
+   "Wohlgemuth/Bower"
+  ],
+  [
+   "2026-08-25",
+   "Tue",
+   "Bottke",
+   "R2",
+   "senior",
+   "Cardiology",
+   "Cardiology \u2014 avoid Tuesday night (Wed personal clinic all day)",
+   "Oehm/Bottke"
+  ],
+  [
+   "2026-09-06",
+   "Sun",
+   "Sublette",
+   "R2",
+   "senior",
+   "Community Medicine",
+   "GYN/CM (Community Medicine) \u2014 must avoid Sun/Mon/Wed (LC & GYN coverage)",
+   "Wohlgemuth/Sublette"
+  ],
+  [
+   "2026-09-27",
+   "Sun",
+   "Patel",
+   "R2",
+   "senior",
+   "Community Medicine",
+   "GYN/CM (Community Medicine) \u2014 must avoid Sun/Mon/Wed (LC & GYN coverage)",
+   "Oehm/Patel/Kendrick/"
+  ],
+  [
+   "2026-10-30",
+   "Fri",
+   "Mautino",
+   "R3",
+   "senior",
+   "Away",
+   "No-call rotation: Away",
+   "Oehm/Mautino"
+  ],
+  [
+   "2026-11-04",
+   "Wed",
+   "Beutel",
+   "R2",
+   "senior",
+   "Ultrasound",
+   "Ultrasound \u2014 avoid Sun/Wed (on-site Mon & Thu only)",
+   "Oehm/Beutel"
+  ],
+  [
+   "2026-11-11",
+   "Wed",
+   "Sublette",
+   "R2",
+   "senior",
+   "Ultrasound",
+   "Ultrasound \u2014 avoid Sun/Wed (on-site Mon & Thu only)",
+   "Hard/Sublette"
+  ],
+  [
+   "2026-11-13",
+   "Fri",
+   "Mautino",
+   "R3",
+   "senior",
+   "Away",
+   "No-call rotation: Away",
+   "Hard/Mautino"
+  ],
+  [
+   "2027-01-12",
+   "Tue",
+   "Beutel",
+   "R2",
+   "senior",
+   "Cardiology",
+   "Cardiology \u2014 avoid Tuesday night (Wed personal clinic all day)",
+   "Oehm/Beutel"
+  ],
+  [
+   "2027-02-22",
+   "Mon",
+   "Mudondo",
+   "R3",
+   "senior",
+   "Dermatology",
+   "Dermatology \u2014 avoid Monday (Tues Derm clinic)",
+   "Schutt/Mudondo"
+  ],
+  [
+   "2027-02-28",
+   "Sun",
+   "Kendrick",
+   "R2",
+   "senior",
+   "Community Medicine",
+   "GYN/CM (Community Medicine) \u2014 must avoid Sun/Mon/Wed (LC & GYN coverage)",
+   "Schutt/Kendrick"
+  ],
+  [
+   "2027-03-08",
+   "Mon",
+   "Lux",
+   "R3",
+   "senior",
+   "Dermatology",
+   "Dermatology \u2014 avoid Monday (Tues Derm clinic)",
+   "Oehm/Lux/"
+  ],
+  [
+   "2027-03-09",
+   "Tue",
+   "Gaspar",
+   "R2",
+   "senior",
+   "Cardiology",
+   "Cardiology \u2014 avoid Tuesday night (Wed personal clinic all day)",
+   "Stanek/Gaspar"
+  ],
+  [
+   "2027-03-17",
+   "Wed",
+   "Kendrick",
+   "R2",
+   "senior",
+   "Community Medicine",
+   "GYN/CM (Community Medicine) \u2014 must avoid Sun/Mon/Wed (LC & GYN coverage)",
+   "Hard/Kendrick"
+  ],
+  [
+   "2027-04-14",
+   "Wed",
+   "Sublette",
+   "R2",
+   "senior",
+   "Peds ER",
+   "No-call rotation: Peds ER",
+   "Stanek/Sublette"
+  ],
+  [
+   "2027-04-18",
+   "Sun",
+   "Kendrick",
+   "R2",
+   "senior",
+   "Ultrasound",
+   "Ultrasound \u2014 avoid Sun/Wed (on-site Mon & Thu only)",
+   "Hard/Kendrick"
+  ],
+  [
+   "2027-05-17",
+   "Mon",
+   "Bottke",
+   "R2",
+   "senior",
+   "Peds ER",
+   "No-call rotation: Peds ER",
+   "Stanek/Bottke"
+  ],
+  [
+   "2027-05-30",
+   "Sun",
+   "Bower",
+   "R2",
+   "senior",
+   "Gynecology",
+   "GYN/CM (Gynecology) \u2014 must avoid Sun/Mon/Wed (LC & GYN coverage)",
+   "Hard/Bower"
+  ],
+  [
+   "2027-06-06",
+   "Sun",
+   "Gaspar",
+   "R2",
+   "senior",
+   "Ultrasound",
+   "Ultrasound \u2014 avoid Sun/Wed (on-site Mon & Thu only)",
+   "Stanek/Gaspar"
+  ]
+ ],
+ "soft": [
+  [
+   "2026-07-13",
+   "Mon",
+   "Lux",
+   "R3",
+   "senior",
+   "Orthopaedics",
+   "R3 Orthopaedics \u2014 limited call only",
+   "Wohlgemuth/Lux"
+  ],
+  [
+   "2026-07-16",
+   "Thu",
+   "Lux",
+   "R3",
+   "senior",
+   "Orthopaedics",
+   "R3 Orthopaedics \u2014 limited call only",
+   "Wohlgemuth/Lux"
+  ],
+  [
+   "2026-08-12",
+   "Wed",
+   "Lux",
+   "R3",
+   "senior",
+   "Community Based Practice",
+   "CBP (2 wks away) \u2014 avoid call unless necessary",
+   "Hard/Lux"
+  ],
+  [
+   "2026-08-24",
+   "Mon",
+   "Lux",
+   "R3",
+   "senior",
+   "Community Based Practice",
+   "CBP (2 wks away) \u2014 avoid call unless necessary",
+   "Oehm/Patel/Lux"
+  ],
+  [
+   "2026-10-07",
+   "Wed",
+   "Johnson",
+   "R3",
+   "senior",
+   "Orthopaedics",
+   "R3 Orthopaedics \u2014 limited call only",
+   "Schutt/Johnson"
+  ],
+  [
+   "2026-11-05",
+   "Thu",
+   "Mudondo",
+   "R3",
+   "senior",
+   "Community Based Practice",
+   "CBP (2 wks away) \u2014 avoid call unless necessary",
+   "Oehm/Mudondo"
+  ],
+  [
+   "2026-11-18",
+   "Wed",
+   "Mudondo",
+   "R3",
+   "senior",
+   "Community Based Practice",
+   "CBP (2 wks away) \u2014 avoid call unless necessary",
+   "Hard/Mudondo"
+  ],
+  [
+   "2027-03-11",
+   "Thu",
+   "Mautino",
+   "R3",
+   "senior",
+   "Community Based Practice",
+   "CBP (2 wks away) \u2014 avoid call unless necessary",
+   "Wohlgemuth/Mautino"
+  ],
+  [
+   "2027-03-23",
+   "Tue",
+   "Mautino",
+   "R3",
+   "senior",
+   "Community Based Practice",
+   "CBP (2 wks away) \u2014 avoid call unless necessary",
+   "Stanek/Mautino"
+  ],
+  [
+   "2027-06-03",
+   "Thu",
+   "Johnson",
+   "R3",
+   "senior",
+   "Community Based Practice",
+   "CBP (2 wks away) \u2014 avoid call unless necessary",
+   "Hard/Johnson"
+  ],
+  [
+   "2027-06-17",
+   "Thu",
+   "Johnson",
+   "R3",
+   "senior",
+   "Community Based Practice",
+   "CBP (2 wks away) \u2014 avoid call unless necessary",
+   "Stanek/Johnson"
+  ]
+ ],
+ "pto": [
+  [
+   "2026-09-10",
+   "Thu",
+   "Patel",
+   "Stanek/Patel/Lux",
+   "Nexplanon training eve \u2014 DO NOT schedule 9/10"
+  ],
+  [
+   "2027-03-15",
+   "Mon",
+   "Schutt",
+   "Schutt/Patel",
+   "PTO 2027-03-15..2027-03-19"
+  ],
+  [
+   "2027-05-18",
+   "Tue",
+   "Wohlgemuth",
+   "Wohlgemuth**/Kendrick",
+   "PTO 2027-05-17..2027-05-21"
+  ]
+ ],
+ "spacing": [
+  [
+   "Stanek",
+   "R1",
+   "2027-02-14",
+   "2027-02-15"
+  ],
+  [
+   "Oehm",
+   "R1",
+   "2027-05-09",
+   "2027-05-10"
+  ],
+  [
+   "Mautino",
+   "R3",
+   "2026-10-12",
+   "2026-10-13"
+  ],
+  [
+   "Patel",
+   "R2",
+   "2027-02-02",
+   "2027-02-03"
+  ]
+ ]
+}
